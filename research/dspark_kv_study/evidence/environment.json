@@ -1,0 +1,35 @@
+{
+  "recorded_at_utc": "2026-10-17T12:36:28.166639+00:00",
+  "platform": "Linux-5.10.0-182.0.0.95.r2220_156.hce2.aarch64-aarch64-with-glibc2.31",
+  "glibc": [
+    "glibc",
+    "2.31"
+  ],
+  "python": "3.11.4",
+  "packages": {
+    "torch": "2.7.1+cpu",
+    "torch-npu": "2.7.1.post4",
+    "vllm": null,
+    "vllm-ascend": null,
+    "transformers": null
+  },
+  "containers": {
+    "docker": false,
+    "podman": false
+  },
+  "cann_version_files": {
+    "compiler/version.info": "Version=9.0.0\nversion_dir=cann\nrequired_package_runtime_version=\"9.0\"\nrequired_package_ge-executor_version=\"9.0\"\nrequired_package_metadef_version=\"9.0\"\nrequired_package_opbase_version=\"9.0\"\nrequired_package_bisheng-compiler_version=\"9.0\"\nrequired_package_tbe-tik_version=\"9.0\"\ntimestamp=20260428_134817545\n",
+    "opp/version.info": "Version=9.0.0\nversion_dir=cann\nrequired_package_runtime_version=\">=8.5\"\nrequired_package_ge-executor_version=\">=8.5\"\nrequired_package_metadef_version=\">=8.5\"\nrequired_package_asc-devkit_version=\">=8.5\"\nrequired_package_bisheng-compiler_version=\">=8.5\"\ntimestamp=20260428_134817545\n"
+  },
+  "driver_version_info": "Version=25.5.5\nascendhal_version=7.35.23\naicpu_version=1.0\ntdt_version=1.0\nlog_version=1.0\nprof_version=2.0\ndvppkernels_version=1.1\ntsfw_version=1.0\nInnerversion=V100R001C23SPC009B220\ncompatible_version=[V100R001C19],[V100R001C20],[V100R001C21],[V100R001C22],[V100R001C23]\ncompatible_version_fw=[7.0.0,8.9.9]\npackage_version=25.5.5\n",
+  "npu_smi": {
+    "exit_code": 0,
+    "stdout": "+------------------------------------------------------------------------------------------------+\n| npu-smi 25.5.5                   Version: 25.5.5                                               |\n+---------------------------+---------------+----------------------------------------------------+\n| NPU   Name                | Health        | Power(W)    Temp(C)           Hugepages-Usage(page)|\n| Chip  Phy-ID              | Bus-Id        | AICore(%)   Memory-Usage(MB)  HBM-Usage(MB)        |\n+===========================+===============+====================================================+\n| 6     Ascend910           | OK            | 166.4       45                0    / 0             |\n| 0     12                  | 0000:0A:00.0  | 0           0    / 0          3122 / 65536         |\n+------------------------------------------------------------------------------------------------+\n| 6     Ascend910           | OK            | -           43                0    / 0             |\n| 1     13                  | 0000:0B:00.0  | 0           0    / 0          2870 / 65536         |\n+===========================+===============+====================================================+\n+---------------------------+---------------+----------------------------------------------------+\n| NPU     Chip              | Process id    | Process name             | Process memory(MB)      |\n+===========================+===============+====================================================+\n| No running processes found in NPU 6                                                            |\n+===========================+===============+====================================================+\n",
+    "stderr": ""
+  },
+  "local_model_cache_roots_checked": {
+    "/home/developer/.cache/huggingface/hub": [],
+    "/models": [],
+    "/data/models": []
+  }
+}

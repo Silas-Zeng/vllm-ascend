@@ -1,0 +1,224 @@
+{
+  "scope": "separate_profiled_iteration_not_benchmark_samples",
+  "paths": {
+    "full_kv": {
+      "host_range_us": 791.97,
+      "kernels": [
+        {
+          "name": "aclnnMatmul_BatchMatMulNd_BatchMatMulV2",
+          "start_us": 66.5,
+          "duration_us": 258.78515625
+        },
+        {
+          "name": "aclnnDivs_RealDivAiCore_RealDiv",
+          "start_us": 325.25,
+          "duration_us": 18.220375
+        },
+        {
+          "name": "aclnnInplaceCopy_CastAiCore_Cast",
+          "start_us": 343.5,
+          "duration_us": 13.10025
+        },
+        {
+          "name": "aclnnSoftmax_SoftmaxAiCore_SoftmaxV2",
+          "start_us": 356.5,
+          "duration_us": 63.04128125
+        },
+        {
+          "name": "aclnnInplaceCopy_CastAiCore_Cast",
+          "start_us": 419.75,
+          "duration_us": 10.40021875
+        },
+        {
+          "name": "aclnnMatmul_BatchMatMulNd_BatchMatMulV2",
+          "start_us": 430.0,
+          "duration_us": 306.306125
+        }
+      ],
+      "sum_kernel_durations_us": 669.85340625,
+      "kernel_groups": {
+        "MatMul": 2,
+        "Scale / other": 1,
+        "Cast": 2,
+        "Softmax": 1
+      }
+    },
+    "window_2176": {
+      "host_range_us": 348.22,
+      "kernels": [
+        {
+          "name": "aclnnMatmul_SliceAiCore_Slice",
+          "start_us": 132.5,
+          "duration_us": 24.12046875
+        },
+        {
+          "name": "aclnnMatmul_TransposeAiCore_Transpose",
+          "start_us": 156.75,
+          "duration_us": 41.70084375
+        },
+        {
+          "name": "aclnnMatmul_BatchMatMulNd_BatchMatMulV2",
+          "start_us": 198.5,
+          "duration_us": 15.8603125
+        },
+        {
+          "name": "aclnnDivs_RealDivAiCore_RealDiv",
+          "start_us": 214.25,
+          "duration_us": 6.120125
+        },
+        {
+          "name": "aclnnInplaceCopy_CastAiCore_Cast",
+          "start_us": 220.5,
+          "duration_us": 7.000125
+        },
+        {
+          "name": "aclnnSoftmax_SoftmaxAiCore_SoftmaxV2",
+          "start_us": 227.5,
+          "duration_us": 16.54034375
+        },
+        {
+          "name": "aclnnInplaceCopy_CastAiCore_Cast",
+          "start_us": 244.75,
+          "duration_us": 7.20015625
+        },
+        {
+          "name": "aclnnMatmul_SliceAiCore_Slice",
+          "start_us": 266.5,
+          "duration_us": 14.52028125
+        },
+        {
+          "name": "aclnnMatmul_BatchMatMulNd_BatchMatMulV2",
+          "start_us": 281.0,
+          "duration_us": 13.42028125
+        }
+      ],
+      "sum_kernel_durations_us": 146.4829375,
+      "kernel_groups": {
+        "Layout copy": 3,
+        "MatMul": 2,
+        "Scale / other": 1,
+        "Cast": 2,
+        "Softmax": 1
+      }
+    },
+    "anchors_online": {
+      "host_range_us": 925.78,
+      "kernels": [
+        {
+          "name": "aclnnIndexSelect_GatherV3AiCore_GatherV3",
+          "start_us": 621.75,
+          "duration_us": 74.9615
+        },
+        {
+          "name": "aclnnIndexSelect_GatherV3AiCore_GatherV3",
+          "start_us": 696.75,
+          "duration_us": 72.1214375
+        },
+        {
+          "name": "aclnnMatmul_BatchMatMulNd_BatchMatMulV2",
+          "start_us": 768.75,
+          "duration_us": 49.14096875
+        },
+        {
+          "name": "aclnnDivs_RealDivAiCore_RealDiv",
+          "start_us": 818.0,
+          "duration_us": 8.6001875
+        },
+        {
+          "name": "aclnnInplaceCopy_CastAiCore_Cast",
+          "start_us": 826.75,
+          "duration_us": 6.500125
+        },
+        {
+          "name": "aclnnSoftmax_SoftmaxAiCore_SoftmaxV2",
+          "start_us": 833.25,
+          "duration_us": 15.3603125
+        },
+        {
+          "name": "aclnnInplaceCopy_CastAiCore_Cast",
+          "start_us": 848.5,
+          "duration_us": 6.180125
+        },
+        {
+          "name": "aclnnMatmul_BatchMatMulNd_BatchMatMulV2",
+          "start_us": 854.75,
+          "duration_us": 13.54025
+        }
+      ],
+      "sum_kernel_durations_us": 246.40490625,
+      "kernel_groups": {
+        "KV gather": 2,
+        "MatMul": 2,
+        "Scale / other": 1,
+        "Cast": 2,
+        "Softmax": 1
+      }
+    },
+    "anchors_cached": {
+      "host_range_us": 386.9,
+      "kernels": [
+        {
+          "name": "aclnnArange_ArangeAiCore_Range",
+          "start_us": 43.75,
+          "duration_us": 7.42015625
+        },
+        {
+          "name": "aclnnCat_ConcatD_ConcatD",
+          "start_us": 69.25,
+          "duration_us": 12.60025
+        },
+        {
+          "name": "aclnnIndexSelect_GatherV3AiCore_GatherV3",
+          "start_us": 91.0,
+          "duration_us": 72.2814375
+        },
+        {
+          "name": "aclnnIndexSelect_GatherV3AiCore_GatherV3",
+          "start_us": 163.25,
+          "duration_us": 73.02146875
+        },
+        {
+          "name": "aclnnMatmul_BatchMatMulNd_BatchMatMulV2",
+          "start_us": 236.25,
+          "duration_us": 48.44096875
+        },
+        {
+          "name": "aclnnDivs_RealDivAiCore_RealDiv",
+          "start_us": 284.75,
+          "duration_us": 8.8601875
+        },
+        {
+          "name": "aclnnInplaceCopy_CastAiCore_Cast",
+          "start_us": 293.75,
+          "duration_us": 7.040125
+        },
+        {
+          "name": "aclnnSoftmax_SoftmaxAiCore_SoftmaxV2",
+          "start_us": 300.75,
+          "duration_us": 15.9003125
+        },
+        {
+          "name": "aclnnInplaceCopy_CastAiCore_Cast",
+          "start_us": 316.75,
+          "duration_us": 7.06015625
+        },
+        {
+          "name": "aclnnMatmul_BatchMatMulNd_BatchMatMulV2",
+          "start_us": 323.75,
+          "duration_us": 13.52028125
+        }
+      ],
+      "sum_kernel_durations_us": 266.14534375,
+      "kernel_groups": {
+        "Scale / other": 3,
+        "KV gather": 2,
+        "MatMul": 2,
+        "Cast": 2,
+        "Softmax": 1
+      }
+    }
+  },
+  "time_unit": "microseconds",
+  "kernel_count": 33,
+  "trace_sha256": "f7de760538dbd834f4aa6758cba9404304e7469b06a1c1f20c5697b9c3fecb62"
+}
