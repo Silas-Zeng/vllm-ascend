@@ -1,0 +1,159 @@
+{
+  "scope": "controlled_synthetic_retrieval_not_general_model_quality",
+  "generator_sha256": "ccb43a990a70dd7d61543f32f04e80286ab82b786679b6070f2fc5fedc91d27a",
+  "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+  "enable_thinking": false,
+  "long_form": true,
+  "files": [
+    {
+      "name": "prompts_long_c1024_b1.json",
+      "context_tokens": 1024,
+      "batch": 1,
+      "sha256": "9cf2e712e05e220e097d02fe8630d869423124bfc16d7020a5950a27fc78c8ff",
+      "anchor_blocks": [
+        []
+      ],
+      "retrieval_hits": [
+        true
+      ]
+    },
+    {
+      "name": "prompts_long_c1024_b4.json",
+      "context_tokens": 1024,
+      "batch": 4,
+      "sha256": "e81d6d75bc267a64c6ab1149d13e71c95f1f20d5cb191ab6b7db4b78ebc33bd6",
+      "anchor_blocks": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "retrieval_hits": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "prompts_long_c4096_b1.json",
+      "context_tokens": 4096,
+      "batch": 1,
+      "sha256": "2eea55439b57bf66de8e842e5db692b25c304f3856b3bff579558d84bd508951",
+      "anchor_blocks": [
+        [
+          2
+        ]
+      ],
+      "retrieval_hits": [
+        true
+      ]
+    },
+    {
+      "name": "prompts_long_c4096_b4.json",
+      "context_tokens": 4096,
+      "batch": 4,
+      "sha256": "8682f65391c59e61c5b864d0a41e9195b991d91aaf0678f24474271ff3706bc4",
+      "anchor_blocks": [
+        [
+          2
+        ],
+        [
+          15
+        ],
+        [
+          13
+        ],
+        [
+          2
+        ]
+      ],
+      "retrieval_hits": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "prompts_long_c16384_b1.json",
+      "context_tokens": 16384,
+      "batch": 1,
+      "sha256": "5f1dfd4c9df231af3aa5fea24bdc0ef1f249efa3fab24fefc554439eb7a9b16f",
+      "anchor_blocks": [
+        [
+          2
+        ]
+      ],
+      "retrieval_hits": [
+        true
+      ]
+    },
+    {
+      "name": "prompts_long_c16384_b4.json",
+      "context_tokens": 16384,
+      "batch": 4,
+      "sha256": "ecefaf7b97f3b77886f701614dc7d2414383c17c99ae4e82786e9adb89280a11",
+      "anchor_blocks": [
+        [
+          2
+        ],
+        [
+          63
+        ],
+        [
+          79
+        ],
+        [
+          2
+        ]
+      ],
+      "retrieval_hits": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "prompts_long_c24576_b1.json",
+      "context_tokens": 24576,
+      "batch": 1,
+      "sha256": "f01aa65df93725970c98ab95f0a91ca712f908ffbef4370dd895dbc149610af4",
+      "anchor_blocks": [
+        [
+          2
+        ]
+      ],
+      "retrieval_hits": [
+        true
+      ]
+    },
+    {
+      "name": "prompts_long_c24576_b4.json",
+      "context_tokens": 24576,
+      "batch": 4,
+      "sha256": "dd9198e8cf61d80455e59300301c18a54d566c08749634925e442e655abeb910",
+      "anchor_blocks": [
+        [
+          2
+        ],
+        [
+          95
+        ],
+        [
+          161
+        ],
+        [
+          2
+        ]
+      ],
+      "retrieval_hits": [
+        true,
+        true,
+        true,
+        true
+      ]
+    }
+  ]
+}

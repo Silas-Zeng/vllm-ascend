@@ -1,0 +1,26 @@
+{
+  "reason": "fatal pre-run split_qkv_rmsnorm_rope_kernel exception; model initialization produced no outputs",
+  "time": 1792255940.7142804,
+  "signalled": [
+    {
+      "pid": 1973,
+      "startticks": "41640261",
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 1970,
+      "startticks": "41640257",
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 1966,
+      "startticks": "41640255",
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 1893,
+      "startticks": "41637262",
+      "signal": "SIGTERM"
+    }
+  ]
+}

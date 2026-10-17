@@ -1,0 +1,19 @@
+{
+  "pid": 8648,
+  "status": "failed",
+  "started_at": 1792261708.0443306,
+  "steps": [
+    {
+      "name": "transfer_and_integer_ops",
+      "started_at": 1792261708.0451765,
+      "log": "logs/metadata_without_attention_transfer_and_integer_ops.log",
+      "exit_code": 1,
+      "finished_at": 1792261720.128756
+    }
+  ],
+  "active_step": "transfer_and_integer_ops",
+  "child_pid": 8651,
+  "child_startticks": "42328351",
+  "error": "experiment step failed: transfer_and_integer_ops",
+  "finished_at": 1792261720.12926
+}

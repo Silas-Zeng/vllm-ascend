@@ -1,0 +1,218 @@
+{
+  "scope": "synthetic real paged FIA numerical validation; not full-model or latency evidence",
+  "device": "Ascend910B2",
+  "torch_npu": "2.10.0.post4",
+  "source_sha256": {
+    "validate_paged_history_npu.py": "cb08a90340d3c2c80f29f76ed6c4d1638be0fcd11547342f1285e183c90ec19a",
+    "paged_history.py": "9bc418d011026e30412ef776740fcd892123585ecd5514e42c51bcac69a6d51f",
+    "history_policy.py": "1902cdb482daba54c1b78cbc27805d4a50573ac9e04f07619c02551ccc447f8e"
+  },
+  "checks": [
+    {
+      "policy": "window",
+      "input_lengths_including_queries": [
+        2300
+      ],
+      "query_tokens": 7,
+      "actual_read_lengths": [
+        2300
+      ],
+      "page_tokens": 128,
+      "query_heads": 8,
+      "kv_heads": 2,
+      "head_dim": 128,
+      "max_abs_error": 0.000416487455368042,
+      "atol": 0.02,
+      "rtol": 0.02,
+      "position_sha256": [
+        "65c6f6cb2605edf11210e14055aea03abf673feb010a91fca510fde29beaeb94"
+      ],
+      "full_cache_unchanged": true,
+      "absolute_slots_and_positions_unchanged": true,
+      "passed": true
+    },
+    {
+      "policy": "bm25",
+      "input_lengths_including_queries": [
+        2300
+      ],
+      "query_tokens": 7,
+      "actual_read_lengths": [
+        2300
+      ],
+      "page_tokens": 128,
+      "query_heads": 8,
+      "kv_heads": 2,
+      "head_dim": 128,
+      "max_abs_error": 0.000416487455368042,
+      "atol": 0.02,
+      "rtol": 0.02,
+      "position_sha256": [
+        "65c6f6cb2605edf11210e14055aea03abf673feb010a91fca510fde29beaeb94"
+      ],
+      "full_cache_unchanged": true,
+      "absolute_slots_and_positions_unchanged": true,
+      "passed": true
+    },
+    {
+      "policy": "window",
+      "input_lengths_including_queries": [
+        2300
+      ],
+      "query_tokens": 8,
+      "actual_read_lengths": [
+        2300
+      ],
+      "page_tokens": 128,
+      "query_heads": 8,
+      "kv_heads": 2,
+      "head_dim": 128,
+      "max_abs_error": 0.000416487455368042,
+      "atol": 0.02,
+      "rtol": 0.02,
+      "position_sha256": [
+        "65c6f6cb2605edf11210e14055aea03abf673feb010a91fca510fde29beaeb94"
+      ],
+      "full_cache_unchanged": true,
+      "absolute_slots_and_positions_unchanged": true,
+      "passed": true
+    },
+    {
+      "policy": "bm25",
+      "input_lengths_including_queries": [
+        2300
+      ],
+      "query_tokens": 8,
+      "actual_read_lengths": [
+        2300
+      ],
+      "page_tokens": 128,
+      "query_heads": 8,
+      "kv_heads": 2,
+      "head_dim": 128,
+      "max_abs_error": 0.000416487455368042,
+      "atol": 0.02,
+      "rtol": 0.02,
+      "position_sha256": [
+        "65c6f6cb2605edf11210e14055aea03abf673feb010a91fca510fde29beaeb94"
+      ],
+      "full_cache_unchanged": true,
+      "absolute_slots_and_positions_unchanged": true,
+      "passed": true
+    },
+    {
+      "policy": "window",
+      "input_lengths_including_queries": [
+        4099,
+        24583
+      ],
+      "query_tokens": 7,
+      "actual_read_lengths": [
+        2179,
+        2183
+      ],
+      "page_tokens": 128,
+      "query_heads": 8,
+      "kv_heads": 2,
+      "head_dim": 128,
+      "max_abs_error": 0.00042179226875305176,
+      "atol": 0.02,
+      "rtol": 0.02,
+      "position_sha256": [
+        "b2f1f23f48d552cb10ef11041b55a16d5b97112d1f8beea120b4ef52bfcf61cb",
+        "8beb3b776a24264a5eeb60da5d533b98ba51851c5338a8ea8c3f28c9bb6f3deb"
+      ],
+      "full_cache_unchanged": true,
+      "absolute_slots_and_positions_unchanged": true,
+      "passed": true
+    },
+    {
+      "policy": "bm25",
+      "input_lengths_including_queries": [
+        4099,
+        24583
+      ],
+      "query_tokens": 7,
+      "actual_read_lengths": [
+        2179,
+        2183
+      ],
+      "page_tokens": 128,
+      "query_heads": 8,
+      "kv_heads": 2,
+      "head_dim": 128,
+      "max_abs_error": 0.0003541409969329834,
+      "atol": 0.02,
+      "rtol": 0.02,
+      "position_sha256": [
+        "19e50fcec2c1867912d2f06253790fedae0478eee47d70b86539cb0f24f70889",
+        "f40236e1ca8a82849021e03b9b0fa83caa20f48f7f0b9d1e76c95f2426df8873"
+      ],
+      "full_cache_unchanged": true,
+      "absolute_slots_and_positions_unchanged": true,
+      "passed": true
+    },
+    {
+      "policy": "window",
+      "input_lengths_including_queries": [
+        4099,
+        24583
+      ],
+      "query_tokens": 8,
+      "actual_read_lengths": [
+        2179,
+        2183
+      ],
+      "page_tokens": 128,
+      "query_heads": 8,
+      "kv_heads": 2,
+      "head_dim": 128,
+      "max_abs_error": 0.00042179226875305176,
+      "atol": 0.02,
+      "rtol": 0.02,
+      "position_sha256": [
+        "b2f1f23f48d552cb10ef11041b55a16d5b97112d1f8beea120b4ef52bfcf61cb",
+        "8beb3b776a24264a5eeb60da5d533b98ba51851c5338a8ea8c3f28c9bb6f3deb"
+      ],
+      "full_cache_unchanged": true,
+      "absolute_slots_and_positions_unchanged": true,
+      "passed": true
+    },
+    {
+      "policy": "bm25",
+      "input_lengths_including_queries": [
+        4099,
+        24583
+      ],
+      "query_tokens": 8,
+      "actual_read_lengths": [
+        2179,
+        2183
+      ],
+      "page_tokens": 128,
+      "query_heads": 8,
+      "kv_heads": 2,
+      "head_dim": 128,
+      "max_abs_error": 0.0003541409969329834,
+      "atol": 0.02,
+      "rtol": 0.02,
+      "position_sha256": [
+        "19e50fcec2c1867912d2f06253790fedae0478eee47d70b86539cb0f24f70889",
+        "f40236e1ca8a82849021e03b9b0fa83caa20f48f7f0b9d1e76c95f2426df8873"
+      ],
+      "full_cache_unchanged": true,
+      "absolute_slots_and_positions_unchanged": true,
+      "passed": true
+    },
+    {
+      "lengths": [
+        512,
+        16391,
+        24583
+      ],
+      "policy": "window",
+      "passed": false,
+      "error": "ACL stream synchronize failed, error code:507015"
+    }
+  ]
+}

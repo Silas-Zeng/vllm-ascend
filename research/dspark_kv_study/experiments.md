@@ -1,4 +1,33 @@
-# 实验记录：2026-10-17
+# 实验记录：2026-10-17 至 2026-10-18
+
+## 2026-10-18：切换服务器后的接入与诊断
+
+用户提供了新的 SSH 环境。只使用密码建立连接，凭据不进入本项目文件、日志或 Git。新设备为一张 64GB Ascend910B2，数据盘 240GB；已有 CANN 9.1、Python 3.12.13、PyTorch 2.10 / torch-npu 2.10.0.post4 和 vLLM。非交互 SSH 默认使用的系统 Python 3.12.3 并不包含这些包，后续独立入口显式选用镜像中的正确 Python。
+
+4×4 NPU 矩阵冒烟检查通过，共享 Qwen3-8B 的 16 个文件均与冻结的 ModelScope 清单匹配；只另行下载 DSpark Block-7，5 个文件全部校验通过。数据见 `evidence/server_b2/`。插件复制到 `/data/dspark-study-20261017/runtime`，原始包和共享模型均未修改。
+
+新增整页读取适配器，10 项 CPU 逻辑测试在新服务器通过；实际 builder 的双 group / 混合长度 10 组 CPU 回归通过。它只改变 Draft 读集合，各 group 独立保存块表，沿用绝对写入位置。首版采用一次批量 D2H 长度镜像；这仍是待优化成本，不能先声称消除了准备开销。
+
+| 尝试 | 可观察反馈 | 当前结论 |
+| --- | --- | --- |
+| 原生 AR 初始化 | worker 找不到 `libatb.so` | 独立启动脚本加载已有 ATB 环境后越过该阶段 |
+| 原生编译 / 图模式 AR | `split_qkv_rmsnorm_rope_kernel` 报致命设备错误 | 历史适配器尚未启用；保存日志，核对 PID / startticks 后终止本实验故障进程 |
+| 关闭单一 QKNorm / RoPE 融合 | 初始化与图捕获完成，后续图回放仍报异常 | 关闭该融合不能单独解决完整模型问题 |
+| eager Target AR | 原生 `aclnnFusedInferAttentionScoreV3` 异常 | 不能归因于图模式或历史页选择；尚无合格 AR 参考输出 |
+| 分页 FIA 首轮 | 8 组通过；三请求混合长度的第 9 组失败；后续未执行 | 部分读取数值正确不代表完整后端门槛通过；失败和准确源码均保留 |
+| Full / Window / BM25 独立进程对照 | Full 也存在数值错误；部分稀疏调用通过，部分失败 | 当前证据不足以确定根因；继续比较同步、输入格式和软件配对 |
+
+首轮 FIA 成功项最大绝对误差约 0.000422；这只是成功项的数值检查，不是性能结果或完整通过率。原始 [JSON](evidence/server_b2/paged_fia_initial.json)、[日志](evidence/server_b2/paged_fia_initial.log.gz) 和 [源码快照](archive/fia_initial/validate_paged_history_npu.py) 互相对应。后续独立对照也全部留存，不从失败批次中挑选成功项生成“加速”图。
+
+同步 / 非同步同输入对照已经完成：Full KV 的两组各 3 次重复均有失败；同步 BM25 的两次也未通过。因此“打开同步就解决问题”的假设不成立。部分 Full KV 结果虽落在首版 `atol=0.02, rtol=0.02` 粗门槛内，最大误差仍达约 0.017–0.019，远高于首轮正常成功项；不能把这种边界通过解释为稳定正确。后续需收紧数值诊断，并报告误差分布。
+
+随后比较 TND / BNSD、显式 ND 存储，以及 FIA 前后的块表和缓存保真。16 个独立进程中仍有通过与失败交替，单改布局或存储格式没有取得稳定通过。全部结果位于 [layout_controls](evidence/server_b2/layout_controls/fia_layout_controls_result.json)。调试配置的耗时不会混入正式性能。供应镜像的实际 vLLM commit 与插件仓库所记录的 verified commit 不同，后续还需核对这一差异，不能只凭版本号宣布兼容。
+
+随后进一步移除了 attention：只执行小型长度传输、整数窗口计算、表传输、gather 与 mask。40 次中 36 次通过，4 次块表内容不一致；失败项的输入长度、窗口起点和压缩长度均与参考一致，构造器传输与持久 CPU 输入两种方式各有失败。见 [最小诊断](diagnose_npu_metadata.py)、[40 次记录](evidence/server_b2/metadata_without_attention.json)。这证明当前还有独立于 attention 的准备链问题；尚未证明它就是全部模型异常的共同根因。下一步需要单独比较表传输、gather 和 mask，以及输入／输出列数对齐。
+
+Windows 本地直接加载 PyTorch 触发 OpenMP runtime 冲突，未使用允许重复 runtime 的绕过选项。17 项策略 / 指标 / 证据测试在本地通过，分页 CPU 测试在实际 Linux PyTorch 环境执行。Ruff 使用仓库固定的 0.14.0。以下旧记录保留第一阶段当时的环境与结论。
+
+本次再次执行整仓 `format.sh ci`，在下载 `ruff-pre-commit` hook 时连接 GitHub 443 失败；聚合检查未通过。研究目录的独立 Ruff、codespell 和 markdownlint 检查通过。完整模型与整仓 NPU 测试未通过交付门槛，不能把这些独立检查写成整仓 CI 或模型正确性通过。
 
 ## 接入和范围核实
 

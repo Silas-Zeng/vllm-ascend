@@ -1,0 +1,24 @@
+{
+  "scope": "synthetic real paged FIA numerical validation; not full-model or latency evidence",
+  "device": "Ascend910B2",
+  "torch_npu": "2.10.0.post4",
+  "source_sha256": {
+    "validate_paged_history_npu.py": "14aa0b43b7e8db77cd6f27761f8610a78c3bfe64c7d0758f17d6d931a9ff913c",
+    "paged_history.py": "9bc418d011026e30412ef776740fcd892123585ecd5514e42c51bcac69a6d51f",
+    "history_policy.py": "1902cdb482daba54c1b78cbc27805d4a50573ac9e04f07619c02551ccc447f8e"
+  },
+  "checks": [
+    {
+      "lengths": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "query_tokens": 7,
+      "policy": "bm25",
+      "passed": false,
+      "error": "RunOpApiV2:../torch_npu/csrc/framework/OpCommand.cpp:267 NPU function error: c10_npu::acl::AclrtSynchronizeStreamWithTimeout(stream), error code is 507015\n[ERROR] 2026-10-17-18:00:39 (PID:5613, Device:0, RankID:-1) ERR00100 PTA call acl api failed\n[Error]: The aicore execution is abnormal. \n        Rectify the fault based on the error information in the ascend log.\nEZ9999: Inner Error!\nEZ9999[PID: 5613] 2026-10-17-18:00:39.224.746 (EZ9999):  The error from device(chipId:3, dieId:0), serial number is 11, there is an exception of fftsplus aicore error, core id is 5, error code = 0x800000, dump info: pc start: 0x12c04fcacbf8, current: 0x12c04fcaf1d4, vec error info: 0, mte error info: 0xb8030000e7, ifu error info: 0x5b2028eb39280, ccu error info: 0xf6b0446506186604, cube error info: 0, biu error info: 0, aic error mask: 0x6500020bd00028c, para base: 0x12c100000080, aic cond: 0.\nThe extend info: errcode:(0x800000, 0, 0) errorStr: MTE accesses an invalid GM address or the cross-device memory access times out. fixp_error0 info: 0x30000e7, fixp_error1 info: 0xb8, fsmId:0, tslot:4, thread:0, ctxid:0, blk:0, sublk:0, subErrType:4.\nFor details, see the troubleshooting document on the Ascend official website. Search for the keyword \"AI Core Error\".[FUNC:PrintCoreInfo][FILE:device_error_core_proc.cc][LINE:1060]\nTraceBack (most recent call last):\n       An error occurred in the kernel task, retCode=0x26, [aicore exception].[FUNC:PreCheckTaskErr][FILE:davinci_kernel_task.cc][LINE:1262]\n       rtStreamSynchronizeWithTimeout execution failed, reason=aicore exception[FUNC:FuncErrorReason][FILE:error_message_manage.cc][LINE:69]\n"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "path": "v026_llm_base_proposer.py",
+    "url": "https://raw.githubusercontent.com/vllm-project/vllm-ascend/v0.26.0rc1/vllm_ascend/spec_decode/llm_base_proposer.py",
+    "sha256": "e3e1ff579e67f845f155c983294ae5546e6ee76ba330098d7867e870c3f9f6e4",
+    "size": 124701
+  },
+  {
+    "path": "v026_dspark_proposer.py",
+    "url": "https://raw.githubusercontent.com/vllm-project/vllm-ascend/v0.26.0rc1/vllm_ascend/spec_decode/dspark_proposer.py",
+    "sha256": "e9163996db794c5fba777ea55a5374283780a2fd3404778f5369caea76f9344f",
+    "size": 19765
+  },
+  {
+    "path": "v026_spec_utils.py",
+    "url": "https://raw.githubusercontent.com/vllm-project/vllm-ascend/v0.26.0rc1/vllm_ascend/spec_decode/utils.py",
+    "sha256": "f2b33edd54c35eb44cef435cf59d9bf0245baf480e95d1e25435400cf8103d60",
+    "size": 10406
+  }
+]

@@ -1,0 +1,90 @@
+{
+  "scope": "actual builder on CPU; full model and NPU regression are separate gates",
+  "before_sha256": "25f0e85ea44291448b8a1b91408d6e4f8c80636646b603f78dd1c3a8fdece01f",
+  "after_sha256": "cd4b86dd90f5c34f290662229494b5a34b7032efc1a25539381e728edb208e12",
+  "checks": [
+    {
+      "policy": "window",
+      "lengths": [
+        256
+      ],
+      "kv_groups": 2,
+      "passed": true
+    },
+    {
+      "policy": "window",
+      "lengths": [
+        2300
+      ],
+      "kv_groups": 2,
+      "passed": true
+    },
+    {
+      "policy": "window",
+      "lengths": [
+        4099
+      ],
+      "kv_groups": 2,
+      "passed": true
+    },
+    {
+      "policy": "window",
+      "lengths": [
+        24583
+      ],
+      "kv_groups": 2,
+      "passed": true
+    },
+    {
+      "policy": "window",
+      "lengths": [
+        256,
+        24583
+      ],
+      "kv_groups": 2,
+      "passed": true
+    },
+    {
+      "policy": "bm25",
+      "lengths": [
+        256
+      ],
+      "kv_groups": 2,
+      "passed": true
+    },
+    {
+      "policy": "bm25",
+      "lengths": [
+        2300
+      ],
+      "kv_groups": 2,
+      "passed": true
+    },
+    {
+      "policy": "bm25",
+      "lengths": [
+        4099
+      ],
+      "kv_groups": 2,
+      "passed": true
+    },
+    {
+      "policy": "bm25",
+      "lengths": [
+        24583
+      ],
+      "kv_groups": 2,
+      "passed": true
+    },
+    {
+      "policy": "bm25",
+      "lengths": [
+        256,
+        24583
+      ],
+      "kv_groups": 2,
+      "passed": true
+    }
+  ],
+  "applied": false
+}

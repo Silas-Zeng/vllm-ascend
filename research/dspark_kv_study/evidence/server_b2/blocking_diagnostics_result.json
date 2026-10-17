@@ -1,0 +1,74 @@
+{
+  "pid": 5173,
+  "status": "completed_with_failures",
+  "started_at": 1792259919.066186,
+  "steps": [
+    {
+      "name": "full_b3_q7_blocking0_repeat0",
+      "started_at": 1792259919.0683692,
+      "log": "logs/blocking_diagnostics_full_b3_q7_blocking0_repeat0.log",
+      "exit_code": 1,
+      "finished_at": 1792259933.902914
+    },
+    {
+      "name": "full_b3_q7_blocking0_repeat1",
+      "started_at": 1792259933.9045835,
+      "log": "logs/blocking_diagnostics_full_b3_q7_blocking0_repeat1.log",
+      "exit_code": 0,
+      "finished_at": 1792259948.7390769
+    },
+    {
+      "name": "full_b3_q7_blocking0_repeat2",
+      "started_at": 1792259948.7439268,
+      "log": "logs/blocking_diagnostics_full_b3_q7_blocking0_repeat2.log",
+      "exit_code": 0,
+      "finished_at": 1792259963.578293
+    },
+    {
+      "name": "full_b3_q7_blocking1_repeat0",
+      "started_at": 1792259963.5799205,
+      "log": "logs/blocking_diagnostics_full_b3_q7_blocking1_repeat0.log",
+      "exit_code": 0,
+      "finished_at": 1792259979.4152606
+    },
+    {
+      "name": "full_b3_q7_blocking1_repeat1",
+      "started_at": 1792259979.4170082,
+      "log": "logs/blocking_diagnostics_full_b3_q7_blocking1_repeat1.log",
+      "exit_code": 0,
+      "finished_at": 1792259995.803446
+    },
+    {
+      "name": "full_b3_q7_blocking1_repeat2",
+      "started_at": 1792259995.8050773,
+      "log": "logs/blocking_diagnostics_full_b3_q7_blocking1_repeat2.log",
+      "exit_code": 1,
+      "finished_at": 1792260011.4402425
+    },
+    {
+      "name": "bm25_b4_q7_blocking1_repeat0",
+      "started_at": 1792260011.4418406,
+      "log": "logs/blocking_diagnostics_bm25_b4_q7_blocking1_repeat0.log",
+      "exit_code": 1,
+      "finished_at": 1792260026.8773959
+    },
+    {
+      "name": "bm25_b4_q7_blocking1_repeat1",
+      "started_at": 1792260026.8790758,
+      "log": "logs/blocking_diagnostics_bm25_b4_q7_blocking1_repeat1.log",
+      "exit_code": 1,
+      "finished_at": 1792260043.466115
+    },
+    {
+      "name": "ar_eager_blocking_diagnostic",
+      "started_at": 1792260043.4678247,
+      "log": "logs/blocking_diagnostics_ar_eager_blocking_diagnostic.log",
+      "exit_code": 1,
+      "finished_at": 1792260093.7505455
+    }
+  ],
+  "active_step": "ar_eager_blocking_diagnostic",
+  "child_pid": 5686,
+  "child_startticks": "42161893",
+  "finished_at": 1792260093.7511575
+}

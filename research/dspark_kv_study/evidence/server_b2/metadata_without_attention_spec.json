@@ -1,0 +1,22 @@
+{
+  "root": "/data/dspark-study-20261017",
+  "name": "metadata_without_attention",
+  "source_sha256": {
+    "/data/dspark-study-20261017/study/diagnose_npu_metadata.py": "cf0294b9ab55540c3bf2367ade73b89fdfa293ed627dc5e478fadda0a80cfee5"
+  },
+  "steps": [
+    {
+      "name": "transfer_and_integer_ops",
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "/data/dspark-study-20261017/study/diagnose_npu_metadata.py",
+        "--output",
+        "/data/dspark-study-20261017/evidence/metadata_without_attention.json"
+      ],
+      "timeout_seconds": 120
+    }
+  ]
+}

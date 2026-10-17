@@ -1,9 +1,11 @@
 import copy
 import json
+import shutil
 import tempfile
 import unittest
 from pathlib import Path
 
+from plot_backend_validation import read_controls
 from plot_profile import extract_profile
 from plot_results import load_evidence
 
@@ -60,6 +62,27 @@ class EvidenceTests(unittest.TestCase):
     def test_profile_refuses_cpu_only_trace(self):
         with self.assertRaises(ValueError):
             extract_profile([])
+
+    def test_backend_controls_require_executed_cases_and_matching_sources(self):
+        evidence = Path(__file__).parent / "evidence/server_b2"
+        self.assertEqual(len(read_controls(evidence)), 8)
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            for path in evidence.glob("*_fia.json"):
+                shutil.copyfile(path, root / path.name)
+            path = root / "full_b3_q7_fia.json"
+            original = json.loads(path.read_text(encoding="utf-8"))
+            for mutation in ("unexecuted", "source", "missing_error"):
+                candidate = copy.deepcopy(original)
+                if mutation == "unexecuted":
+                    candidate["checks"] = []
+                elif mutation == "source":
+                    candidate["source_sha256"]["paged_history.py"] = "different-code"
+                else:
+                    candidate["checks"][0].pop("error")
+                path.write_text(json.dumps(candidate), encoding="utf-8")
+                with self.subTest(mutation=mutation), self.assertRaises(ValueError):
+                    read_controls(root)
 
 
 if __name__ == "__main__":

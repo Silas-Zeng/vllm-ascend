@@ -1,0 +1,41 @@
+{
+  "scope": "synthetic real paged FIA numerical validation; not full-model or latency evidence",
+  "device": "Ascend910B2",
+  "torch_npu": "2.10.0.post4",
+  "source_sha256": {
+    "validate_paged_history_npu.py": "14aa0b43b7e8db77cd6f27761f8610a78c3bfe64c7d0758f17d6d931a9ff913c",
+    "paged_history.py": "9bc418d011026e30412ef776740fcd892123585ecd5514e42c51bcac69a6d51f",
+    "history_policy.py": "1902cdb482daba54c1b78cbc27805d4a50573ac9e04f07619c02551ccc447f8e"
+  },
+  "checks": [
+    {
+      "policy": "full",
+      "input_lengths_including_queries": [
+        512,
+        16391,
+        24583
+      ],
+      "query_tokens": 7,
+      "actual_read_lengths": [
+        512,
+        16391,
+        24583
+      ],
+      "page_tokens": 128,
+      "query_heads": 8,
+      "kv_heads": 2,
+      "head_dim": 128,
+      "max_abs_error": 0.01702738367021084,
+      "atol": 0.02,
+      "rtol": 0.02,
+      "position_sha256": [
+        "5738153ec97595b1c1e4dc027f7b7fb4534f19ed2ce9f9ee712e6d34a384cde7",
+        "692659f3d2fd6e05d5c7f3c7f3f583e60ddb68db85a17a9a4ceecb2ad2a84e2b",
+        "f857ec5a9c7b7ab0839ef62ee0c5d8a39a1782d065d345fd90a9cd8b93cdb916"
+      ],
+      "full_cache_unchanged": true,
+      "absolute_slots_and_positions_unchanged": true,
+      "passed": true
+    }
+  ]
+}

@@ -26,6 +26,18 @@ class MeasurementContractTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             model_options("full", "target", None, 32768, 4, 42)
 
+    def test_sparse_and_fusion_controls_are_explicit(self):
+        config = {"local_tokens": 2048, "anchor_tokens": 128, "policy": "bm25", "cache_anchors": True}
+        options = model_options("anchors", "target", "draft", 32768, 4, 42, config, True)
+        self.assertEqual(
+            options["additional_config"],
+            {
+                "research_history_kv": config,
+                "ascend_compilation_config": {"fuse_qknorm_rope": False},
+            },
+        )
+        self.assertEqual(options["speculative_config"]["num_speculative_tokens"], 7)
+
     def test_tpot_uses_decode_interval_and_output_gaps(self):
         self.assertEqual(request_tpot_ms(2, 3, 101), 10)
         self.assertIsNone(request_tpot_ms(None, None, 512))

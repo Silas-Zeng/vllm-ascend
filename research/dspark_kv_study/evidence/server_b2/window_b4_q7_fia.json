@@ -1,0 +1,24 @@
+{
+  "scope": "synthetic real paged FIA numerical validation; not full-model or latency evidence",
+  "device": "Ascend910B2",
+  "torch_npu": "2.10.0.post4",
+  "source_sha256": {
+    "validate_paged_history_npu.py": "14aa0b43b7e8db77cd6f27761f8610a78c3bfe64c7d0758f17d6d931a9ff913c",
+    "paged_history.py": "9bc418d011026e30412ef776740fcd892123585ecd5514e42c51bcac69a6d51f",
+    "history_policy.py": "1902cdb482daba54c1b78cbc27805d4a50573ac9e04f07619c02551ccc447f8e"
+  },
+  "checks": [
+    {
+      "lengths": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "query_tokens": 7,
+      "policy": "window",
+      "passed": false,
+      "error": "Tensor-likes are not close!\n\nMismatched elements: 495 / 28672 (1.7%)\nGreatest absolute difference: 0.09292406588792801 at index (27, 1, 122) (up to 0.02 allowed)\nGreatest relative difference: 814.110107421875 at index (23, 1, 86) (up to 0.02 allowed)"
+    }
+  ]
+}

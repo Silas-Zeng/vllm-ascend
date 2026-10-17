@@ -1,0 +1,85 @@
+{
+  "scope": "individual numerical controls; not throughput or stability",
+  "records": [
+    {
+      "batch": 3,
+      "queries": 7,
+      "policy": "full",
+      "passed": false,
+      "error": "Tensor-likes are not close!\n\nMismatched elements: 3790 / 21504 (17.6%)\nGreatest absolute difference: 2.458195447921753 at index (12, 0, 17) (up to 0.02 allowed)\nGreatest relative difference: 54728.32421875 at index (12, 1, 34) (up to 0.02 allowed)",
+      "max_abs_error": null,
+      "file": "full_b3_q7_fia.json",
+      "sha256": "0ce0023fa4a79d26da6e2a86178ecb8c998ae76ab9c6954c9fa4435cff397450"
+    },
+    {
+      "batch": 3,
+      "queries": 7,
+      "policy": "window",
+      "passed": true,
+      "error": null,
+      "max_abs_error": 0.0008074939250946045,
+      "file": "window_b3_q7_fia.json",
+      "sha256": "d5761aac35b5a3a38cd2f04170f2e204c0353989ef2e9457772553e6d307d540"
+    },
+    {
+      "batch": 3,
+      "queries": 8,
+      "policy": "full",
+      "passed": false,
+      "error": "Tensor-likes are not close!\n\nMismatched elements: 256 / 24576 (1.0%)\nGreatest absolute difference: inf at index (22, 3, 33) (up to 0.02 allowed)\nGreatest relative difference: inf at index (22, 3, 33) (up to 0.02 allowed)",
+      "max_abs_error": null,
+      "file": "full_b3_q8_fia.json",
+      "sha256": "fb4bc935212d5ee2b3af7b1a92879f3b82bd8c48019c657493bda4f1fa41d17b"
+    },
+    {
+      "batch": 3,
+      "queries": 8,
+      "policy": "window",
+      "passed": false,
+      "error": "ACL stream synchronize failed, error code:507015",
+      "max_abs_error": null,
+      "file": "window_b3_q8_fia.json",
+      "sha256": "20aaba5e1cb427559b8fd391a99ca7749f4db8ede653b420bb4d69b5eeb7dc6e"
+    },
+    {
+      "batch": 4,
+      "queries": 7,
+      "policy": "window",
+      "passed": false,
+      "error": "Tensor-likes are not close!\n\nMismatched elements: 495 / 28672 (1.7%)\nGreatest absolute difference: 0.09292406588792801 at index (27, 1, 122) (up to 0.02 allowed)\nGreatest relative difference: 814.110107421875 at index (23, 1, 86) (up to 0.02 allowed)",
+      "max_abs_error": null,
+      "file": "window_b4_q7_fia.json",
+      "sha256": "16cdafd05a106efc1c8289c5abedbca2d91b25511c9808ddf861361827f220bb"
+    },
+    {
+      "batch": 4,
+      "queries": 7,
+      "policy": "bm25",
+      "passed": true,
+      "error": null,
+      "max_abs_error": 0.0010437369346618652,
+      "file": "bm25_b4_q7_fia.json",
+      "sha256": "4d0a16677e649dadc003986381eaabcc086234e8553598b02bc3d854a3d1638e"
+    },
+    {
+      "batch": 4,
+      "queries": 8,
+      "policy": "window",
+      "passed": false,
+      "error": "Tensor-likes are not close!\n\nMismatched elements: 1545 / 32768 (4.7%)\nGreatest absolute difference: 5.790751934051514 at index (25, 4, 86) (up to 0.02 allowed)\nGreatest relative difference: 8271.71875 at index (30, 4, 75) (up to 0.02 allowed)",
+      "max_abs_error": null,
+      "file": "window_b4_q8_fia.json",
+      "sha256": "765d2fb803424caecbc461e0f074cf325e4b654388dc72a91b1b0ac429ed92b8"
+    },
+    {
+      "batch": 4,
+      "queries": 8,
+      "policy": "bm25",
+      "passed": false,
+      "error": "ACL stream synchronize failed, error code:507015",
+      "max_abs_error": null,
+      "file": "bm25_b4_q8_fia.json",
+      "sha256": "b6b98953b92c5cbb2f95bceb1099ac0ae87c6b7baad1411390e55c258dd81923"
+    }
+  ]
+}

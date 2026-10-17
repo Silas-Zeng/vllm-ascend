@@ -1,0 +1,123 @@
+{
+  "pid": 6119,
+  "status": "completed_with_failures",
+  "started_at": 1792260987.4656186,
+  "steps": [
+    {
+      "name": "TND_nd0_full_repeat0",
+      "started_at": 1792260987.467412,
+      "log": "logs/fia_layout_controls_TND_nd0_full_repeat0.log",
+      "exit_code": 1,
+      "finished_at": 1792261002.3016953
+    },
+    {
+      "name": "TND_nd0_full_repeat1",
+      "started_at": 1792261002.3030303,
+      "log": "logs/fia_layout_controls_TND_nd0_full_repeat1.log",
+      "exit_code": 1,
+      "finished_at": 1792261017.137702
+    },
+    {
+      "name": "TND_nd0_bm25_repeat0",
+      "started_at": 1792261017.1390038,
+      "log": "logs/fia_layout_controls_TND_nd0_bm25_repeat0.log",
+      "exit_code": 1,
+      "finished_at": 1792261030.9720507
+    },
+    {
+      "name": "TND_nd0_bm25_repeat1",
+      "started_at": 1792261030.9733682,
+      "log": "logs/fia_layout_controls_TND_nd0_bm25_repeat1.log",
+      "exit_code": 1,
+      "finished_at": 1792261044.807103
+    },
+    {
+      "name": "TND_nd1_full_repeat0",
+      "started_at": 1792261044.808382,
+      "log": "logs/fia_layout_controls_TND_nd1_full_repeat0.log",
+      "exit_code": 0,
+      "finished_at": 1792261060.6443238
+    },
+    {
+      "name": "TND_nd1_full_repeat1",
+      "started_at": 1792261060.645595,
+      "log": "logs/fia_layout_controls_TND_nd1_full_repeat1.log",
+      "exit_code": 0,
+      "finished_at": 1792261076.4814246
+    },
+    {
+      "name": "TND_nd1_bm25_repeat0",
+      "started_at": 1792261076.482888,
+      "log": "logs/fia_layout_controls_TND_nd1_bm25_repeat0.log",
+      "exit_code": 1,
+      "finished_at": 1792261091.3179543
+    },
+    {
+      "name": "TND_nd1_bm25_repeat1",
+      "started_at": 1792261091.3211956,
+      "log": "logs/fia_layout_controls_TND_nd1_bm25_repeat1.log",
+      "exit_code": 0,
+      "finished_at": 1792261106.2058418
+    },
+    {
+      "name": "BNSD_nd0_full_repeat0",
+      "started_at": 1792261106.2071645,
+      "log": "logs/fia_layout_controls_BNSD_nd0_full_repeat0.log",
+      "exit_code": 1,
+      "finished_at": 1792261121.0428607
+    },
+    {
+      "name": "BNSD_nd0_full_repeat1",
+      "started_at": 1792261121.0441575,
+      "log": "logs/fia_layout_controls_BNSD_nd0_full_repeat1.log",
+      "exit_code": 0,
+      "finished_at": 1792261135.8793755
+    },
+    {
+      "name": "BNSD_nd0_bm25_repeat0",
+      "started_at": 1792261135.8807425,
+      "log": "logs/fia_layout_controls_BNSD_nd0_bm25_repeat0.log",
+      "exit_code": 1,
+      "finished_at": 1792261150.7661753
+    },
+    {
+      "name": "BNSD_nd0_bm25_repeat1",
+      "started_at": 1792261150.7675025,
+      "log": "logs/fia_layout_controls_BNSD_nd0_bm25_repeat1.log",
+      "exit_code": 1,
+      "finished_at": 1792261165.6525671
+    },
+    {
+      "name": "BNSD_nd1_full_repeat0",
+      "started_at": 1792261165.6539605,
+      "log": "logs/fia_layout_controls_BNSD_nd1_full_repeat0.log",
+      "exit_code": 0,
+      "finished_at": 1792261181.491193
+    },
+    {
+      "name": "BNSD_nd1_full_repeat1",
+      "started_at": 1792261181.4925458,
+      "log": "logs/fia_layout_controls_BNSD_nd1_full_repeat1.log",
+      "exit_code": 1,
+      "finished_at": 1792261196.328299
+    },
+    {
+      "name": "BNSD_nd1_bm25_repeat0",
+      "started_at": 1792261196.3296998,
+      "log": "logs/fia_layout_controls_BNSD_nd1_bm25_repeat0.log",
+      "exit_code": 0,
+      "finished_at": 1792261211.1661427
+    },
+    {
+      "name": "BNSD_nd1_bm25_repeat1",
+      "started_at": 1792261211.1675506,
+      "log": "logs/fia_layout_controls_BNSD_nd1_bm25_repeat1.log",
+      "exit_code": 1,
+      "finished_at": 1792261225.251094
+    }
+  ],
+  "active_step": "BNSD_nd1_bm25_repeat1",
+  "child_pid": 7087,
+  "child_startticks": "42278663",
+  "finished_at": 1792261225.2517006
+}

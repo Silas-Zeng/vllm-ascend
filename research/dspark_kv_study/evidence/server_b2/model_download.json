@@ -1,0 +1,36 @@
+{
+  "pid": 826,
+  "status": "complete",
+  "files": {
+    "dspark_qwen3_8b_block7/README.md": {
+      "status": "verified",
+      "downloaded_bytes": 1380,
+      "sha256": "d56bc42d94f8b5b64a8dc6d2f10dd9292685aef07187ad0400c01b9d83706916"
+    },
+    "dspark_qwen3_8b_block7/.gitattributes": {
+      "status": "verified",
+      "downloaded_bytes": 2078,
+      "sha256": "e68812cce59fdb19969eb25a12a613fa18321892c05202290873f5e4ab0e55a7"
+    },
+    "dspark_qwen3_8b_block7/config.json": {
+      "status": "verified",
+      "downloaded_bytes": 1201,
+      "sha256": "e470e70a553616f0dce8f783f42cfd25b7bd7dfdcd57ead680a0623040725611"
+    },
+    "dspark_qwen3_8b_block7/configuration.json": {
+      "status": "verified",
+      "downloaded_bytes": 64,
+      "sha256": "625c81a3527ce4f7a739854b431f380a987dc4af5e07e099b568e50e2e3b248c"
+    },
+    "dspark_qwen3_8b_block7/model.safetensors": {
+      "status": "verified",
+      "downloaded_bytes": 4742170330,
+      "sha256": "5c922d1f96c8d18dbdf005c40ea99878d9133d70eaa3be4bd1077ee5f2afc1e5"
+    }
+  },
+  "total_bytes": 4742175053,
+  "selected_models": [
+    "deepseek-ai/dspark_qwen3_8b_block7"
+  ],
+  "updated_at_utc": "2026-10-17T16:10:01.863873+00:00"
+}

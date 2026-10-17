@@ -1,0 +1,95 @@
+{
+  "pid": 3915,
+  "status": "completed_with_failures",
+  "started_at": 1792258699.0722632,
+  "steps": [
+    {
+      "name": "full_b3_q7",
+      "started_at": 1792258699.0774453,
+      "log": "logs/fia_shape_controls_full_b3_q7.log",
+      "exit_code": 1,
+      "finished_at": 1792258713.96368
+    },
+    {
+      "name": "window_b3_q7",
+      "started_at": 1792258713.965764,
+      "log": "logs/fia_shape_controls_window_b3_q7.log",
+      "exit_code": 0,
+      "finished_at": 1792258727.8507981
+    },
+    {
+      "name": "full_b3_q8",
+      "started_at": 1792258727.852765,
+      "log": "logs/fia_shape_controls_full_b3_q8.log",
+      "exit_code": 1,
+      "finished_at": 1792258743.6897929
+    },
+    {
+      "name": "window_b3_q8",
+      "started_at": 1792258743.6918457,
+      "log": "logs/fia_shape_controls_window_b3_q8.log",
+      "exit_code": 1,
+      "finished_at": 1792258760.079938
+    },
+    {
+      "name": "window_b4_q7",
+      "started_at": 1792258760.0820274,
+      "log": "logs/fia_shape_controls_window_b4_q7.log",
+      "exit_code": 1,
+      "finished_at": 1792258773.9182937
+    },
+    {
+      "name": "bm25_b4_q7",
+      "started_at": 1792258773.9204307,
+      "log": "logs/fia_shape_controls_bm25_b4_q7.log",
+      "exit_code": 0,
+      "finished_at": 1792258789.7587595
+    },
+    {
+      "name": "window_b4_q8",
+      "started_at": 1792258789.7607343,
+      "log": "logs/fia_shape_controls_window_b4_q8.log",
+      "exit_code": 1,
+      "finished_at": 1792258804.6463387
+    },
+    {
+      "name": "bm25_b4_q8",
+      "started_at": 1792258804.64835,
+      "log": "logs/fia_shape_controls_bm25_b4_q8.log",
+      "exit_code": 1,
+      "finished_at": 1792258821.4870846
+    },
+    {
+      "name": "short_c1024_ar_32_eager",
+      "started_at": 1792258821.4891284,
+      "log": "logs/fia_shape_controls_short_c1024_ar_32_eager.log",
+      "exit_code": 1,
+      "finished_at": 1792258871.5229561
+    },
+    {
+      "name": "short_c1024_full_32_eager",
+      "started_at": 1792258871.5249639,
+      "log": "logs/fia_shape_controls_short_c1024_full_32_eager.log",
+      "exit_code": 1,
+      "finished_at": 1792258871.7407854
+    },
+    {
+      "name": "long_c4096_ar_512_eager",
+      "started_at": 1792258871.7426634,
+      "log": "logs/fia_shape_controls_long_c4096_ar_512_eager.log",
+      "exit_code": 1,
+      "finished_at": 1792258925.1781626
+    },
+    {
+      "name": "long_c4096_full_512_eager",
+      "started_at": 1792258925.180253,
+      "log": "logs/fia_shape_controls_long_c4096_full_512_eager.log",
+      "exit_code": 1,
+      "finished_at": 1792258925.3960571
+    }
+  ],
+  "active_step": "long_c4096_full_512_eager",
+  "child_pid": 4888,
+  "child_startticks": "42050065",
+  "finished_at": 1792258925.3965821
+}

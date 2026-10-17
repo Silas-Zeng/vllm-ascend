@@ -1,8 +1,26 @@
-# DSpark 历史 KV 优化：实现、实测与证据边界
+# 长上下文投机解码：历史 KV、瓶颈分析与实验记录
 
-2026-10-17。本目录记录从简历中的研究设想出发，实际完成的第一阶段实验。入口按“问题 → 实现 → 正确性 → 性能 → Profiling → 下一步”组织，所有图表均由提交的原始数据生成。
+更新：2026-10-18。本目录记录从简历中的设想出发，持续实施的长上下文投机解码研究。入口按“问题 → 实现 → 正确性 → 性能 → Profiling → 下一步”组织。简历数字不是优化目标，也不作为实验结果；没有收益或验证失败的候选同样保留。
 
-**已完成的是历史锚点选择、绝对地址映射参考实现，以及真实 Ascend NPU 上的 KV 读取与 attention 组件实验。完整 DSpark 服务集成和端到端复现尚未完成。** 简历里的吞吐、TPOT、接受长度和 Draft Attention 数字均未当成实测结果使用。
+**组件实验已完成，真实分页读取适配器已经实现，完整模型正确性与端到端性能仍未通过交付门槛。** 下文已有的性能图来自第一阶段真实 NPU 组件测量，不能解释为 DSpark 模型加速。
+
+当前进展：
+
+| 阶段 | 实际证据与状态 |
+| --- | --- |
+| 组件性能与时间线 | 两轮、1440 个计时样本和 4 类图表，见下文 |
+| 新服务器推理准备 | 910B2、64GB；4×4 矩阵冒烟检查通过；Target 16 个文件和 Draft 5 个文件逐一校验，见 [环境](evidence/server_b2/runtime_probe.json)、[Target](evidence/server_b2/target_verified.json)、[Draft](evidence/server_b2/model_download.json) |
+| 历史页＋局部窗口 | [paged_history.py](paged_history.py) 实现整页直读、请求级缓存及 BM25 / uniform / sink / recent 对照；10 项逻辑测试通过 |
+| 实际 DSpark builder 接线 | 双 KV group、混合长度的 10 组 CPU 回归通过，见 [原始结果](evidence/server_b2/history_builder_qa.json)；补丁尚未晋升为模型验证通过 |
+| 真实分页 FIA | 首轮 8 组通过，第 9 组失败；保留 [全部结果](evidence/server_b2/paged_fia_initial.json) 和匹配 SHA-256 的 [当时源码](archive/fia_initial/validate_paged_history_npu.py) |
+| 模型基线 | 新镜像的 AR 在融合、图回放及 eager attention 路径暴露异常；当前不发布模型吞吐、TPOT 或接受率结论 |
+| 最小问题隔离 | 不含 attention 的基础元数据检查 40 次中 4 次块表内容错误；长度与窗口起点正常，见 [原始记录](evidence/server_b2/metadata_without_attention.json) |
+
+当前研究取舍、公式和论文参考见 [research_notes.md](research_notes.md)；部署与回归入口见 [integration.md](integration.md)；失败、修正和下一步见 [experiments.md](experiments.md)。不同设备、运行库和执行模式的结果分开记录。
+
+![真实分页后端验证结果](figures/backend_validation.png)
+
+这张图保留首批独立进程对照的全部 8 个结果。红色包括数值错误和设备异常，灰色为未测；单次绿色不证明稳定。完整 KV 对照也出现失败，因此目前不能将异常归因于历史选择。输入、错误与 SHA-256 见 [汇总](backend_validation_summary.json)，可用 `plot_backend_validation.py` 从全部原始 JSON 重新生成。
 
 ## 1. 研究问题
 
@@ -37,8 +55,8 @@ flowchart LR
 | NPU 运行时型号 | `Ascend910_9362`，可见 2 个设备，每个 64GB；实验使用逻辑设备 0 |
 | 系统 | Linux aarch64，glibc 2.31，Python 3.11.4 |
 | 软件 | CANN 9.0.0；PyTorch 2.7.1+cpu；torch-npu 2.7.1.post4 |
-| vLLM / vLLM-Ascend / Transformers | 当前服务器未安装 |
-| 模型权重 | 检查的常见缓存目录中未找到 Qwen3 / DSpark 权重 |
+| vLLM / vLLM-Ascend / Transformers | 此组件测量阶段未安装；后续模型环境另见上方进展 |
+| 模型权重 | 此组件测量未加载任何模型权重 |
 | 数据与形状 | 合成 BF16 Q/K/V；batch 1/4；历史 4096/16384/24576；8 个 query、8 头、head dimension 128 |
 | 统计 | 两轮独立进程，每路径每形状 3 次预热、30 次测量；共 1440 个计时样本 |
 
@@ -89,11 +107,13 @@ Profiling 会改变执行成本，不能用 trace 的 kernel 时间直接减去�
 
 ## 6. 复现
 
-进入本目录，先运行不依赖模型、torch 或 NPU 的语义测试：
+进入本目录，先运行不依赖模型、torch 或 NPU 的策略、证据和指标测试：
 
 ```bash
-python -m unittest discover -s . -p 'test_*.py' -v
+python -m unittest test_history_policy test_measurement_contract test_plot_evidence test_emission_timing -v
 ```
+
+分页适配器的 CPU 测试需要 PyTorch：`python test_paged_history.py -v`。完整分页 FIA 校验需要真实 NPU：`python validate_paged_history_npu.py --output evidence/paged_fia_repeat.json`。验证失败会保存已执行项及错误，不能把未执行项标为通过。
 
 在已配置好的 NPU 环境串行运行，不与其他 NPU 基准并发：
 
@@ -117,11 +137,11 @@ python plot_profile.py evidence/run_06.trace.json.gz --output figures
 | --- | --- |
 | 历史锚点 CPU 选择与绝对地址参考 | 已实现并测试 |
 | NPU 组件性能、重复测量、索引缓存消融与时间线 | 已完成 |
-| AR / Full KV / Window 的 vLLM 基线入口 | 已准备；仅配置和指标逻辑经过测试，尚未在真实模型上运行 |
-| 历史锚点接入 DSpark 的实际 attention metadata / FIA | 尚未完成 |
-| Mean acceptance length、TPOT、端到端吞吐、生成一致性 | 尚未实测 |
+| AR / Full KV / Window / Anchors 的 vLLM 实验入口 | 已实现，包括真实输出事件计时、执行模式一致性检查和失败留存 |
+| 历史锚点接入 DSpark 的实际 attention metadata / FIA | 适配器和最小隔离补丁已实现；CPU 接线通过，NPU 完整验证未通过 |
+| Mean acceptance length、TPOT、端到端吞吐、生成一致性 | 新设备尚无满足正确性门槛的模型结果，不发布加速结论 |
 | 简历中的性能数字 | 未验证，不作为成果引用 |
 
-下一步需要准备与 DSpark 版本匹配的完整推理环境及 Qwen3-8B / DSpark Block-7 权重。当前可达服务器是 CANN 9.0 的算子环境，缺少推理栈，也没有 Docker/Podman。已核查的旧版本与当前 DSpark 源码不是同一套兼容组合，不能直接混装后声称复现成功。具体接入检查与基线命令见 [integration.md](integration.md)。
+下一步先定位完整 KV、普通 AR 也会触发的 attention 异常，核对同步、输入格式与软件配对；随后完成同输入的 AR / Full / Window / Anchors 贪心回归，再进行 4K / 16K / 24K、并发 1/4、512-token 的性能与接受长度实验。只有基线正确后，才评估历史信息是否值得其准备开销。
 
-来源核对、候选变化与失败尝试见 [experiments.md](experiments.md)。本目录仅新增独立研究材料，未修改生产模型路径。
+研究补丁只允许安装到显式指定的独立运行库副本。原始软件和共享权重保持可追溯，账号密码及权重文件不进入仓库。

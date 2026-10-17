@@ -1,0 +1,927 @@
+{
+  "scope": "metadata transfer/arithmetic diagnostics, no attention or timing",
+  "torch_npu": "2.10.0.post4",
+  "script_sha256": "cf0294b9ab55540c3bf2367ade73b89fdfa293ed627dc5e478fadda0a80cfee5",
+  "checks": [
+    {
+      "transfer": "constructor",
+      "iteration": 0,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "constructor",
+      "iteration": 1,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "constructor",
+      "iteration": 2,
+      "passed": false,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "constructor",
+      "iteration": 3,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "constructor",
+      "iteration": 4,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "constructor",
+      "iteration": 5,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "constructor",
+      "iteration": 6,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "constructor",
+      "iteration": 7,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "constructor",
+      "iteration": 8,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "constructor",
+      "iteration": 9,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "constructor",
+      "iteration": 10,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "constructor",
+      "iteration": 11,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "constructor",
+      "iteration": 12,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "constructor",
+      "iteration": 13,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "constructor",
+      "iteration": 14,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "constructor",
+      "iteration": 15,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "constructor",
+      "iteration": 16,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "constructor",
+      "iteration": 17,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "constructor",
+      "iteration": 18,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "constructor",
+      "iteration": 19,
+      "passed": false,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "persistent_host",
+      "iteration": 0,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "persistent_host",
+      "iteration": 1,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "persistent_host",
+      "iteration": 2,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "persistent_host",
+      "iteration": 3,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "persistent_host",
+      "iteration": 4,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "persistent_host",
+      "iteration": 5,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "persistent_host",
+      "iteration": 6,
+      "passed": false,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "persistent_host",
+      "iteration": 7,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "persistent_host",
+      "iteration": 8,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "persistent_host",
+      "iteration": 9,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "persistent_host",
+      "iteration": 10,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "persistent_host",
+      "iteration": 11,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "persistent_host",
+      "iteration": 12,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "persistent_host",
+      "iteration": 13,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "persistent_host",
+      "iteration": 14,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "persistent_host",
+      "iteration": 15,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "persistent_host",
+      "iteration": 16,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "persistent_host",
+      "iteration": 17,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "persistent_host",
+      "iteration": 18,
+      "passed": true,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    },
+    {
+      "transfer": "persistent_host",
+      "iteration": 19,
+      "passed": false,
+      "input": [
+        512,
+        16391,
+        24583,
+        4099
+      ],
+      "starts": [
+        0,
+        112,
+        176,
+        16
+      ],
+      "lengths": [
+        512,
+        2055,
+        2055,
+        2051
+      ]
+    }
+  ]
+}

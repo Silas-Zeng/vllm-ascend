@@ -1,0 +1,14 @@
+{
+  "scope": "new 910B2 server; original package is unchanged",
+  "original_package": "/vllm-workspace/vllm-ascend/vllm_ascend",
+  "isolated_package": "/data/dspark-study-20261017/runtime/vllm_ascend",
+  "files": {
+    "spec_decode/llm_base_proposer.py": "25f0e85ea44291448b8a1b91408d6e4f8c80636646b603f78dd1c3a8fdece01f",
+    "spec_decode/dspark_proposer.py": "3c255085779423213c1c4ce5ce283350e8691e2a8a8c113ebcbb19d92a0d9515",
+    "spec_decode/utils.py": "f2b33edd54c35eb44cef435cf59d9bf0245baf480e95d1e25435400cf8103d60",
+    "attention/attention_v1.py": "4ba903ee8afb23012e78870034b1280039ccf81edb41b8e16f00e6e5bbc4c076",
+    "attention/utils.py": "d75af6df78f5e68079f9696a58779cefa364df7049c5de00ca6f225b24d7ce26"
+  },
+  "vllm_commit": "568afb3a13806beb53bb2e6bd518269357b237c0",
+  "vllm-ascend_commit": "85625bd772f27a4a13bc8e548f131af5ce3ff734"
+}
