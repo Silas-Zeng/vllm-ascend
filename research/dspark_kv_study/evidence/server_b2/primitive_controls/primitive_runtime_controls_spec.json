@@ -1,0 +1,50 @@
+{
+  "name": "primitive_runtime_controls",
+  "root": "/data/dspark-study-20261017",
+  "continue_after_failure": true,
+  "source_sha256": {
+    "/data/dspark-study-20261017/study/diagnose_npu_primitives.py": "589c8a1bc50e424969c3d6cbd89bc7e23412f7206f4ac84e2935b38f28bfc5a2",
+    "/data/dspark-study-20261017/study/diagnose_npu_gather.py": "94734cab0df6837b9110565c604e110a95524de0a57c315c7b3e32d7add4e2ef",
+    "/data/dspark-study-20261017/study/deployment/run_proot_runtime.py": "e344d761e102ef58fa48e5d63e26b284a24f8833d43c6c3c25254c624c022399"
+  },
+  "steps": [
+    {
+      "name": "native",
+      "timeout_seconds": 240,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "/data/dspark-study-20261017/study/diagnose_npu_primitives.py",
+        "--iterations",
+        "200",
+        "--output",
+        "/data/dspark-study-20261017/evidence/primitives_native.json"
+      ]
+    },
+    {
+      "name": "official_a2",
+      "timeout_seconds": 240,
+      "argv": [
+        "python3",
+        "/data/dspark-study-20261017/study/deployment/run_proot_runtime.py",
+        "--root",
+        "/data/dspark-study-20261017/candidates/official_a2",
+        "--study",
+        "/data/dspark-study-20261017",
+        "--proot",
+        "/data/dspark-study-20261017/tools/proot_540/usr/bin/proot",
+        "--proot-library-path",
+        "/data/dspark-study-20261017/tools/proot/usr/lib/aarch64-linux-gnu",
+        "--",
+        "python",
+        "/data/dspark-study-20261017/study/diagnose_npu_primitives.py",
+        "--iterations",
+        "200",
+        "--output",
+        "/data/dspark-study-20261017/evidence/primitives_official_a2.json"
+      ]
+    }
+  ]
+}

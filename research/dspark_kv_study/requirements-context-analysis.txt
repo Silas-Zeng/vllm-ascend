@@ -1,0 +1,2 @@
+-r requirements-plots.txt
+tokenizers==0.23.3

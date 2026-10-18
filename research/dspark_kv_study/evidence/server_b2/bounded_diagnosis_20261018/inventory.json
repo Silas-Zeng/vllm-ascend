@@ -1,0 +1,247 @@
+{
+  "scope": "read-only bounded diagnostic inventory",
+  "recorded_at": 1792283678.5270786,
+  "commands": {
+    "board": {
+      "argv": [
+        "npu-smi",
+        "info",
+        "-t",
+        "board",
+        "-i",
+        "3"
+      ],
+      "exit_code": 0,
+      "stdout": "\tNPU ID                         : 3\n\tProduct Name                   : IT21HMDA_Bin5\n\tModel                          : NA\n\tManufacturer                   : Huawei\n\tSerial Number                  : 102486384249\n\tSoftware Version               : 25.2.1\n\tFirmware Version               : 7.7.0.9.220\n\tCompatibility                  : UNKNOWN\n\tBoard ID                       : 0x60\n\tPCB ID                         : A\n\tBOM ID                         : 1\n\tPCIe Bus Info                  : 0000:02:00.0\n\tSlot ID                        : 3\n\tClass ID                       : NA\n\tPCI Vendor ID                  : 0x19E5\n\tPCI Device ID                  : 0xD802\n\tSubsystem Vendor ID            : 0x19E5\n\tSubsystem Device ID            : 0x3003\n\tChip Count                     : 1\n",
+      "stderr": ""
+    },
+    "health": {
+      "argv": [
+        "npu-smi",
+        "info",
+        "-t",
+        "health",
+        "-i",
+        "3",
+        "-c",
+        "0"
+      ],
+      "exit_code": 0,
+      "stdout": "\tHealth Status                  : OK\n\tError Code                     : NA\n\tError Information              : NA\n",
+      "stderr": ""
+    },
+    "usage": {
+      "argv": [
+        "npu-smi",
+        "info"
+      ],
+      "exit_code": 0,
+      "stdout": "+------------------------------------------------------------------------------------------------+\n| npu-smi 25.2.1                   Version: 25.2.1                                               |\n+---------------------------+---------------+----------------------------------------------------+\n| NPU   Name                | Health        | Power(W)    Temp(C)           Hugepages-Usage(page)|\n| Chip                      | Bus-Id        | AICore(%)   Memory-Usage(MB)  HBM-Usage(MB)        |\n+===========================+===============+====================================================+\n| 3     910B2               | OK            | 88.7        30                0    / 0             |\n| 0                         | 0000:02:00.0  | 0           0    / 0          3432 / 65536         |\n+===========================+===============+====================================================+\n+---------------------------+---------------+----------------------------------------------------+\n| NPU     Chip              | Process id    | Process name             | Process memory(MB)      |\n+===========================+===============+====================================================+\n| No running processes found in NPU 3                                                            |\n+===========================+===============+====================================================+\n",
+      "stderr": ""
+    },
+    "processes": {
+      "argv": [
+        "ps",
+        "-eo",
+        "pid,ppid,pgid,comm"
+      ],
+      "exit_code": 0,
+      "stdout": "    PID    PPID    PGID COMMAND\n      1       0       1 entrypoint.sh\n     68       1      68 sshd\n     69       1       1 jupyter-lab\n     70       1       1 tail\n  23484      68   23484 sshd\n  23495   23484   23495 python\n  23561   23495   23495 ps\n",
+      "stderr": ""
+    },
+    "pip_check": {
+      "argv": [
+        "python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 1,
+      "stdout": "affinity-sched 26.2.0.dev20260716 requires argparse, which is not installed.\nmindstudio-kpp 26.1.0 requires plotly, which is not installed.\nms-service-profiler 26.0.0 requires matplotlib, which is not installed.\nms-service-profiler 26.0.0 requires msguard, which is not installed.\nms-service-profiler 26.0.0 requires openpyxl, which is not installed.\nms-service-profiler 26.0.0 has requirement opentelemetry-exporter-otlp-proto-grpc==1.33.1, but you have opentelemetry-exporter-otlp-proto-grpc 1.44.0.\nms-service-profiler 26.0.0 has requirement opentelemetry-exporter-otlp-proto-http==1.33.1, but you have opentelemetry-exporter-otlp-proto-http 1.44.0.\nms-service-profiler 26.0.0 has requirement pandas~=2.2, but you have pandas 3.0.5.\nopencv-python-headless 5.0.0.93 has requirement numpy>=2; python_version >= \"3.9\", but you have numpy 1.26.4.\nprometheus-fastapi-instrumentator 8.1.0 has requirement starlette<2.0.0,>=1.0.0, but you have starlette 0.50.0.\nvllm 0.26.0+empty has requirement fastapi[standard]<0.137.0,>=0.133.0, but you have fastapi 0.123.10.\nvllm 0.26.0+empty has requirement starlette>=1.0.1, but you have starlette 0.50.0.\nte 0.4.0 is not supported on this platform\n",
+      "stderr": ""
+    }
+  },
+  "files": {
+    "/usr/local/Ascend/ascend-toolkit/latest/opp/version.info": {
+      "text": "Version=9.1.0\nversion_dir=cann\nrequired_package_runtime_version=\">=8.5\"\nrequired_package_ge-executor_version=\">=8.5\"\nrequired_package_metadef_version=\">=8.5\"\nrequired_package_asc-devkit_version=\">=8.5\"\nrequired_package_bisheng-compiler_version=\">=8.5\"\ntimestamp=20260720_000024864\n",
+      "sha256": "a2d6f11df384b13cc2ce88647342a05b3aebab1af0820a6a5d9815b493c5421f"
+    },
+    "/usr/local/Ascend/nnal/atb/latest/version.info": {
+      "text": "    Ascend-cann-atb : 9.1.0\n    Ascend-cann-atb Version : 9.1.0\n    Platform : aarch64\n    branch : \n    commit id : 15b2c00c320b12d6194f4b3a84a0fd528f3f8d43\n",
+      "sha256": "52a434ec6220995e7086e89dc3552fd3cf886446f84bbba28554585edc0a1cfe"
+    }
+  },
+  "environment": {
+    "ASCEND_HOME_PATH": "/usr/local/Ascend/cann-9.1.0",
+    "ASCEND_OPP_PATH": "/usr/local/Ascend/cann-9.1.0/opp",
+    "ASCEND_CUSTOM_OPP_PATH": null,
+    "ASCEND_RT_VISIBLE_DEVICES": null,
+    "ASCEND_VISIBLE_DEVICES": null,
+    "LD_LIBRARY_PATH": "/usr/local/python3.12.13/lib:/usr/local/Ascend/driver/lib64/common:/usr/local/Ascend/driver/lib64/driver:/usr/local/Ascend/driver/lib64:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/lib:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/examples:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/tests/atbopstest:/usr/local/Ascend/cann-9.1.0/lib64:/usr/local/Ascend/cann-9.1.0/lib64/plugin/opskernel:/usr/local/Ascend/cann-9.1.0/lib64/plugin/nnengine:/usr/local/Ascend/cann-9.1.0/opp/built-in/op_impl/ai_core/tbe/op_tiling/lib/linux/aarch64:/usr/local/Ascend/driver/lib64:/usr/local/Ascend/driver/lib64/common:/usr/local/Ascend/driver/lib64/driver:/usr/local/Ascend/cann-9.1.0/devlib",
+    "LD_PRELOAD": null,
+    "TASK_QUEUE_ENABLE": null,
+    "COMBINED_ENABLE": null,
+    "ASCEND_LAUNCH_BLOCKING": null,
+    "PYTORCH_NPU_ALLOC_CONF": null,
+    "PYTORCH_NO_NPU_MEMORY_CACHING": null,
+    "VLLM_USE_V2_MODEL_RUNNER": null,
+    "VLLM_USE_V1": null
+  },
+  "device_nodes": [
+    "/dev/davinci_manager",
+    "/dev/davinci3"
+  ],
+  "log_directories": {
+    "/root/ascend/log": {
+      "exists": true,
+      "recent_files": [
+        {
+          "name": "run/plog/plog-22152_20261018002217057.log",
+          "bytes": 1311
+        },
+        {
+          "name": "vllm_ascend/vllm_ascend_20261018_002305_22152.log",
+          "bytes": 14587
+        },
+        {
+          "name": "run/plog/plog-22278_20261018002312085.log",
+          "bytes": 13693
+        },
+        {
+          "name": "run/device-0/device-22278_20261018002318423.log",
+          "bytes": 9141
+        },
+        {
+          "name": "run/plog/plog-22219_20261018002240495.log",
+          "bytes": 1958
+        },
+        {
+          "name": "run/plog/plog-21772_20261018002037503.log",
+          "bytes": 1311
+        },
+        {
+          "name": "vllm_ascend/vllm_ascend_20261018_002058_21772.log",
+          "bytes": 123183
+        },
+        {
+          "name": "debug/plog/plog-21839_20261018002209040.log",
+          "bytes": 129655
+        },
+        {
+          "name": "run/plog/plog-21839_20261018002105432.log",
+          "bytes": 14215
+        },
+        {
+          "name": "run/device-0/device-21839_20261018002111712.log",
+          "bytes": 9141
+        },
+        {
+          "name": "run/plog/plog-21369_20261018000700982.log",
+          "bytes": 846
+        },
+        {
+          "name": "run/plog/plog-21305_20261018000642616.log",
+          "bytes": 33275
+        }
+      ]
+    },
+    "/var/log/npu/slog": {
+      "exists": false,
+      "recent_files": []
+    }
+  },
+  "packages": {
+    "torch": "2.10.0+cpu",
+    "torch_npu": "2.10.0.post4"
+  },
+  "loaded_libraries": [
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libacl_mdl.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libacl_mdl_impl.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libacl_mdl_impl_om2.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libacl_op_compiler.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libacl_op_executor.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libacl_op_executor_impl.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libacl_rt.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libacl_rt_impl.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libacl_tdt_channel.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libaihac_autofusion.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libaihac_codegen.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libaihac_ir.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libaihac_ir_register.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libaihac_symbolizer.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libaihac_symbolizer_af.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libascend_dump.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libascend_protobuf.so.3.13.0.0",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libascend_trace.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libascend_watchdog.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libascendalog.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libascendcl.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libdata_flow_base.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libdavinci_executor.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libdflow_runner.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libdummy_tls.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/liberror_manager.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libexe_graph.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libflow_graph.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libge_common.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libge_common_base.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libge_compiler.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libge_executor.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libge_runner.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libge_runner_v2.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libgert.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libgraph.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libgraph_af.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libgraph_base.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libgraph_base_af.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libhccl.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libhccl_alg.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libhccl_compat.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libhccl_legacy.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libhccl_plf.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libhccl_v2.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libhcomm.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libhybrid_executor.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/liblowering.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libmetadef.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libmsprofiler.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libnnopbase.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libom2_executor.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libopapi_cv.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libopapi_math.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libopapi_nn.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libopapi_oam.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libopapi_ras.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libopapi_transformer.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libopp_registry.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libplatform.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libprofapi.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libra.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libra_hdc.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libra_peer.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libregister.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/librs.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libruntime.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libruntime_common.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libtls_adp.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libtopoaddrinfo.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libtsdclient.so",
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libunified_dlog.so",
+    "/usr/local/Ascend/cann-9.1.0/opp/built-in/op_impl/ai_core/tbe/op_host/lib/linux/aarch64/libophost_comm_legacy.so",
+    "/usr/local/Ascend/cann-9.1.0/opp/built-in/op_impl/dpu/libccl_dpu.so",
+    "/usr/local/Ascend/driver/lib64/common/libc_sec.so",
+    "/usr/local/Ascend/driver/lib64/common/libmmpa.so",
+    "/usr/local/Ascend/driver/lib64/driver/libascend_hal.so",
+    "/usr/local/Ascend/nnal/atb/9.1.0/atb/cxx_abi_1/lib/libasdops.so",
+    "/usr/local/Ascend/nnal/atb/9.1.0/atb/cxx_abi_1/lib/libatb.so",
+    "/usr/local/Ascend/nnal/atb/9.1.0/atb/cxx_abi_1/lib/libatb_mixops.so",
+    "/usr/local/Ascend/nnal/atb/9.1.0/atb/cxx_abi_1/lib/liblcal.so",
+    "/usr/local/Ascend/nnal/atb/9.1.0/atb/cxx_abi_1/lib/libmki.so",
+    "/usr/local/Ascend/nnal/atb/9.1.0/atb/cxx_abi_1/lib/libtbe_adapter.so",
+    "/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/_C.cpython-312-aarch64-linux-gnu.so",
+    "/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libnpu_profiler.so",
+    "/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libop_plugin_atb.so",
+    "/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libtensorpipe.so",
+    "/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libtorch_npu.so"
+  ]
+}

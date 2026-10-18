@@ -1,0 +1,74 @@
+{
+  "pid": 24270,
+  "status": "completed_with_failures",
+  "started_at": 1792283942.0454874,
+  "steps": [
+    {
+      "name": "primitive_unset_before",
+      "started_at": 1792283942.0489066,
+      "log": "logs/bounded_queue_confirmation_20261018_primitive_unset_before.log",
+      "exit_code": 0,
+      "finished_at": 1792283954.9805727
+    },
+    {
+      "name": "ar_unset_before",
+      "started_at": 1792283954.9830582,
+      "log": "logs/bounded_queue_confirmation_20261018_ar_unset_before.log",
+      "exit_code": 0,
+      "finished_at": 1792284033.2992394
+    },
+    {
+      "name": "primitive_queue1_repeat",
+      "started_at": 1792284033.301543,
+      "log": "logs/bounded_queue_confirmation_20261018_primitive_queue1_repeat.log",
+      "exit_code": 0,
+      "finished_at": 1792284046.235304
+    },
+    {
+      "name": "ar_queue1_repeat",
+      "started_at": 1792284046.2376049,
+      "log": "logs/bounded_queue_confirmation_20261018_ar_queue1_repeat.log",
+      "exit_code": 0,
+      "finished_at": 1792284124.3540921
+    },
+    {
+      "name": "primitive_unset_after",
+      "started_at": 1792284124.356643,
+      "log": "logs/bounded_queue_confirmation_20261018_primitive_unset_after.log",
+      "exit_code": 0,
+      "finished_at": 1792284137.2897718
+    },
+    {
+      "name": "ar_unset_after",
+      "started_at": 1792284137.2921627,
+      "log": "logs/bounded_queue_confirmation_20261018_ar_unset_after.log",
+      "exit_code": 0,
+      "finished_at": 1792284214.8085318
+    },
+    {
+      "name": "primitive_queue2",
+      "started_at": 1792284214.8108978,
+      "log": "logs/bounded_queue_confirmation_20261018_primitive_queue2.log",
+      "exit_code": 0,
+      "finished_at": 1792284227.7431045
+    },
+    {
+      "name": "ar_queue2",
+      "started_at": 1792284227.7454386,
+      "log": "logs/bounded_queue_confirmation_20261018_ar_queue2.log",
+      "exit_code": -15,
+      "finished_at": 1792284408.4791634
+    },
+    {
+      "name": "dspark_queue1",
+      "started_at": 1792284408.481643,
+      "log": "logs/bounded_queue_confirmation_20261018_dspark_queue1.log",
+      "exit_code": 0,
+      "finished_at": 1792284485.8960993
+    }
+  ],
+  "active_step": "dspark_queue1",
+  "child_pid": 25815,
+  "child_startticks": "44598395",
+  "finished_at": 1792284485.8968341
+}

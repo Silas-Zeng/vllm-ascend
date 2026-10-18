@@ -1,0 +1,231 @@
+{
+  "name": "context_profile_analysis_v8_20261018",
+  "root": "/data/dspark-study-20261017",
+  "continue_after_failure": true,
+  "scope": "serial native CPU SDK analysis after NPU measurements and profiling are terminal",
+  "source_sha256": {
+    "/data/dspark-study-20261017/study/deployment/make_profile_analysis_job.py": "a40677b8fded58d6151891973742adc66ac3165fcd689699a3ce856f67638da9",
+    "/data/dspark-study-20261017/study/deployment/analyze_one_native_profile.py": "c584c9933f924cfbc76be867d8beeba5deab91600c69a54ff157714f65ebaa0a",
+    "/data/dspark-study-20261017/study/deployment/run_job.py": "eac7af4ab213eb751ead2213a1c34d9067da2538fb699dd79321c991965ae97a",
+    "/data/dspark-study-20261017/study/deployment/download_models.py": "17b432a592467e25204fc8ce77bd5b45652cefb236e0f2e31bbccf0ad8a55240",
+    "/data/dspark-study-20261017/study/deployment/run_native.sh": "ad6265e1b574c04dd239365945167812a7ab90d5e1e65fa029dd82e642ddf11f"
+  },
+  "steps": [
+    {
+      "name": "ar_c4096_b1_parse",
+      "timeout_seconds": 600,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "/data/dspark-study-20261017/study/deployment/analyze_one_native_profile.py",
+        "/data/dspark-study-20261017/evidence/context_baseline_20261018/profile_observations_v8/traces/ar_c4096_b1/ar-c4096-b1_rank0_45839_20261018054030437_ascend_pt"
+      ]
+    },
+    {
+      "name": "full_c4096_b1_parse",
+      "timeout_seconds": 600,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "/data/dspark-study-20261017/study/deployment/analyze_one_native_profile.py",
+        "/data/dspark-study-20261017/evidence/context_baseline_20261018/profile_observations_v8/traces/full_c4096_b1/full-c4096-b1_rank0_46088_20261018054209983_ascend_pt"
+      ]
+    },
+    {
+      "name": "window_c4096_b1_parse",
+      "timeout_seconds": 600,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "/data/dspark-study-20261017/study/deployment/analyze_one_native_profile.py",
+        "/data/dspark-study-20261017/evidence/context_baseline_20261018/profile_observations_v8/traces/window_c4096_b1/window-c4096-b1_rank0_46360_20261018054348164_ascend_pt"
+      ]
+    },
+    {
+      "name": "ar_c16384_b1_parse",
+      "timeout_seconds": 600,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "/data/dspark-study-20261017/study/deployment/analyze_one_native_profile.py",
+        "/data/dspark-study-20261017/evidence/context_baseline_20261018/profile_observations_v8/traces/ar_c16384_b1/ar-c16384-b1_rank0_46621_20261018054534959_ascend_pt"
+      ]
+    },
+    {
+      "name": "full_c16384_b1_parse",
+      "timeout_seconds": 600,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "/data/dspark-study-20261017/study/deployment/analyze_one_native_profile.py",
+        "/data/dspark-study-20261017/evidence/context_baseline_20261018/profile_observations_v8/traces/full_c16384_b1/full-c16384-b1_rank0_46869_20261018054725635_ascend_pt"
+      ]
+    },
+    {
+      "name": "window_c16384_b1_parse",
+      "timeout_seconds": 600,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "/data/dspark-study-20261017/study/deployment/analyze_one_native_profile.py",
+        "/data/dspark-study-20261017/evidence/context_baseline_20261018/profile_observations_v8/traces/window_c16384_b1/window-c16384-b1_rank0_47129_20261018054920482_ascend_pt"
+      ]
+    },
+    {
+      "name": "ar_c24576_b1_parse",
+      "timeout_seconds": 600,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "/data/dspark-study-20261017/study/deployment/analyze_one_native_profile.py",
+        "/data/dspark-study-20261017/evidence/context_baseline_20261018/profile_observations_v8/traces/ar_c24576_b1/ar-c24576-b1_rank0_47402_20261018055119205_ascend_pt"
+      ]
+    },
+    {
+      "name": "full_c24576_b1_parse",
+      "timeout_seconds": 600,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "/data/dspark-study-20261017/study/deployment/analyze_one_native_profile.py",
+        "/data/dspark-study-20261017/evidence/context_baseline_20261018/profile_observations_v8/traces/full_c24576_b1/full-c24576-b1_rank0_47665_20261018055320710_ascend_pt"
+      ]
+    },
+    {
+      "name": "window_c24576_b1_parse",
+      "timeout_seconds": 600,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "/data/dspark-study-20261017/study/deployment/analyze_one_native_profile.py",
+        "/data/dspark-study-20261017/evidence/context_baseline_20261018/profile_observations_v8/traces/window_c24576_b1/window-c24576-b1_rank0_47929_20261018055516235_ascend_pt"
+      ]
+    },
+    {
+      "name": "ar_c4096_b4_parse",
+      "timeout_seconds": 600,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "/data/dspark-study-20261017/study/deployment/analyze_one_native_profile.py",
+        "/data/dspark-study-20261017/evidence/context_baseline_20261018/profile_observations_v8/traces/ar_c4096_b4/ar-c4096-b4_rank0_48181_20261018055709337_ascend_pt"
+      ]
+    },
+    {
+      "name": "full_c4096_b4_parse",
+      "timeout_seconds": 600,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "/data/dspark-study-20261017/study/deployment/analyze_one_native_profile.py",
+        "/data/dspark-study-20261017/evidence/context_baseline_20261018/profile_observations_v8/traces/full_c4096_b4/full-c4096-b4_rank0_48453_20261018055903914_ascend_pt"
+      ]
+    },
+    {
+      "name": "window_c4096_b4_parse",
+      "timeout_seconds": 600,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "/data/dspark-study-20261017/study/deployment/analyze_one_native_profile.py",
+        "/data/dspark-study-20261017/evidence/context_baseline_20261018/profile_observations_v8/traces/window_c4096_b4/window-c4096-b4_rank0_48713_20261018060058064_ascend_pt"
+      ]
+    },
+    {
+      "name": "ar_c16384_b4_parse",
+      "timeout_seconds": 600,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "/data/dspark-study-20261017/study/deployment/analyze_one_native_profile.py",
+        "/data/dspark-study-20261017/evidence/context_baseline_20261018/profile_observations_v8/traces/ar_c16384_b4/ar-c16384-b4_rank0_48961_20261018060328940_ascend_pt"
+      ]
+    },
+    {
+      "name": "full_c16384_b4_parse",
+      "timeout_seconds": 600,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "/data/dspark-study-20261017/study/deployment/analyze_one_native_profile.py",
+        "/data/dspark-study-20261017/evidence/context_baseline_20261018/profile_observations_v8/traces/full_c16384_b4/full-c16384-b4_rank0_49234_20261018060602179_ascend_pt"
+      ]
+    },
+    {
+      "name": "window_c16384_b4_parse",
+      "timeout_seconds": 600,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "/data/dspark-study-20261017/study/deployment/analyze_one_native_profile.py",
+        "/data/dspark-study-20261017/evidence/context_baseline_20261018/profile_observations_v8/traces/window_c16384_b4/window-c16384-b4_rank0_49494_20261018060830209_ascend_pt"
+      ]
+    },
+    {
+      "name": "ar_c24576_b4_parse",
+      "timeout_seconds": 600,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "/data/dspark-study-20261017/study/deployment/analyze_one_native_profile.py",
+        "/data/dspark-study-20261017/evidence/context_baseline_20261018/profile_observations_v8/traces/ar_c24576_b4/ar-c24576-b4_rank0_49767_20261018061138660_ascend_pt"
+      ]
+    },
+    {
+      "name": "full_c24576_b4_parse",
+      "timeout_seconds": 600,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "/data/dspark-study-20261017/study/deployment/analyze_one_native_profile.py",
+        "/data/dspark-study-20261017/evidence/context_baseline_20261018/profile_observations_v8/traces/full_c24576_b4/full-c24576-b4_rank0_50031_20261018061444700_ascend_pt"
+      ]
+    },
+    {
+      "name": "window_c24576_b4_parse",
+      "timeout_seconds": 600,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "/data/dspark-study-20261017/study/deployment/analyze_one_native_profile.py",
+        "/data/dspark-study-20261017/evidence/context_baseline_20261018/profile_observations_v8/traces/window_c24576_b4/window-c24576-b4_rank0_50307_20261018061738823_ascend_pt"
+      ]
+    }
+  ]
+}

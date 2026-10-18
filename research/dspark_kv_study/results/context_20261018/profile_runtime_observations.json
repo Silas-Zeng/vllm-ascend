@@ -1,0 +1,150 @@
+{
+  "scope": "one separate instrumented run per configuration; warmup count and instrumentation differ from formal runs",
+  "interpretation": "wall ratios show observed differences, not isolated profiler overhead or production speed",
+  "configurations": [
+    {
+      "label": "ar_c4096_b1",
+      "wall_seconds": 8.984629892976955,
+      "wall_vs_formal_median": 1.1033404088719974,
+      "matches_native_control": true,
+      "ar_exact_requests": 1,
+      "requests": 1
+    },
+    {
+      "label": "full_c4096_b1",
+      "wall_seconds": 7.258687257010024,
+      "wall_vs_formal_median": 1.179617844204587,
+      "matches_native_control": true,
+      "ar_exact_requests": 0,
+      "requests": 1
+    },
+    {
+      "label": "window_c4096_b1",
+      "wall_seconds": 7.769585054018535,
+      "wall_vs_formal_median": 1.1748579258570508,
+      "matches_native_control": true,
+      "ar_exact_requests": 0,
+      "requests": 1
+    },
+    {
+      "label": "ar_c16384_b1",
+      "wall_seconds": 11.073369854013436,
+      "wall_vs_formal_median": 1.0806296581912567,
+      "matches_native_control": true,
+      "ar_exact_requests": 1,
+      "requests": 1
+    },
+    {
+      "label": "full_c16384_b1",
+      "wall_seconds": 9.857553629030008,
+      "wall_vs_formal_median": 1.1274514336159722,
+      "matches_native_control": true,
+      "ar_exact_requests": 1,
+      "requests": 1
+    },
+    {
+      "label": "window_c16384_b1",
+      "wall_seconds": 12.333052836998831,
+      "wall_vs_formal_median": 1.4928154520159138,
+      "matches_native_control": true,
+      "ar_exact_requests": 1,
+      "requests": 1
+    },
+    {
+      "label": "ar_c24576_b1",
+      "wall_seconds": 12.660663501999807,
+      "wall_vs_formal_median": 1.060574976609844,
+      "matches_native_control": true,
+      "ar_exact_requests": 1,
+      "requests": 1
+    },
+    {
+      "label": "full_c24576_b1",
+      "wall_seconds": 11.895894679008052,
+      "wall_vs_formal_median": 1.1484888365397177,
+      "matches_native_control": true,
+      "ar_exact_requests": 0,
+      "requests": 1
+    },
+    {
+      "label": "window_c24576_b1",
+      "wall_seconds": 10.438956128957216,
+      "wall_vs_formal_median": 1.1383564477187518,
+      "matches_native_control": true,
+      "ar_exact_requests": 0,
+      "requests": 1
+    },
+    {
+      "label": "ar_c4096_b4",
+      "wall_seconds": 11.35380752402125,
+      "wall_vs_formal_median": 1.084011494248901,
+      "matches_native_control": false,
+      "ar_exact_requests": 4,
+      "requests": 4
+    },
+    {
+      "label": "full_c4096_b4",
+      "wall_seconds": 10.177074612001888,
+      "wall_vs_formal_median": 1.1811569559456272,
+      "matches_native_control": true,
+      "ar_exact_requests": 0,
+      "requests": 4
+    },
+    {
+      "label": "window_c4096_b4",
+      "wall_seconds": 9.940247085993178,
+      "wall_vs_formal_median": 1.1398390895872053,
+      "matches_native_control": true,
+      "ar_exact_requests": 0,
+      "requests": 4
+    },
+    {
+      "label": "ar_c16384_b4",
+      "wall_seconds": 20.981602704967372,
+      "wall_vs_formal_median": 1.0361441684293413,
+      "matches_native_control": true,
+      "ar_exact_requests": 4,
+      "requests": 4
+    },
+    {
+      "label": "full_c16384_b4",
+      "wall_seconds": 17.15290584799368,
+      "wall_vs_formal_median": 1.0590214750033087,
+      "matches_native_control": true,
+      "ar_exact_requests": 0,
+      "requests": 4
+    },
+    {
+      "label": "window_c16384_b4",
+      "wall_seconds": 17.07081778201973,
+      "wall_vs_formal_median": 1.0758655601497216,
+      "matches_native_control": true,
+      "ar_exact_requests": 0,
+      "requests": 4
+    },
+    {
+      "label": "ar_c24576_b4",
+      "wall_seconds": 28.863649414968677,
+      "wall_vs_formal_median": 1.0283250216119557,
+      "matches_native_control": true,
+      "ar_exact_requests": 4,
+      "requests": 4
+    },
+    {
+      "label": "full_c24576_b4",
+      "wall_seconds": 23.634717424982227,
+      "wall_vs_formal_median": 1.0416519513935147,
+      "matches_native_control": true,
+      "ar_exact_requests": 0,
+      "requests": 4
+    },
+    {
+      "label": "window_c24576_b4",
+      "wall_seconds": 22.129802818992175,
+      "wall_vs_formal_median": 1.0630606120295412,
+      "matches_native_control": true,
+      "ar_exact_requests": 0,
+      "requests": 4
+    }
+  ]
+}

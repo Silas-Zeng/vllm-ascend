@@ -1,0 +1,59 @@
+{
+  "name": "primitive_core_limits",
+  "root": "/data/dspark-study-20261017",
+  "continue_after_failure": true,
+  "source_sha256": {
+    "/data/dspark-study-20261017/study/diagnose_npu_primitives.py": "589c8a1bc50e424969c3d6cbd89bc7e23412f7206f4ac84e2935b38f28bfc5a2",
+    "/data/dspark-study-20261017/study/diagnose_npu_gather.py": "94734cab0df6837b9110565c604e110a95524de0a57c315c7b3e32d7add4e2ef"
+  },
+  "steps": [
+    {
+      "name": "cube1_vector2",
+      "timeout_seconds": 180,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "-c",
+        "import runpy,torch,torch_npu;torch.npu.set_device(0);torch.npu.set_device_limit(0,cube_num=1,vector_num=2);print(\"limits\",torch.npu.get_device_limit(0),flush=True);runpy.run_path('/data/dspark-study-20261017/study/diagnose_npu_primitives.py',run_name=\"__main__\")",
+        "--iterations",
+        "200",
+        "--output",
+        "/data/dspark-study-20261017/evidence/primitives_cube1_vector2.json"
+      ]
+    },
+    {
+      "name": "cube4_vector8",
+      "timeout_seconds": 180,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "-c",
+        "import runpy,torch,torch_npu;torch.npu.set_device(0);torch.npu.set_device_limit(0,cube_num=4,vector_num=8);print(\"limits\",torch.npu.get_device_limit(0),flush=True);runpy.run_path('/data/dspark-study-20261017/study/diagnose_npu_primitives.py',run_name=\"__main__\")",
+        "--iterations",
+        "200",
+        "--output",
+        "/data/dspark-study-20261017/evidence/primitives_cube4_vector8.json"
+      ]
+    },
+    {
+      "name": "cube23_vector46",
+      "timeout_seconds": 180,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "-c",
+        "import runpy,torch,torch_npu;torch.npu.set_device(0);torch.npu.set_device_limit(0,cube_num=23,vector_num=46);print(\"limits\",torch.npu.get_device_limit(0),flush=True);runpy.run_path('/data/dspark-study-20261017/study/diagnose_npu_primitives.py',run_name=\"__main__\")",
+        "--iterations",
+        "200",
+        "--output",
+        "/data/dspark-study-20261017/evidence/primitives_cube23_vector46.json"
+      ]
+    }
+  ]
+}

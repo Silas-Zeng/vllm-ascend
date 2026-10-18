@@ -1,0 +1,5 @@
+{
+  "source": "https://github.com/gitleaks/gitleaks/releases/download/v8.24.2/gitleaks_8.24.2_windows_x64.zip",
+  "sha256": "cc47fdc0364964e2d346fbbcbe4cc87f34d490b2647508fb05930d0ec2fbff07",
+  "checksum_source": "https://github.com/gitleaks/gitleaks/releases/download/v8.24.2/gitleaks_8.24.2_checksums.txt"
+}

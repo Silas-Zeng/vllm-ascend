@@ -1,0 +1,24 @@
+{
+  "name": "metadata_gather_stages",
+  "root": "/data/dspark-study-20261017",
+  "source_sha256": {
+    "/data/dspark-study-20261017/study/diagnose_npu_gather.py": "94734cab0df6837b9110565c604e110a95524de0a57c315c7b3e32d7add4e2ef"
+  },
+  "steps": [
+    {
+      "name": "stages",
+      "timeout_seconds": 240,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "/data/dspark-study-20261017/study/diagnose_npu_gather.py",
+        "--iterations",
+        "30",
+        "--output",
+        "/data/dspark-study-20261017/evidence/metadata_gather_stages.json"
+      ]
+    }
+  ]
+}

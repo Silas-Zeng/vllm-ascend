@@ -1,0 +1,25 @@
+{
+  "pid": 15515,
+  "status": "completed_with_failures",
+  "started_at": 1792281009.3128219,
+  "steps": [
+    {
+      "name": "jit_off",
+      "started_at": 1792281009.313611,
+      "log": "logs/metadata_jit_controls_jit_off.log",
+      "exit_code": 1,
+      "finished_at": 1792281030.20584
+    },
+    {
+      "name": "jit_on",
+      "started_at": 1792281030.2068133,
+      "log": "logs/metadata_jit_controls_jit_on.log",
+      "exit_code": 1,
+      "finished_at": 1792281120.5087898
+    }
+  ],
+  "active_step": "jit_on",
+  "child_pid": 15590,
+  "child_startticks": "44260567",
+  "finished_at": 1792281120.5110123
+}

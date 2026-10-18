@@ -1,0 +1,122 @@
+{
+  "scope": "offline_vllm_generation_including_prefill",
+  "mode": "ar",
+  "prompt_sha256": "004df6bc9b12e8480f31269e4c66ee404d9d479c0889aaef2e75c95b27d616d6",
+  "prompt_lengths": [
+    1024
+  ],
+  "output_tokens": 32,
+  "seed": 42,
+  "concurrency": 1,
+  "stop_at_eos": false,
+  "timing_method": "generate",
+  "history_config": null,
+  "disable_qknorm_rope": true,
+  "target_eager": true,
+  "packages": {
+    "vllm": "0.26.0+empty",
+    "vllm-ascend": "0.26.0rc1",
+    "torch": "2.10.0+cpu",
+    "torch-npu": "2.10.0.post4"
+  },
+  "runner_sha256": "ecceb1f3fe893d5390140cc3619d9afa266a50f2fe1af0c8e03d843b094c47ea",
+  "proposer_sha256": "e3e1ff579e67f845f155c983294ae5546e6ee76ba330098d7867e870c3f9f6e4",
+  "target_config_sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+  "draft_config_sha256": null,
+  "runs": [
+    {
+      "iteration": 0,
+      "wall_seconds": 3.3625756049877964,
+      "output_tokens_per_second_including_prefill": 9.516514648037523,
+      "request_tpot_ms": [
+        null
+      ],
+      "observed_request_timing": null,
+      "output_token_ids": [
+        [
+          22,
+          18,
+          16,
+          17,
+          24,
+          151645,
+          271,
+          334,
+          8304,
+          14319,
+          12,
+          8304,
+          71287,
+          25,
+          56177,
+          16,
+          13,
+          3070,
+          28301,
+          1437,
+          279,
+          9760,
+          1995,
+          66963,
+          576,
+          3405,
+          17064,
+          369,
+          279,
+          13351,
+          2038,
+          369
+        ]
+      ],
+      "matches_ar_reference": null,
+      "speculative_counter_deltas": {}
+    },
+    {
+      "iteration": 1,
+      "wall_seconds": 3.3438248810125515,
+      "output_tokens_per_second_including_prefill": 9.569879146993488,
+      "request_tpot_ms": [
+        null
+      ],
+      "observed_request_timing": null,
+      "output_token_ids": [
+        [
+          22,
+          18,
+          16,
+          17,
+          24,
+          151645,
+          271,
+          334,
+          8304,
+          14319,
+          12,
+          8304,
+          71287,
+          25,
+          56177,
+          16,
+          13,
+          3070,
+          28301,
+          1437,
+          279,
+          9760,
+          1995,
+          66963,
+          576,
+          3405,
+          17064,
+          369,
+          279,
+          13351,
+          2038,
+          369
+        ]
+      ],
+      "matches_ar_reference": null,
+      "speculative_counter_deltas": {}
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "reason": "Repeated C4 AR control mismatch; unify formal measurements through native FINAL_ONLY API with internal accepted-token observation",
+  "supervisor_pid": 38069,
+  "supervisor_startticks": "45506628",
+  "active_step": "ar_c16384_b4_measure",
+  "child_pid": 38329,
+  "child_startticks": "45524861",
+  "owned_group_before": [
+    "  38329   38069   38329 Ssl  python /data/dspark-study-20261017/stages/context_baseline_v3/study/run_vllm_baseline.py --mode ar --target /model/Qwen3-8B --prompts /data/dspark-study-20261017/prompts/long/prompts_long_c16384_b4.json --output /data/dspark-study-20261017/evidence/context_baseline_20261018/formal_completed_v2/ar_c16384_b4.json --concurrency 4 --output-tokens 512 --max-model-len 32768 --max-num-batched-tokens 4096 --max-num-scheduled-tokens 4096 --chunked-prefill --async-scheduling --timing-method emission --compare-generate --warmup 10 --repeats 10",
+    "  38402   38329   38329 Rl   VLLM::EngineCore",
+    "  38406   38402   38329 S    /usr/local/python3.12.13/bin/python -c from multiprocessing.resource_tracker import main;main(39)",
+    "  38409   38402   38329 Sl   VLLM::Worker"
+  ],
+  "started_at": 1792294129.813623,
+  "finished_at": 1792294132.8266969,
+  "group_live_after": []
+}

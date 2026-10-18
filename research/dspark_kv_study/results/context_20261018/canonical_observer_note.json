@@ -1,0 +1,7 @@
+{
+  "scope": "canonical observer adds documentation after runtime freeze; no executable AST change",
+  "frozen_sha256": "28eb4a19d1023cedd15f508233073a3d113d9dabc67791267fc29d2048c0f89d",
+  "canonical_sha256": "0067a3415cd27b27a4acc651ec106557d4174948d15790a11b8f5b6466e8c761",
+  "only_docstrings_differ": true,
+  "frozen_snapshot": "sources/28eb4a19d102_study_worker_hooks.py.gz"
+}

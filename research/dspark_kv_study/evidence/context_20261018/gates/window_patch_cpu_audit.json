@@ -1,0 +1,1015 @@
+{
+  "scope": "CPU actual-builder regression; live NPU read audit and output equality still required",
+  "native_package": "/data/dspark-study-20261017/runtime/vllm_ascend",
+  "window_runtime": "/data/dspark-study-20261017/runtimes/window_baseline_v1",
+  "before_sha256": "25f0e85ea44291448b8a1b91408d6e4f8c80636646b603f78dd1c3a8fdece01f",
+  "after_sha256": "32b2eb3e883f434d39f058b06868ee0e88309d3e99b1144fa23b034b5e8ffc3e",
+  "before": [
+    {
+      "lengths": [
+        256
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        256
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        256
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        256
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2175
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2175
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2175
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2175
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2176
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2176
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2176
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2176
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2177
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2177
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2177
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2177
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2303
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 0,
+      "passed": false
+    },
+    {
+      "lengths": [
+        2303
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 1,
+      "passed": false
+    },
+    {
+      "lengths": [
+        2303
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 0,
+      "passed": false
+    },
+    {
+      "lengths": [
+        2303
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 1,
+      "passed": false
+    },
+    {
+      "lengths": [
+        2304
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 0,
+      "passed": false
+    },
+    {
+      "lengths": [
+        2304
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 1,
+      "passed": false
+    },
+    {
+      "lengths": [
+        2304
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 0,
+      "passed": false
+    },
+    {
+      "lengths": [
+        2304
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 1,
+      "passed": false
+    },
+    {
+      "lengths": [
+        4096
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 0,
+      "passed": false
+    },
+    {
+      "lengths": [
+        4096
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 1,
+      "passed": false
+    },
+    {
+      "lengths": [
+        4096
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 0,
+      "passed": false
+    },
+    {
+      "lengths": [
+        4096
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 1,
+      "passed": false
+    },
+    {
+      "lengths": [
+        16384
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 0,
+      "passed": false
+    },
+    {
+      "lengths": [
+        16384
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 1,
+      "passed": false
+    },
+    {
+      "lengths": [
+        16384
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 0,
+      "passed": false
+    },
+    {
+      "lengths": [
+        16384
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 1,
+      "passed": false
+    },
+    {
+      "lengths": [
+        24583
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 0,
+      "passed": false
+    },
+    {
+      "lengths": [
+        24583
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 1,
+      "passed": false
+    },
+    {
+      "lengths": [
+        24583
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 0,
+      "passed": false
+    },
+    {
+      "lengths": [
+        24583
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 1,
+      "passed": false
+    },
+    {
+      "lengths": [
+        256,
+        24583
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 0,
+      "passed": false
+    },
+    {
+      "lengths": [
+        256,
+        24583
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 1,
+      "passed": false
+    },
+    {
+      "lengths": [
+        256,
+        24583
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 0,
+      "passed": false
+    },
+    {
+      "lengths": [
+        256,
+        24583
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 1,
+      "passed": false
+    },
+    {
+      "lengths": [
+        4096,
+        16384,
+        24583,
+        2304
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 0,
+      "passed": false
+    },
+    {
+      "lengths": [
+        4096,
+        16384,
+        24583,
+        2304
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 1,
+      "passed": false
+    },
+    {
+      "lengths": [
+        4096,
+        16384,
+        24583,
+        2304
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 0,
+      "passed": false
+    },
+    {
+      "lengths": [
+        4096,
+        16384,
+        24583,
+        2304
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 1,
+      "passed": false
+    }
+  ],
+  "after": [
+    {
+      "lengths": [
+        256
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        256
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        256
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        256
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2175
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2175
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2175
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2175
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2176
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2176
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2176
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2176
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2177
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2177
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2177
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2177
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2303
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2303
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2303
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2303
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2304
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2304
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2304
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        2304
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        4096
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        4096
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        4096
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        4096
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        16384
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        16384
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        16384
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        16384
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        24583
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        24583
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        24583
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        24583
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        256,
+        24583
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        256,
+        24583
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        256,
+        24583
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        256,
+        24583
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        4096,
+        16384,
+        24583,
+        2304
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        4096,
+        16384,
+        24583,
+        2304
+      ],
+      "block_sizes": [
+        128,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    },
+    {
+      "lengths": [
+        4096,
+        16384,
+        24583,
+        2304
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 0,
+      "passed": true
+    },
+    {
+      "lengths": [
+        4096,
+        16384,
+        24583,
+        2304
+      ],
+      "block_sizes": [
+        64,
+        128
+      ],
+      "gid": 1,
+      "passed": true
+    }
+  ],
+  "changed_native_files": 0,
+  "changed_window_package_files": [
+    "spec_decode/llm_base_proposer.py"
+  ]
+}

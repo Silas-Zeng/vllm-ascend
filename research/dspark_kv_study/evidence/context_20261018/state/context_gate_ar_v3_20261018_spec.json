@@ -1,0 +1,60 @@
+{
+  "name": "context_gate_ar_v3_20261018",
+  "root": "/data/dspark-study-20261017",
+  "continue_after_failure": false,
+  "source_sha256": {
+    "/data/dspark-study-20261017/stages/context_baseline_v2/study/run_vllm_baseline.py": "830a08d02a27af392e7034379b1242d03da5c6472c49ed28044564f6dec57772",
+    "/data/dspark-study-20261017/stages/context_baseline_v2/study/emission_timing.py": "759fd3213d99364090efcf6599318ee1493c3fb01ad35e420e8afdac9d288bb1",
+    "/data/dspark-study-20261017/stages/context_baseline_v2/study/study_worker_hooks.py": "96045db664c635130177364eda7ed4afc89c77d88f45273362e9471300a3f134",
+    "/data/dspark-study-20261017/stages/context_baseline_v2/study/audit_draft_reads.py": "b8cb38d10213619fe33aae120c47b0b2c2b160dfb5364788f4c6c10023cb98ab",
+    "/data/dspark-study-20261017/stages/context_baseline_v2/study/run_study_stage.sh": "7063ab2b7e258c196c74ffbcccb08f2439350869675b36475f753057c7c95ced",
+    "/data/dspark-study-20261017/study/deployment/run_job.py": "eac7af4ab213eb751ead2213a1c34d9067da2538fb699dd79321c991965ae97a",
+    "/data/dspark-study-20261017/study/deployment/download_models.py": "17b432a592467e25204fc8ce77bd5b45652cefb236e0f2e31bbccf0ad8a55240",
+    "/data/dspark-study-20261017/study/deployment/run_native.sh": "ad6265e1b574c04dd239365945167812a7ab90d5e1e65fa029dd82e642ddf11f",
+    "/data/dspark-study-20261017/prompts/long/prompts_long_c4096_b1.json": "2eea55439b57bf66de8e842e5db692b25c304f3856b3bff579558d84bd508951",
+    "/data/dspark-study-20261017/runtime/vllm_ascend/spec_decode/llm_base_proposer.py": "25f0e85ea44291448b8a1b91408d6e4f8c80636646b603f78dd1c3a8fdece01f"
+  },
+  "steps": [
+    {
+      "name": "ar_emission_control",
+      "timeout_seconds": 600,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "env",
+        "TASK_QUEUE_ENABLE=1",
+        "bash",
+        "/data/dspark-study-20261017/stages/context_baseline_v2/study/run_study_stage.sh",
+        "/data/dspark-study-20261017/stages/context_baseline_v2/study",
+        "python",
+        "/data/dspark-study-20261017/stages/context_baseline_v2/study/run_vllm_baseline.py",
+        "--mode",
+        "ar",
+        "--target",
+        "/model/Qwen3-8B",
+        "--prompts",
+        "/data/dspark-study-20261017/prompts/long/prompts_long_c4096_b1.json",
+        "--output",
+        "/data/dspark-study-20261017/evidence/context_baseline_20261018/gate_ar_4k_b1_v3.json",
+        "--concurrency",
+        "1",
+        "--output-tokens",
+        "512",
+        "--max-model-len",
+        "32768",
+        "--max-num-batched-tokens",
+        "4096",
+        "--chunked-prefill",
+        "--async-scheduling",
+        "--timing-method",
+        "emission",
+        "--compare-generate",
+        "--warmup",
+        "3",
+        "--repeats",
+        "2"
+      ]
+    }
+  ]
+}

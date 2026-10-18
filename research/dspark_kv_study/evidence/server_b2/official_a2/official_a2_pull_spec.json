@@ -1,0 +1,24 @@
+{
+  "name": "official_a2_pull",
+  "root": "/data/dspark-study-20261017",
+  "source_sha256": {
+    "/data/dspark-study-20261017/study/deployment/pull_runtime.py": "41c61d4595eb7ef6fdfd87270cbd6c21274ce47e2831d7ba201bf1871459f463",
+    "/data/dspark-study-20261017/study/deployment/download_models.py": "17b432a592467e25204fc8ce77bd5b45652cefb236e0f2e31bbccf0ad8a55240"
+  },
+  "steps": [
+    {
+      "name": "download",
+      "timeout_seconds": 1800,
+      "argv": [
+        "python3",
+        "/data/dspark-study-20261017/study/deployment/pull_runtime.py",
+        "--root",
+        "/data/dspark-study-20261017/candidates/official_a2",
+        "--tag",
+        "v0.26.0rc1",
+        "--workers",
+        "3"
+      ]
+    }
+  ]
+}

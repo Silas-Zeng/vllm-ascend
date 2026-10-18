@@ -1,0 +1,19 @@
+{
+  "pid": 20538,
+  "status": "failed",
+  "started_at": 1792281683.1784353,
+  "steps": [
+    {
+      "name": "ar_1k32",
+      "started_at": 1792281683.1804688,
+      "log": "logs/official_a2_ar_smoke_ar_1k32.log",
+      "exit_code": 1,
+      "finished_at": 1792281859.7349489
+    }
+  ],
+  "active_step": "ar_1k32",
+  "child_pid": 20539,
+  "child_startticks": "44325865",
+  "error": "experiment step failed: ar_1k32",
+  "finished_at": 1792281859.735453
+}

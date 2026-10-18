@@ -1,0 +1,52 @@
+{
+  "name": "official_a2_ar_smoke",
+  "root": "/data/dspark-study-20261017",
+  "source_sha256": {
+    "/data/dspark-study-20261017/study/run_vllm_baseline.py": "ecceb1f3fe893d5390140cc3619d9afa266a50f2fe1af0c8e03d843b094c47ea",
+    "/data/dspark-study-20261017/study/emission_timing.py": "759fd3213d99364090efcf6599318ee1493c3fb01ad35e420e8afdac9d288bb1",
+    "/data/dspark-study-20261017/study/deployment/run_proot_runtime.py": "e344d761e102ef58fa48e5d63e26b284a24f8833d43c6c3c25254c624c022399",
+    "/data/dspark-study-20261017/prompts/short/prompts_c1024_b1.json": "004df6bc9b12e8480f31269e4c66ee404d9d479c0889aaef2e75c95b27d616d6",
+    "/data/dspark-study-20261017/candidates/official_a2/runtime_manifest.json": "66a647eff7092c140a3dcac6b4080a0f028929e711b22ecf89293c44704f875c"
+  },
+  "steps": [
+    {
+      "name": "ar_1k32",
+      "timeout_seconds": 480,
+      "argv": [
+        "python3",
+        "/data/dspark-study-20261017/study/deployment/run_proot_runtime.py",
+        "--root",
+        "/data/dspark-study-20261017/candidates/official_a2",
+        "--study",
+        "/data/dspark-study-20261017",
+        "--proot",
+        "/data/dspark-study-20261017/tools/proot_540/usr/bin/proot",
+        "--proot-library-path",
+        "/data/dspark-study-20261017/tools/proot/usr/lib/aarch64-linux-gnu",
+        "--",
+        "python",
+        "/data/dspark-study-20261017/study/run_vllm_baseline.py",
+        "--mode",
+        "ar",
+        "--target",
+        "/model/Qwen3-8B",
+        "--prompts",
+        "/data/dspark-study-20261017/prompts/short/prompts_c1024_b1.json",
+        "--output",
+        "/data/dspark-study-20261017/evidence/official_a2_ar_1k32.json",
+        "--concurrency",
+        "1",
+        "--output-tokens",
+        "32",
+        "--repeats",
+        "2",
+        "--warmup",
+        "1",
+        "--target-eager",
+        "--disable-qknorm-rope",
+        "--timing-method",
+        "generate"
+      ]
+    }
+  ]
+}

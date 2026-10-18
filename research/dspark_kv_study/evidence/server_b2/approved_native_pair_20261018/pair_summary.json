@@ -1,0 +1,53 @@
+{
+  "configuration": {
+    "mode": "full",
+    "prompt_lengths": [
+      1024
+    ],
+    "output_tokens": 512,
+    "concurrency": 1,
+    "disable_qknorm_rope": false,
+    "target_eager": false,
+    "packages": {
+      "vllm": "0.26.0+empty",
+      "vllm-ascend": "0.19.1rc2.dev1398+g85625bd77",
+      "torch": "2.10.0+cpu",
+      "torch-npu": "2.10.0.post4"
+    }
+  },
+  "measured_runs": [
+    {
+      "iteration": 0,
+      "wall_seconds": 6.468762255040929,
+      "offline_output_tokens_per_second_including_prefill": 79.14960850524572,
+      "request_tpot_ms": [
+        null
+      ],
+      "output_count": 512,
+      "speculative_counter_deltas": {
+        "vllm:spec_decode_num_drafts": 173,
+        "vllm:spec_decode_num_draft_tokens": 1211,
+        "vllm:spec_decode_num_accepted_tokens": 338
+      }
+    },
+    {
+      "iteration": 1,
+      "wall_seconds": 6.478308701014612,
+      "offline_output_tokens_per_second_including_prefill": 79.03297351665447,
+      "request_tpot_ms": [
+        null
+      ],
+      "output_count": 512,
+      "speculative_counter_deltas": {
+        "vllm:spec_decode_num_drafts": 173,
+        "vllm:spec_decode_num_draft_tokens": 1211,
+        "vllm:spec_decode_num_accepted_tokens": 338
+      }
+    }
+  ],
+  "repeat_output_tokens_equal": true,
+  "ar_result_exists": false,
+  "ar_speedup": null,
+  "ar_output_comparison": null,
+  "scope": "single-shape native viability pair; two DSpark repetitions only; no steady-state profile or length/concurrency matrix"
+}

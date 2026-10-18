@@ -1,0 +1,18 @@
+{
+  "pid": 15266,
+  "status": "complete",
+  "started_at": 1792280737.602843,
+  "steps": [
+    {
+      "name": "download",
+      "started_at": 1792280737.6039171,
+      "log": "logs/official_a2_pull_download.log",
+      "exit_code": 0,
+      "finished_at": 1792281058.764895
+    }
+  ],
+  "active_step": "download",
+  "child_pid": 15267,
+  "child_startticks": "44231307",
+  "finished_at": 1792281058.7671456
+}

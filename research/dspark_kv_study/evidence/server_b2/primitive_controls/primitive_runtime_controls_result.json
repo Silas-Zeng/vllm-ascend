@@ -1,0 +1,25 @@
+{
+  "pid": 19873,
+  "status": "completed_with_failures",
+  "started_at": 1792281453.631397,
+  "steps": [
+    {
+      "name": "native",
+      "started_at": 1792281453.6328523,
+      "log": "logs/primitive_runtime_controls_native.log",
+      "exit_code": 1,
+      "finished_at": 1792281470.8192954
+    },
+    {
+      "name": "official_a2",
+      "started_at": 1792281470.8204439,
+      "log": "logs/primitive_runtime_controls_official_a2.log",
+      "exit_code": 1,
+      "finished_at": 1792281496.9176672
+    }
+  ],
+  "active_step": "official_a2",
+  "child_pid": 19946,
+  "child_startticks": "44304629",
+  "finished_at": 1792281496.9181538
+}

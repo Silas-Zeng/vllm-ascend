@@ -1,0 +1,19 @@
+{
+  "pid": 38069,
+  "status": "interrupted_for_native_api_validation",
+  "started_at": 1792293490.8977954,
+  "steps": [
+    {
+      "name": "ar_c4096_b4_measure",
+      "started_at": 1792293490.9313378,
+      "log": "logs/context_formal_completion_v2_20261018_ar_c4096_b4_measure.log",
+      "exit_code": 1,
+      "finished_at": 1792293673.1209111
+    }
+  ],
+  "active_step": "ar_c16384_b4_measure",
+  "child_pid": 38329,
+  "child_startticks": "45524861",
+  "finished_at": 1792294132.8330457,
+  "interruption_audit": "state/context_formal_completion_v2_20261018_interruption_audit.json"
+}

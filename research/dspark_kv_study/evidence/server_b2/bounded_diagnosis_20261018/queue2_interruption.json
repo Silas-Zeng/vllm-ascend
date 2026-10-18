@@ -1,0 +1,9 @@
+{
+  "recorded_at": 1792284407.9686565,
+  "pid": 25542,
+  "startticks": "44580321",
+  "pgid": 25542,
+  "action": "SIGTERM to owned diagnostic child process group",
+  "reason": "explicit fatal unsupported configuration already logged; terminate parent remaining after worker init failure",
+  "not_a_performance_result": true
+}

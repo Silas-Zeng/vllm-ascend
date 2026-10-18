@@ -6,6 +6,8 @@ import unittest
 from pathlib import Path
 
 from plot_backend_validation import read_controls
+from plot_metadata_diagnostics import read_results
+from plot_primitive_diagnostics import read_results as read_primitive_results
 from plot_profile import extract_profile
 from plot_results import load_evidence
 
@@ -83,6 +85,58 @@ class EvidenceTests(unittest.TestCase):
                 path.write_text(json.dumps(candidate), encoding="utf-8")
                 with self.subTest(mutation=mutation), self.assertRaises(ValueError):
                     read_controls(root)
+
+    def test_metadata_controls_reject_incomplete_or_mislabeled_evidence(self):
+        study = Path(__file__).parent
+        evidence = study / "evidence/server_b2/metadata_stages"
+        source = study / "diagnose_npu_gather.py"
+        records = read_results(evidence, source)
+        self.assertEqual([record["failed"] for record in records], [38, 44, 41, 39])
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            for path in evidence.glob("*.json"):
+                shutil.copyfile(path, root / path.name)
+            path = root / "metadata_gather_stages.json"
+            original = json.loads(path.read_text(encoding="utf-8"))
+            for mutation in ("source", "missing", "duplicate", "false_status", "missing_stage"):
+                candidate = copy.deepcopy(original)
+                if mutation == "source":
+                    candidate["script_sha256"] = "different-source"
+                elif mutation == "missing":
+                    candidate["checks"].pop()
+                elif mutation == "duplicate":
+                    candidate["checks"][-1] = candidate["checks"][0]
+                elif mutation == "false_status":
+                    candidate["checks"][0]["passed"] = not candidate["checks"][0]["passed"]
+                else:
+                    candidate["checks"][0]["stages"].pop("table_copy")
+                path.write_text(json.dumps(candidate), encoding="utf-8")
+                with self.subTest(mutation=mutation), self.assertRaises(ValueError):
+                    read_results(root, source)
+
+    def test_primitive_controls_require_all_calls_and_the_matching_source(self):
+        study = Path(__file__).parent
+        evidence = study / "evidence/server_b2/primitive_controls"
+        operations, records = read_primitive_results(evidence, study)
+        self.assertEqual(len(operations), 7)
+        self.assertEqual(records[0]["failures"]["int32_add_tensors"], [3, 51, 99, 147, 195])
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            for name in ("native", "official_a2"):
+                shutil.copyfile(evidence / f"primitives_{name}.json", root / f"primitives_{name}.json")
+            path = root / "primitives_native.json"
+            original = json.loads(path.read_text())
+            for mutation in ("missing", "source", "false_status"):
+                candidate = copy.deepcopy(original)
+                if mutation == "missing":
+                    candidate["checks"].pop()
+                elif mutation == "source":
+                    candidate["source_sha256"]["diagnose_npu_primitives.py"] = "different-code"
+                else:
+                    candidate["checks"][0]["passed"] = not candidate["checks"][0]["passed"]
+                path.write_text(json.dumps(candidate))
+                with self.subTest(mutation=mutation), self.assertRaises(ValueError):
+                    read_primitive_results(root, study)
 
 
 if __name__ == "__main__":

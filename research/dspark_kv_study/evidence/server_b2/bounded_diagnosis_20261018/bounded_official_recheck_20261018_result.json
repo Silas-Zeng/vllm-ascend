@@ -1,0 +1,39 @@
+{
+  "pid": 27568,
+  "status": "complete",
+  "started_at": 1792285123.7646394,
+  "steps": [
+    {
+      "name": "primitive_official",
+      "started_at": 1792285123.7704637,
+      "log": "logs/bounded_official_recheck_20261018_primitive_official.log",
+      "exit_code": 0,
+      "finished_at": 1792285148.8172996
+    },
+    {
+      "name": "official_eager_1k32",
+      "started_at": 1792285148.8200727,
+      "log": "logs/bounded_official_recheck_20261018_official_eager_1k32.log",
+      "exit_code": 0,
+      "finished_at": 1792285226.0860043
+    },
+    {
+      "name": "official_graph_ar",
+      "started_at": 1792285226.0886757,
+      "log": "logs/bounded_official_recheck_20261018_official_graph_ar.log",
+      "exit_code": 0,
+      "finished_at": 1792285385.3532495
+    },
+    {
+      "name": "official_graph_dspark",
+      "started_at": 1792285385.3559651,
+      "log": "logs/bounded_official_recheck_20261018_official_graph_dspark.log",
+      "exit_code": 0,
+      "finished_at": 1792285628.3178349
+    }
+  ],
+  "active_step": "official_graph_dspark",
+  "child_pid": 28382,
+  "child_startticks": "44696082",
+  "finished_at": 1792285628.3185997
+}

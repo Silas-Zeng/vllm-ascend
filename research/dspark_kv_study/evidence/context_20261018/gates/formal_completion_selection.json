@@ -1,0 +1,122 @@
+{
+  "scope": "reuse all 11 terminal successful configurations unchanged; failed AR C4 attempt retained separately; complete remaining 7 under same frozen harness",
+  "initial_job": "context_formal_v1_20261018",
+  "completion_job": "context_formal_completion_v2_20261018",
+  "copied": [
+    {
+      "source": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_v1/ar_c4096_b1.json",
+      "destination": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_completed_v2/ar_c4096_b1.json",
+      "sha256": "6c5ade02c283d0a9aecf3db4a2c30e252e372b11c57ae387b49fe9d6b5df0b12",
+      "source_step": "ar_c4096_b1_measure"
+    },
+    {
+      "source": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_v1/full_c4096_b1.json",
+      "destination": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_completed_v2/full_c4096_b1.json",
+      "sha256": "a472e0ec41b6ea5d8717f0baae141ed9d9efdb67d73a1893f43a6cb9fcde94bf",
+      "source_step": "full_c4096_b1_measure"
+    },
+    {
+      "source": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_v1/full_c4096_b1_audit.json",
+      "destination": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_completed_v2/full_c4096_b1_audit.json",
+      "sha256": "bcf08c4e449e5a9d458735e2297f9f84d8eecaba83682aaa8232ee5182ff4a82",
+      "source_step": "full_c4096_b1_audit"
+    },
+    {
+      "source": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_v1/window_c4096_b1.json",
+      "destination": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_completed_v2/window_c4096_b1.json",
+      "sha256": "046993dc34d2feb3bcf7ecb588007541dad8d4282226a1545b61dda6ff862150",
+      "source_step": "window_c4096_b1_measure"
+    },
+    {
+      "source": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_v1/window_c4096_b1_audit.json",
+      "destination": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_completed_v2/window_c4096_b1_audit.json",
+      "sha256": "128041badebef3fb3fcee6fd00609ce44ac800ce3deacbf137cbfd48c7ce2c0c",
+      "source_step": "window_c4096_b1_audit"
+    },
+    {
+      "source": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_v1/ar_c16384_b1.json",
+      "destination": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_completed_v2/ar_c16384_b1.json",
+      "sha256": "5733724451b571151cdee1e476146c55b3850b2b67aa611d66baf5a899f6153e",
+      "source_step": "ar_c16384_b1_measure"
+    },
+    {
+      "source": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_v1/full_c16384_b1.json",
+      "destination": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_completed_v2/full_c16384_b1.json",
+      "sha256": "a9db7afe9bb567e6b3fd1bf6ebffc720d220a7732674e10bdf905b7f99d36eef",
+      "source_step": "full_c16384_b1_measure"
+    },
+    {
+      "source": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_v1/full_c16384_b1_audit.json",
+      "destination": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_completed_v2/full_c16384_b1_audit.json",
+      "sha256": "f007ada6d2ccc82a2a334ecb1baa0211adb686326bab0efc76bf005bb020c3a1",
+      "source_step": "full_c16384_b1_audit"
+    },
+    {
+      "source": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_v1/window_c16384_b1.json",
+      "destination": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_completed_v2/window_c16384_b1.json",
+      "sha256": "61b6b773287aaff4fbb986e0b3943c3cfa20351dc03d2dee24b4712027ec50e9",
+      "source_step": "window_c16384_b1_measure"
+    },
+    {
+      "source": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_v1/window_c16384_b1_audit.json",
+      "destination": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_completed_v2/window_c16384_b1_audit.json",
+      "sha256": "ff4bfa18d7447f55030ba7e9704fd7e52cf1aa002b9cae6aed2cea89a8d96de7",
+      "source_step": "window_c16384_b1_audit"
+    },
+    {
+      "source": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_v1/ar_c24576_b1.json",
+      "destination": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_completed_v2/ar_c24576_b1.json",
+      "sha256": "5fbdbc43606039a0d9de214475c9c0d30d68cbc78330981c50e5c61383c53b1f",
+      "source_step": "ar_c24576_b1_measure"
+    },
+    {
+      "source": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_v1/full_c24576_b1.json",
+      "destination": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_completed_v2/full_c24576_b1.json",
+      "sha256": "13ee9a03dac6535bc0dea3ff42124fa4896c89e0b5ca2e3b297537816340ef45",
+      "source_step": "full_c24576_b1_measure"
+    },
+    {
+      "source": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_v1/full_c24576_b1_audit.json",
+      "destination": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_completed_v2/full_c24576_b1_audit.json",
+      "sha256": "532f987bea3ec61150135b4d66d6a150913274d18c11fb3a7a3b10592f815029",
+      "source_step": "full_c24576_b1_audit"
+    },
+    {
+      "source": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_v1/window_c24576_b1.json",
+      "destination": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_completed_v2/window_c24576_b1.json",
+      "sha256": "350b17f8937383787ef5def2bb08fb6815d5f158bbb53d02e33c39b6744618e1",
+      "source_step": "window_c24576_b1_measure"
+    },
+    {
+      "source": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_v1/window_c24576_b1_audit.json",
+      "destination": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_completed_v2/window_c24576_b1_audit.json",
+      "sha256": "8dfa80c5dcd5ad1ad46dec456c05f94f2535cfa3a69830333699cfb69a7b59af",
+      "source_step": "window_c24576_b1_audit"
+    },
+    {
+      "source": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_v1/full_c4096_b4.json",
+      "destination": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_completed_v2/full_c4096_b4.json",
+      "sha256": "281f984971471f8736fd326595007d1df698ce2d13e5c37b8adb2aadf879192a",
+      "source_step": "full_c4096_b4_measure"
+    },
+    {
+      "source": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_v1/full_c4096_b4_audit.json",
+      "destination": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_completed_v2/full_c4096_b4_audit.json",
+      "sha256": "bf52a2de92014fd940640613305b9df87eb65ee5a05dd869c397c817e4727827",
+      "source_step": "full_c4096_b4_audit"
+    },
+    {
+      "source": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_v1/window_c4096_b4.json",
+      "destination": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_completed_v2/window_c4096_b4.json",
+      "sha256": "7c14b2f61c1bc412ccadf07c323c151536ad1aebf58c4ab7f98ba6ed97b25383",
+      "source_step": "window_c4096_b4_measure"
+    },
+    {
+      "source": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_v1/window_c4096_b4_audit.json",
+      "destination": "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_completed_v2/window_c4096_b4_audit.json",
+      "sha256": "9005aeff5f1c70fd1405aa02055d763daee46dbd2ff775199c023d0a719d1176",
+      "source_step": "window_c4096_b4_audit"
+    }
+  ],
+  "original_ar4k_c4_reference_sha256": "8b86246feabee344855d0db9d823bd23d0d61deed99aa6a8c53f5d49421649ad"
+}

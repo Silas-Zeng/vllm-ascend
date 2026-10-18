@@ -1,0 +1,37 @@
+[
+  {
+    "file": "primitive_runtime_controls_native.log.gz",
+    "sha256": "2488a435af4bc389de2cb5541cdd3f26abde813e97015e9f50dd6701a565affb",
+    "original_sha256": "853a48f98265327a7df962def1aacb1c9f43804839198488e1e4c65404eb83a9",
+    "bytes": 548,
+    "original_bytes": 1178
+  },
+  {
+    "file": "primitive_runtime_controls_official_a2.log.gz",
+    "sha256": "839248c3bad258870e8b18e06dfb8324d0b2d15c58857d2605f9f10c8b3343b3",
+    "original_sha256": "9b7976d7e311cdcd6b07ddfc8e94ace4eba6d814b98e7cd6390dd9256260706c",
+    "bytes": 569,
+    "original_bytes": 1212
+  },
+  {
+    "file": "primitive_core_limits_cube1_vector2.log.gz",
+    "sha256": "48abb278ff13b9b9f596eaf5284eb1dd7bb0f8765d309fd336e4fc2553b6bf52",
+    "original_sha256": "d25dee301172e5f5c427a009d05aec11954dede0d8aaf77985512180e8ed0a9e",
+    "bytes": 621,
+    "original_bytes": 1415
+  },
+  {
+    "file": "primitive_core_limits_cube4_vector8.log.gz",
+    "sha256": "f1201ea243232ad63bcdc2f107a6b922c24d6a7349d03e8f0da4a3eae1a15e42",
+    "original_sha256": "e7a930656175c817c0fca460be725a4a13a013fd256ee941f57dab8e3854fcfd",
+    "bytes": 630,
+    "original_bytes": 1415
+  },
+  {
+    "file": "primitive_core_limits_cube23_vector46.log.gz",
+    "sha256": "fb2360bd5245326fc29ecfdc0c1350f48a1cfb35505c5d4d4bb9811fb2a62f4e",
+    "original_sha256": "047fb9bbb13c6c9dd3f837a456f17f0b4468eeac3349b40a6ee9b8adb6ee38be",
+    "bytes": 630,
+    "original_bytes": 1417
+  }
+]

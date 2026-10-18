@@ -1,0 +1,27 @@
+{
+  "pid": 40678,
+  "startticks": "45759998",
+  "started_at": 1792296024.5213652,
+  "argv": [
+    "python3",
+    "/data/dspark-study-20261017/study/deployment/queue_context_profiles_v7.py",
+    "--root",
+    "/data/dspark-study-20261017",
+    "--stage",
+    "/data/dspark-study-20261017/stages/context_native_stats_v7/study",
+    "--window-runtime",
+    "/data/dspark-study-20261017/runtimes/window_baseline_v1",
+    "--output",
+    "/data/dspark-study-20261017/evidence/context_baseline_20261018/profile_native_stats_v7",
+    "--name",
+    "context_profile_native_stats_v7_20261018",
+    "--formal-name",
+    "context_formal_native_stats_v7_20261018",
+    "--reference-directory",
+    "/data/dspark-study-20261017/evidence/context_baseline_20261018/formal_native_stats_v7",
+    "--builder",
+    "/data/dspark-study-20261017/study/deployment/make_context_job_v7.py",
+    "--timing-method",
+    "native_stats"
+  ]
+}

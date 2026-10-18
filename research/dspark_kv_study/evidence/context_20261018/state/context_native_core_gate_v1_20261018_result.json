@@ -1,0 +1,19 @@
+{
+  "pid": 38729,
+  "status": "failed",
+  "started_at": 1792294180.3895636,
+  "steps": [
+    {
+      "name": "gate",
+      "started_at": 1792294180.3966475,
+      "log": "logs/context_native_core_gate_v1_20261018_gate.log",
+      "exit_code": 1,
+      "finished_at": 1792294373.8144753
+    }
+  ],
+  "active_step": "gate",
+  "child_pid": 38730,
+  "child_startticks": "45575586",
+  "error": "experiment step failed: gate",
+  "finished_at": 1792294373.815123
+}

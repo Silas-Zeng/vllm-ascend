@@ -1,0 +1,174 @@
+{
+  "created_at_utc": "2026-10-17T16:01:10.828781+00:00",
+  "source": "ModelScope",
+  "files": [
+    {
+      "model": "Qwen/Qwen3-8B",
+      "path": "Qwen3-8B/.gitattributes",
+      "url": "https://modelscope.cn/models/Qwen/Qwen3-8B/resolve/8188480f040c5f1606a1bb3556abf14b31975155/.gitattributes",
+      "revision": "8188480f040c5f1606a1bb3556abf14b31975155",
+      "bytes": 2127,
+      "sha256": "088e25d6bceaa8943f4f292006210358292349cc36e7578f80c62fce75535f46"
+    },
+    {
+      "model": "Qwen/Qwen3-8B",
+      "path": "Qwen3-8B/LICENSE",
+      "url": "https://modelscope.cn/models/Qwen/Qwen3-8B/resolve/26028140be3ee69b82b1d1450179ab71bb1121b9/LICENSE",
+      "revision": "26028140be3ee69b82b1d1450179ab71bb1121b9",
+      "bytes": 11343,
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+    },
+    {
+      "model": "Qwen/Qwen3-8B",
+      "path": "Qwen3-8B/README.md",
+      "url": "https://modelscope.cn/models/Qwen/Qwen3-8B/resolve/7a760cb9412aceb31030659c473628312c656aae/README.md",
+      "revision": "7a760cb9412aceb31030659c473628312c656aae",
+      "bytes": 16660,
+      "sha256": "0f36caaff9c2516411a7738db384606263ba653c1e63e61d72f511606164d5a6"
+    },
+    {
+      "model": "Qwen/Qwen3-8B",
+      "path": "Qwen3-8B/config.json",
+      "url": "https://modelscope.cn/models/Qwen/Qwen3-8B/resolve/8188480f040c5f1606a1bb3556abf14b31975155/config.json",
+      "revision": "8188480f040c5f1606a1bb3556abf14b31975155",
+      "bytes": 728,
+      "sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30"
+    },
+    {
+      "model": "Qwen/Qwen3-8B",
+      "path": "Qwen3-8B/configuration.json",
+      "url": "https://modelscope.cn/models/Qwen/Qwen3-8B/resolve/8188480f040c5f1606a1bb3556abf14b31975155/configuration.json",
+      "revision": "8188480f040c5f1606a1bb3556abf14b31975155",
+      "bytes": 73,
+      "sha256": "f888421726665e8a84b738eed42a64875aed79de8be7daade851ac8bf4c0cef9"
+    },
+    {
+      "model": "Qwen/Qwen3-8B",
+      "path": "Qwen3-8B/generation_config.json",
+      "url": "https://modelscope.cn/models/Qwen/Qwen3-8B/resolve/8188480f040c5f1606a1bb3556abf14b31975155/generation_config.json",
+      "revision": "8188480f040c5f1606a1bb3556abf14b31975155",
+      "bytes": 239,
+      "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2"
+    },
+    {
+      "model": "Qwen/Qwen3-8B",
+      "path": "Qwen3-8B/merges.txt",
+      "url": "https://modelscope.cn/models/Qwen/Qwen3-8B/resolve/8188480f040c5f1606a1bb3556abf14b31975155/merges.txt",
+      "revision": "8188480f040c5f1606a1bb3556abf14b31975155",
+      "bytes": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+    },
+    {
+      "model": "Qwen/Qwen3-8B",
+      "path": "Qwen3-8B/model.safetensors.index.json",
+      "url": "https://modelscope.cn/models/Qwen/Qwen3-8B/resolve/8188480f040c5f1606a1bb3556abf14b31975155/model.safetensors.index.json",
+      "revision": "8188480f040c5f1606a1bb3556abf14b31975155",
+      "bytes": 32878,
+      "sha256": "f9fdbcb91c23971c13ec5d5f2573d2349e8f61f2f049371ec699281748fdb1bc"
+    },
+    {
+      "model": "Qwen/Qwen3-8B",
+      "path": "Qwen3-8B/tokenizer.json",
+      "url": "https://modelscope.cn/models/Qwen/Qwen3-8B/resolve/8188480f040c5f1606a1bb3556abf14b31975155/tokenizer.json",
+      "revision": "8188480f040c5f1606a1bb3556abf14b31975155",
+      "bytes": 11422654,
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+    },
+    {
+      "model": "Qwen/Qwen3-8B",
+      "path": "Qwen3-8B/tokenizer_config.json",
+      "url": "https://modelscope.cn/models/Qwen/Qwen3-8B/resolve/9a8d25579640d91ddc45ce1b991ef2df939d441f/tokenizer_config.json",
+      "revision": "9a8d25579640d91ddc45ce1b991ef2df939d441f",
+      "bytes": 9732,
+      "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+    },
+    {
+      "model": "Qwen/Qwen3-8B",
+      "path": "Qwen3-8B/vocab.json",
+      "url": "https://modelscope.cn/models/Qwen/Qwen3-8B/resolve/8188480f040c5f1606a1bb3556abf14b31975155/vocab.json",
+      "revision": "8188480f040c5f1606a1bb3556abf14b31975155",
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    {
+      "model": "deepseek-ai/dspark_qwen3_8b_block7",
+      "path": "dspark_qwen3_8b_block7/.gitattributes",
+      "url": "https://modelscope.cn/models/deepseek-ai/dspark_qwen3_8b_block7/resolve/0e341e9caf11dafaa818aabe19c5fe2d912633a5/.gitattributes",
+      "revision": "0e341e9caf11dafaa818aabe19c5fe2d912633a5",
+      "bytes": 2078,
+      "sha256": "e68812cce59fdb19969eb25a12a613fa18321892c05202290873f5e4ab0e55a7"
+    },
+    {
+      "model": "deepseek-ai/dspark_qwen3_8b_block7",
+      "path": "dspark_qwen3_8b_block7/README.md",
+      "url": "https://modelscope.cn/models/deepseek-ai/dspark_qwen3_8b_block7/resolve/35934e0e85c8e9527da9aef4ea5058f6ff9f5074/README.md",
+      "revision": "35934e0e85c8e9527da9aef4ea5058f6ff9f5074",
+      "bytes": 1380,
+      "sha256": "d56bc42d94f8b5b64a8dc6d2f10dd9292685aef07187ad0400c01b9d83706916"
+    },
+    {
+      "model": "deepseek-ai/dspark_qwen3_8b_block7",
+      "path": "dspark_qwen3_8b_block7/config.json",
+      "url": "https://modelscope.cn/models/deepseek-ai/dspark_qwen3_8b_block7/resolve/0e341e9caf11dafaa818aabe19c5fe2d912633a5/config.json",
+      "revision": "0e341e9caf11dafaa818aabe19c5fe2d912633a5",
+      "bytes": 1201,
+      "sha256": "e470e70a553616f0dce8f783f42cfd25b7bd7dfdcd57ead680a0623040725611"
+    },
+    {
+      "model": "deepseek-ai/dspark_qwen3_8b_block7",
+      "path": "dspark_qwen3_8b_block7/configuration.json",
+      "url": "https://modelscope.cn/models/deepseek-ai/dspark_qwen3_8b_block7/resolve/0e341e9caf11dafaa818aabe19c5fe2d912633a5/configuration.json",
+      "revision": "0e341e9caf11dafaa818aabe19c5fe2d912633a5",
+      "bytes": 64,
+      "sha256": "625c81a3527ce4f7a739854b431f380a987dc4af5e07e099b568e50e2e3b248c"
+    },
+    {
+      "model": "Qwen/Qwen3-8B",
+      "path": "Qwen3-8B/model-00001-of-00005.safetensors",
+      "url": "https://modelscope.cn/models/Qwen/Qwen3-8B/resolve/7c9709d23bd2136dac1d6ea1fe30f4107d681cd6/model-00001-of-00005.safetensors",
+      "revision": "7c9709d23bd2136dac1d6ea1fe30f4107d681cd6",
+      "bytes": 3996250744,
+      "sha256": "31d6a825ae35f11fb85b195b4c42c146c051e446433125a215336abdf95cbf5f"
+    },
+    {
+      "model": "Qwen/Qwen3-8B",
+      "path": "Qwen3-8B/model-00002-of-00005.safetensors",
+      "url": "https://modelscope.cn/models/Qwen/Qwen3-8B/resolve/7c9709d23bd2136dac1d6ea1fe30f4107d681cd6/model-00002-of-00005.safetensors",
+      "revision": "7c9709d23bd2136dac1d6ea1fe30f4107d681cd6",
+      "bytes": 3993160032,
+      "sha256": "5991236cea6fe21f3d43cab0f0e84448734fbbe0789816202989f2ddc9d18282"
+    },
+    {
+      "model": "Qwen/Qwen3-8B",
+      "path": "Qwen3-8B/model-00003-of-00005.safetensors",
+      "url": "https://modelscope.cn/models/Qwen/Qwen3-8B/resolve/7c9709d23bd2136dac1d6ea1fe30f4107d681cd6/model-00003-of-00005.safetensors",
+      "revision": "7c9709d23bd2136dac1d6ea1fe30f4107d681cd6",
+      "bytes": 3959604768,
+      "sha256": "c5185c4794be2d8a9784d5753c9922db38df478ce11f9ed0b415b7304d896836"
+    },
+    {
+      "model": "Qwen/Qwen3-8B",
+      "path": "Qwen3-8B/model-00004-of-00005.safetensors",
+      "url": "https://modelscope.cn/models/Qwen/Qwen3-8B/resolve/7c9709d23bd2136dac1d6ea1fe30f4107d681cd6/model-00004-of-00005.safetensors",
+      "revision": "7c9709d23bd2136dac1d6ea1fe30f4107d681cd6",
+      "bytes": 3187841392,
+      "sha256": "b5ee7de71fbf17db3d5704e0c8f2bc7d005ca9e1d7ca2aeb19827b0cfcaa917a"
+    },
+    {
+      "model": "Qwen/Qwen3-8B",
+      "path": "Qwen3-8B/model-00005-of-00005.safetensors",
+      "url": "https://modelscope.cn/models/Qwen/Qwen3-8B/resolve/7c9709d23bd2136dac1d6ea1fe30f4107d681cd6/model-00005-of-00005.safetensors",
+      "revision": "7c9709d23bd2136dac1d6ea1fe30f4107d681cd6",
+      "bytes": 1244659840,
+      "sha256": "20c2d6366ab85c90786ccdd829cd2b9e7d30ef3b2ebbb998280e7e4014b542ff"
+    },
+    {
+      "model": "deepseek-ai/dspark_qwen3_8b_block7",
+      "path": "dspark_qwen3_8b_block7/model.safetensors",
+      "url": "https://modelscope.cn/models/deepseek-ai/dspark_qwen3_8b_block7/resolve/0e341e9caf11dafaa818aabe19c5fe2d912633a5/model.safetensors",
+      "revision": "0e341e9caf11dafaa818aabe19c5fe2d912633a5",
+      "bytes": 4742170330,
+      "sha256": "5c922d1f96c8d18dbdf005c40ea99878d9133d70eaa3be4bd1077ee5f2afc1e5"
+    }
+  ]
+}

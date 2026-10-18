@@ -1,0 +1,7 @@
+{
+  "status": "launched",
+  "source_sha256": "7ee04c2d2a74a600f9fae5ae0cb3cd0a65ab816d0c072dcd878d247938262f4c",
+  "started_at": 1792299125.1010096,
+  "finished_at": 1792301945.307438,
+  "launcher_output": "{\"pid\": 45747, \"startticks\": \"46352076\", \"started_at\": 1792301945.297055}\n{\"spec\": \"/data/dspark-study-20261017/state/context_profile_observations_v8_20261018_spec.json\", \"steps\": 18, \"configurations\": 18}\n"
+}

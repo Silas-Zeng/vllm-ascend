@@ -1,0 +1,32 @@
+{
+  "pid": 32063,
+  "status": "completed_with_failures",
+  "started_at": 1792288835.274887,
+  "steps": [
+    {
+      "name": "full",
+      "started_at": 1792288835.2812502,
+      "log": "logs/context_gate_dspark_v1_20261018_full.log",
+      "exit_code": 1,
+      "finished_at": 1792288966.3136976
+    },
+    {
+      "name": "native_window",
+      "started_at": 1792288966.3172338,
+      "log": "logs/context_gate_dspark_v1_20261018_native_window.log",
+      "exit_code": 0,
+      "finished_at": 1792289063.7540703
+    },
+    {
+      "name": "fixed_window",
+      "started_at": 1792289063.757595,
+      "log": "logs/context_gate_dspark_v1_20261018_fixed_window.log",
+      "exit_code": 1,
+      "finished_at": 1792289179.5193548
+    }
+  ],
+  "active_step": "fixed_window",
+  "child_pid": 32675,
+  "child_startticks": "45063922",
+  "finished_at": 1792289179.519944
+}

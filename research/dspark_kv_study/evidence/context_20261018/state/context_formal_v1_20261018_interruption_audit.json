@@ -1,0 +1,17 @@
+{
+  "reason": "C4 AR native-control mismatch; preserve completed samples and validate native API timing before rerunning",
+  "supervisor_pid": 33980,
+  "supervisor_startticks": "45154470",
+  "active_step": "ar_c16384_b4_measure",
+  "child_pid": 37486,
+  "child_startticks": "45451055",
+  "owned_group_before": [
+    "  37486   33980   37486 Ssl  python /data/dspark-study-20261017/stages/context_baseline_v3/study/run_vllm_baseline.py --mode ar --target /model/Qwen3-8B --prompts /data/dspark-study-20261017/prompts/long/prompts_long_c16384_b4.json --output /data/dspark-study-20261017/evidence/context_baseline_20261018/formal_v1/ar_c16384_b4.json --concurrency 4 --output-tokens 512 --max-model-len 32768 --max-num-batched-tokens 4096 --max-num-scheduled-tokens 4096 --chunked-prefill --async-scheduling --timing-method emission --compare-generate --warmup 10 --repeats 10",
+    "  37558   37486   37486 Rl   VLLM::EngineCore",
+    "  37562   37558   37486 S    /usr/local/python3.12.13/bin/python -c from multiprocessing.resource_tracker import main;main(39)",
+    "  37565   37558   37486 Rl   VLLM::Worker"
+  ],
+  "started_at": 1792293048.7111042,
+  "finished_at": 1792293052.728061,
+  "group_live_after": []
+}

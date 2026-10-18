@@ -1,0 +1,159 @@
+{
+  "pid": 39708,
+  "status": "interrupted_for_recorded_variation",
+  "started_at": 1792295242.7553232,
+  "steps": [
+    {
+      "name": "ar_c4096_b1_measure",
+      "started_at": 1792295242.7722552,
+      "log": "logs/context_formal_native_stats_v7_20261018_ar_c4096_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792295470.3041778
+    },
+    {
+      "name": "full_c4096_b1_measure",
+      "started_at": 1792295470.316665,
+      "log": "logs/context_formal_native_stats_v7_20261018_full_c4096_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792295664.004466
+    },
+    {
+      "name": "full_c4096_b1_audit",
+      "started_at": 1792295664.0165842,
+      "log": "logs/context_formal_native_stats_v7_20261018_full_c4096_b1_audit.log",
+      "exit_code": 0,
+      "finished_at": 1792295664.082251
+    },
+    {
+      "name": "window_c4096_b1_measure",
+      "started_at": 1792295664.093599,
+      "log": "logs/context_formal_native_stats_v7_20261018_window_c4096_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792295864.7210374
+    },
+    {
+      "name": "window_c4096_b1_audit",
+      "started_at": 1792295864.733192,
+      "log": "logs/context_formal_native_stats_v7_20261018_window_c4096_b1_audit.log",
+      "exit_code": 0,
+      "finished_at": 1792295864.7988486
+    },
+    {
+      "name": "ar_c16384_b1_measure",
+      "started_at": 1792295864.8111556,
+      "log": "logs/context_formal_native_stats_v7_20261018_ar_c16384_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792296136.7364857
+    },
+    {
+      "name": "full_c16384_b1_measure",
+      "started_at": 1792296136.7488978,
+      "log": "logs/context_formal_native_stats_v7_20261018_full_c16384_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792296384.3342621
+    },
+    {
+      "name": "full_c16384_b1_audit",
+      "started_at": 1792296384.346032,
+      "log": "logs/context_formal_native_stats_v7_20261018_full_c16384_b1_audit.log",
+      "exit_code": 0,
+      "finished_at": 1792296384.4117367
+    },
+    {
+      "name": "window_c16384_b1_measure",
+      "started_at": 1792296384.4229622,
+      "log": "logs/context_formal_native_stats_v7_20261018_window_c16384_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792296622.0514584
+    },
+    {
+      "name": "window_c16384_b1_audit",
+      "started_at": 1792296622.0633965,
+      "log": "logs/context_formal_native_stats_v7_20261018_window_c16384_b1_audit.log",
+      "exit_code": 0,
+      "finished_at": 1792296622.1291347
+    },
+    {
+      "name": "ar_c24576_b1_measure",
+      "started_at": 1792296622.1405363,
+      "log": "logs/context_formal_native_stats_v7_20261018_ar_c24576_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792296929.641942
+    },
+    {
+      "name": "full_c24576_b1_measure",
+      "started_at": 1792296929.654149,
+      "log": "logs/context_formal_native_stats_v7_20261018_full_c24576_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792297212.1381245
+    },
+    {
+      "name": "full_c24576_b1_audit",
+      "started_at": 1792297212.1496134,
+      "log": "logs/context_formal_native_stats_v7_20261018_full_c24576_b1_audit.log",
+      "exit_code": 0,
+      "finished_at": 1792297212.215345
+    },
+    {
+      "name": "window_c24576_b1_measure",
+      "started_at": 1792297212.2265248,
+      "log": "logs/context_formal_native_stats_v7_20261018_window_c24576_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792297470.1685529
+    },
+    {
+      "name": "window_c24576_b1_audit",
+      "started_at": 1792297470.1801953,
+      "log": "logs/context_formal_native_stats_v7_20261018_window_c24576_b1_audit.log",
+      "exit_code": 0,
+      "finished_at": 1792297470.2459908
+    },
+    {
+      "name": "ar_c4096_b4_measure",
+      "started_at": 1792297470.2570293,
+      "log": "logs/context_formal_native_stats_v7_20261018_ar_c4096_b4_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792297747.2202115
+    },
+    {
+      "name": "full_c4096_b4_measure",
+      "started_at": 1792297747.2323415,
+      "log": "logs/context_formal_native_stats_v7_20261018_full_c4096_b4_measure.log",
+      "exit_code": 1,
+      "finished_at": 1792297922.9667463
+    },
+    {
+      "name": "full_c4096_b4_audit",
+      "started_at": 1792297922.9785507,
+      "log": "logs/context_formal_native_stats_v7_20261018_full_c4096_b4_audit.log",
+      "exit_code": 1,
+      "finished_at": 1792297923.0443606
+    },
+    {
+      "name": "window_c4096_b4_measure",
+      "started_at": 1792297923.0555322,
+      "log": "logs/context_formal_native_stats_v7_20261018_window_c4096_b4_measure.log",
+      "exit_code": 1,
+      "finished_at": 1792298091.63481
+    },
+    {
+      "name": "window_c4096_b4_audit",
+      "started_at": 1792298091.6467817,
+      "log": "logs/context_formal_native_stats_v7_20261018_window_c4096_b4_audit.log",
+      "exit_code": 1,
+      "finished_at": 1792298091.7125762
+    },
+    {
+      "name": "ar_c16384_b4_measure",
+      "started_at": 1792298091.723729,
+      "log": "logs/context_formal_native_stats_v7_20261018_ar_c16384_b4_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792298575.1030097
+    }
+  ],
+  "active_step": "full_c16384_b4_measure",
+  "child_pid": 43095,
+  "child_startticks": "46015058",
+  "finished_at": 1792298856.9701626,
+  "interruption_audit": "state/context_formal_native_stats_v7_20261018_interruption_audit.json"
+}

@@ -1,0 +1,18 @@
+{
+  "pid": 37776,
+  "status": "complete",
+  "started_at": 1792293143.13267,
+  "steps": [
+    {
+      "name": "probe",
+      "started_at": 1792293143.1408687,
+      "log": "logs/context_native_timing_probe_v1_20261018_probe.log",
+      "exit_code": 0,
+      "finished_at": 1792293336.2046242
+    }
+  ],
+  "active_step": "probe",
+  "child_pid": 37777,
+  "child_startticks": "45471861",
+  "finished_at": 1792293336.2051773
+}

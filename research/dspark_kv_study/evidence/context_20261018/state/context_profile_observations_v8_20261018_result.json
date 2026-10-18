@@ -1,0 +1,137 @@
+{
+  "pid": 45747,
+  "status": "complete",
+  "started_at": 1792301945.382885,
+  "steps": [
+    {
+      "name": "ar_c4096_b1_measure",
+      "started_at": 1792301945.4061487,
+      "log": "logs/context_profile_observations_v8_20261018_ar_c4096_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792302044.4603255
+    },
+    {
+      "name": "full_c4096_b1_measure",
+      "started_at": 1792302044.4762428,
+      "log": "logs/context_profile_observations_v8_20261018_full_c4096_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792302142.3192194
+    },
+    {
+      "name": "window_c4096_b1_measure",
+      "started_at": 1792302142.3345928,
+      "log": "logs/context_profile_observations_v8_20261018_window_c4096_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792302240.9747677
+    },
+    {
+      "name": "ar_c16384_b1_measure",
+      "started_at": 1792302240.989611,
+      "log": "logs/context_profile_observations_v8_20261018_ar_c16384_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792302350.9929514
+    },
+    {
+      "name": "full_c16384_b1_measure",
+      "started_at": 1792302351.0077872,
+      "log": "logs/context_profile_observations_v8_20261018_full_c16384_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792302460.5123844
+    },
+    {
+      "name": "window_c16384_b1_measure",
+      "started_at": 1792302460.5292842,
+      "log": "logs/context_profile_observations_v8_20261018_window_c16384_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792302578.6033342
+    },
+    {
+      "name": "ar_c24576_b1_measure",
+      "started_at": 1792302578.6185138,
+      "log": "logs/context_profile_observations_v8_20261018_ar_c24576_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792302697.0400145
+    },
+    {
+      "name": "full_c24576_b1_measure",
+      "started_at": 1792302697.0549262,
+      "log": "logs/context_profile_observations_v8_20261018_full_c24576_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792302817.5786788
+    },
+    {
+      "name": "window_c24576_b1_measure",
+      "started_at": 1792302817.5940526,
+      "log": "logs/context_profile_observations_v8_20261018_window_c24576_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792302931.7056916
+    },
+    {
+      "name": "ar_c4096_b4_measure",
+      "started_at": 1792302931.7228444,
+      "log": "logs/context_profile_observations_v8_20261018_ar_c4096_b4_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792303045.6890993
+    },
+    {
+      "name": "full_c4096_b4_measure",
+      "started_at": 1792303045.704143,
+      "log": "logs/context_profile_observations_v8_20261018_full_c4096_b4_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792303159.1199987
+    },
+    {
+      "name": "window_c4096_b4_measure",
+      "started_at": 1792303159.1352282,
+      "log": "logs/context_profile_observations_v8_20261018_window_c4096_b4_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792303273.1509356
+    },
+    {
+      "name": "ar_c16384_b4_measure",
+      "started_at": 1792303273.1656969,
+      "log": "logs/context_profile_observations_v8_20261018_ar_c16384_b4_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792303434.8872156
+    },
+    {
+      "name": "full_c16384_b4_measure",
+      "started_at": 1792303434.902398,
+      "log": "logs/context_profile_observations_v8_20261018_full_c16384_b4_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792303584.3541045
+    },
+    {
+      "name": "window_c16384_b4_measure",
+      "started_at": 1792303584.3708506,
+      "log": "logs/context_profile_observations_v8_20261018_window_c16384_b4_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792303732.3738618
+    },
+    {
+      "name": "ar_c24576_b4_measure",
+      "started_at": 1792303732.3891423,
+      "log": "logs/context_profile_observations_v8_20261018_ar_c24576_b4_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792303932.7513804
+    },
+    {
+      "name": "full_c24576_b4_measure",
+      "started_at": 1792303932.7662752,
+      "log": "logs/context_profile_observations_v8_20261018_full_c24576_b4_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792304113.4090872
+    },
+    {
+      "name": "window_c24576_b4_measure",
+      "started_at": 1792304113.4243326,
+      "log": "logs/context_profile_observations_v8_20261018_window_c24576_b4_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792304286.0066009
+    }
+  ],
+  "active_step": "window_c24576_b4_measure",
+  "child_pid": 50228,
+  "child_startticks": "46568889",
+  "finished_at": 1792304286.007376
+}

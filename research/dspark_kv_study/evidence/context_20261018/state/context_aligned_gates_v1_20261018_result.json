@@ -1,0 +1,25 @@
+{
+  "pid": 33327,
+  "status": "complete",
+  "started_at": 1792289373.865082,
+  "steps": [
+    {
+      "name": "aligned_full",
+      "started_at": 1792289373.871421,
+      "log": "logs/context_aligned_gates_v1_20261018_aligned_full.log",
+      "exit_code": 0,
+      "finished_at": 1792289498.5454264
+    },
+    {
+      "name": "aligned_window",
+      "started_at": 1792289498.5490403,
+      "log": "logs/context_aligned_gates_v1_20261018_aligned_window.log",
+      "exit_code": 0,
+      "finished_at": 1792289628.2785478
+    }
+  ],
+  "active_step": "aligned_window",
+  "child_pid": 33650,
+  "child_startticks": "45107401",
+  "finished_at": 1792289628.2791352
+}

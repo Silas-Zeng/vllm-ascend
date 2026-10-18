@@ -1,0 +1,42 @@
+{
+  "name": "metadata_jit_controls",
+  "root": "/data/dspark-study-20261017",
+  "continue_after_failure": true,
+  "source_sha256": {
+    "/data/dspark-study-20261017/study/diagnose_npu_gather.py": "94734cab0df6837b9110565c604e110a95524de0a57c315c7b3e32d7add4e2ef"
+  },
+  "steps": [
+    {
+      "name": "jit_off",
+      "timeout_seconds": 240,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "-c",
+        "import runpy,torch,torch_npu;torch.npu.set_compile_mode(jit_compile=False);print(\"jit_compile_false\",torch.npu.is_jit_compile_false(),flush=True);runpy.run_path('/data/dspark-study-20261017/study/diagnose_npu_gather.py',run_name=\"__main__\")",
+        "--iterations",
+        "30",
+        "--output",
+        "/data/dspark-study-20261017/evidence/metadata_jit_off.json"
+      ]
+    },
+    {
+      "name": "jit_on",
+      "timeout_seconds": 240,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "-c",
+        "import runpy,torch,torch_npu;torch.npu.set_compile_mode(jit_compile=True);print(\"jit_compile_false\",torch.npu.is_jit_compile_false(),flush=True);runpy.run_path('/data/dspark-study-20261017/study/diagnose_npu_gather.py',run_name=\"__main__\")",
+        "--iterations",
+        "30",
+        "--output",
+        "/data/dspark-study-20261017/evidence/metadata_jit_on.json"
+      ]
+    }
+  ]
+}

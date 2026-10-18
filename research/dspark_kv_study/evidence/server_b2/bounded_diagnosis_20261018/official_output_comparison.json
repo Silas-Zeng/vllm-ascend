@@ -1,0 +1,32 @@
+{
+  "scope": "official A2 PRoot output correctness only; timings excluded from native performance",
+  "reference": "ar_queue1.json",
+  "comparisons": [
+    {
+      "file": "official_graph_ar.json",
+      "sha256": "715f9b02b0ca08e3cb6de6d5f4dcb2941b82a2934a7ca619120134370d4c1364",
+      "measured_outputs": 2,
+      "all_512": true,
+      "all_match_native_ar": true
+    },
+    {
+      "file": "official_graph_dspark.json",
+      "sha256": "9308b0ae0de150c37a6a428e7fe6a45f3181a0b6fd2d9d7a058b8fb843248daf",
+      "measured_outputs": 2,
+      "all_512": true,
+      "all_match_native_ar": true
+    }
+  ],
+  "different_prompt_short_eager": {
+    "file": "official_eager_1k32_recheck.json",
+    "output_lengths": [
+      [
+        32
+      ],
+      [
+        32
+      ]
+    ],
+    "repeats_identical": true
+  }
+}

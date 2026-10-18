@@ -1,0 +1,39 @@
+{
+  "pid": 23613,
+  "status": "complete",
+  "started_at": 1792283755.2535882,
+  "steps": [
+    {
+      "name": "primitive_queue0",
+      "started_at": 1792283755.2591312,
+      "log": "logs/bounded_task_queue_20261018_primitive_queue0.log",
+      "exit_code": 0,
+      "finished_at": 1792283768.7419956
+    },
+    {
+      "name": "primitive_queue1",
+      "started_at": 1792283768.7443955,
+      "log": "logs/bounded_task_queue_20261018_primitive_queue1.log",
+      "exit_code": 0,
+      "finished_at": 1792283781.6266267
+    },
+    {
+      "name": "primitive_queue2",
+      "started_at": 1792283781.628903,
+      "log": "logs/bounded_task_queue_20261018_primitive_queue2.log",
+      "exit_code": 0,
+      "finished_at": 1792283794.5613787
+    },
+    {
+      "name": "ar_queue1",
+      "started_at": 1792283794.5637426,
+      "log": "logs/bounded_task_queue_20261018_ar_queue1.log",
+      "exit_code": 0,
+      "finished_at": 1792283872.2307115
+    }
+  ],
+  "active_step": "ar_queue1",
+  "child_pid": 23968,
+  "child_startticks": "44537003",
+  "finished_at": 1792283872.2315392
+}

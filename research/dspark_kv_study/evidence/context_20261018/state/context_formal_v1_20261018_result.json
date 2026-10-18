@@ -1,0 +1,152 @@
+{
+  "pid": 33980,
+  "status": "interrupted_for_measurement_validation",
+  "started_at": 1792289969.3186514,
+  "steps": [
+    {
+      "name": "ar_c4096_b1_measure",
+      "started_at": 1792289969.3329973,
+      "log": "logs/context_formal_v1_20261018_ar_c4096_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792290195.1888075
+    },
+    {
+      "name": "full_c4096_b1_measure",
+      "started_at": 1792290195.1987906,
+      "log": "logs/context_formal_v1_20261018_full_c4096_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792290380.5026147
+    },
+    {
+      "name": "full_c4096_b1_audit",
+      "started_at": 1792290380.5130038,
+      "log": "logs/context_formal_v1_20261018_full_c4096_b1_audit.log",
+      "exit_code": 0,
+      "finished_at": 1792290380.5785851
+    },
+    {
+      "name": "window_c4096_b1_measure",
+      "started_at": 1792290380.5879362,
+      "log": "logs/context_formal_v1_20261018_window_c4096_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792290573.593612
+    },
+    {
+      "name": "window_c4096_b1_audit",
+      "started_at": 1792290573.603483,
+      "log": "logs/context_formal_v1_20261018_window_c4096_b1_audit.log",
+      "exit_code": 0,
+      "finished_at": 1792290573.6690483
+    },
+    {
+      "name": "ar_c16384_b1_measure",
+      "started_at": 1792290573.678341,
+      "log": "logs/context_formal_v1_20261018_ar_c16384_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792290845.8469057
+    },
+    {
+      "name": "full_c16384_b1_measure",
+      "started_at": 1792290845.8570151,
+      "log": "logs/context_formal_v1_20261018_full_c16384_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792291090.4008687
+    },
+    {
+      "name": "full_c16384_b1_audit",
+      "started_at": 1792291090.4109418,
+      "log": "logs/context_formal_v1_20261018_full_c16384_b1_audit.log",
+      "exit_code": 0,
+      "finished_at": 1792291090.4765828
+    },
+    {
+      "name": "window_c16384_b1_measure",
+      "started_at": 1792291090.485962,
+      "log": "logs/context_formal_v1_20261018_window_c16384_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792291325.4651399
+    },
+    {
+      "name": "window_c16384_b1_audit",
+      "started_at": 1792291325.475396,
+      "log": "logs/context_formal_v1_20261018_window_c16384_b1_audit.log",
+      "exit_code": 0,
+      "finished_at": 1792291325.5714965
+    },
+    {
+      "name": "ar_c24576_b1_measure",
+      "started_at": 1792291325.581392,
+      "log": "logs/context_formal_v1_20261018_ar_c24576_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792291631.8824234
+    },
+    {
+      "name": "full_c24576_b1_measure",
+      "started_at": 1792291631.8921938,
+      "log": "logs/context_formal_v1_20261018_full_c24576_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792291908.0660138
+    },
+    {
+      "name": "full_c24576_b1_audit",
+      "started_at": 1792291908.0762975,
+      "log": "logs/context_formal_v1_20261018_full_c24576_b1_audit.log",
+      "exit_code": 0,
+      "finished_at": 1792291908.1421058
+    },
+    {
+      "name": "window_c24576_b1_measure",
+      "started_at": 1792291908.151845,
+      "log": "logs/context_formal_v1_20261018_window_c24576_b1_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792292161.9959133
+    },
+    {
+      "name": "window_c24576_b1_audit",
+      "started_at": 1792292162.0056887,
+      "log": "logs/context_formal_v1_20261018_window_c24576_b1_audit.log",
+      "exit_code": 0,
+      "finished_at": 1792292162.0714078
+    },
+    {
+      "name": "ar_c4096_b4_measure",
+      "started_at": 1792292162.0809846,
+      "log": "logs/context_formal_v1_20261018_ar_c4096_b4_measure.log",
+      "exit_code": 1,
+      "finished_at": 1792292379.1729748
+    },
+    {
+      "name": "full_c4096_b4_measure",
+      "started_at": 1792292379.1831546,
+      "log": "logs/context_formal_v1_20261018_full_c4096_b4_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792292658.6447299
+    },
+    {
+      "name": "full_c4096_b4_audit",
+      "started_at": 1792292658.6546686,
+      "log": "logs/context_formal_v1_20261018_full_c4096_b4_audit.log",
+      "exit_code": 0,
+      "finished_at": 1792292658.7203975
+    },
+    {
+      "name": "window_c4096_b4_measure",
+      "started_at": 1792292658.729963,
+      "log": "logs/context_formal_v1_20261018_window_c4096_b4_measure.log",
+      "exit_code": 0,
+      "finished_at": 1792292935.0019822
+    },
+    {
+      "name": "window_c4096_b4_audit",
+      "started_at": 1792292935.012075,
+      "log": "logs/context_formal_v1_20261018_window_c4096_b4_audit.log",
+      "exit_code": 0,
+      "finished_at": 1792292935.0779521
+    }
+  ],
+  "active_step": "ar_c16384_b4_measure",
+  "child_pid": 37486,
+  "child_startticks": "45451055",
+  "finished_at": 1792293052.7321053,
+  "interruption_audit": "state/context_formal_v1_20261018_interruption_audit.json"
+}

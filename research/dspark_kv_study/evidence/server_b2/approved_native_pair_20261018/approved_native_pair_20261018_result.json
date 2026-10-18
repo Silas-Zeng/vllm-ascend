@@ -1,0 +1,25 @@
+{
+  "pid": 21771,
+  "status": "completed_with_failures",
+  "started_at": 1792282835.0694768,
+  "steps": [
+    {
+      "name": "ar",
+      "started_at": 1792282835.0739584,
+      "log": "logs/approved_native_pair_20261018_ar.log",
+      "exit_code": 1,
+      "finished_at": 1792282934.6214015
+    },
+    {
+      "name": "dspark_k7",
+      "started_at": 1792282934.623604,
+      "log": "logs/approved_native_pair_20261018_dspark_k7.log",
+      "exit_code": 0,
+      "finished_at": 1792283125.834358
+    }
+  ],
+  "active_step": "dspark_k7",
+  "child_pid": 22152,
+  "child_startticks": "44451009",
+  "finished_at": 1792283125.834961
+}

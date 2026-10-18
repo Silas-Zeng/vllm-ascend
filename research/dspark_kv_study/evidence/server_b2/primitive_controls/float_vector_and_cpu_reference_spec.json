@@ -1,0 +1,49 @@
+{
+  "name": "float_vector_and_cpu_reference",
+  "root": "/data/dspark-study-20261017",
+  "continue_after_failure": true,
+  "source_sha256": {
+    "/data/dspark-study-20261017/study/diagnose_npu_vector.py": "acf06183121a211763bbd4c48c80412f6a19c027e738ff899794013bc02471da",
+    "/data/dspark-study-20261017/study/run_cpu_reference.py": "89fbd70e45c253ee7602c27f134c9ab592e4286581bae983fa4843fe26f2500d",
+    "/data/dspark-study-20261017/study/diagnose_npu_gather.py": "94734cab0df6837b9110565c604e110a95524de0a57c315c7b3e32d7add4e2ef",
+    "/data/dspark-study-20261017/prompts/short/prompts_c1024_b1.json": "004df6bc9b12e8480f31269e4c66ee404d9d479c0889aaef2e75c95b27d616d6"
+  },
+  "steps": [
+    {
+      "name": "float_vector",
+      "timeout_seconds": 240,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "/data/dspark-study-20261017/study/diagnose_npu_vector.py",
+        "--iterations",
+        "200",
+        "--output",
+        "/data/dspark-study-20261017/evidence/vector_float_native.json"
+      ]
+    },
+    {
+      "name": "cpu_reference",
+      "timeout_seconds": 1200,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "python",
+        "/data/dspark-study-20261017/study/run_cpu_reference.py",
+        "--target",
+        "/model/Qwen3-8B",
+        "--prompts",
+        "/data/dspark-study-20261017/prompts/short/prompts_c1024_b1.json",
+        "--output",
+        "/data/dspark-study-20261017/evidence/cpu_reference_1k16.json",
+        "--threads",
+        "8",
+        "--output-tokens",
+        "16"
+      ]
+    }
+  ]
+}

@@ -9,7 +9,6 @@ import concurrent.futures
 import hashlib
 import json
 import os
-import re
 import threading
 import time
 import urllib.error
@@ -18,6 +17,13 @@ import urllib.request
 from pathlib import Path
 
 from download_models import atomic_json, sha256
+
+
+def bearer_challenge(value):
+    scheme, _, parameters = value.partition(" ")
+    if scheme.lower() != "bearer":
+        raise ValueError("registry did not provide a Bearer challenge")
+    return urllib.request.parse_keqv_list(urllib.request.parse_http_list(parameters))
 
 
 class Registry:
@@ -47,7 +53,7 @@ class Registry:
             except urllib.error.HTTPError as error:
                 if error.code != 401 or attempt:
                     raise
-                auth = dict(re.findall(r'(\w+)="([^"]*)"', error.headers.get("WWW-Authenticate", "")))
+                auth = bearer_challenge(error.headers.get("WWW-Authenticate", ""))
                 endpoint = (
                     auth["realm"]
                     + "?"
@@ -69,13 +75,15 @@ def digest_bytes(data):
     return "sha256:" + hashlib.sha256(data).hexdigest()
 
 
-def run(root, transport, workers):
+def run(root, transport, workers, tag="v0.26.0rc1-a3"):
+    """Freeze the official image manifest and verify every transported layer."""
     official = Registry("https://quay.io", "ascend/vllm-ascend")
     mirror = Registry(transport, "ascend/vllm-ascend")
     plan_path = root / "runtime_manifest.json"
-    tag = "v0.26.0rc1-a3"
     if plan_path.exists():
         plan = json.loads(plan_path.read_text(encoding="utf-8"))
+        if plan["image"] != "quay.io/ascend/vllm-ascend:" + tag:
+            raise ValueError("existing runtime manifest belongs to a different hardware image")
         image = plan["image_digest"]
         raw_manifest = official.document(image)
     else:
@@ -133,7 +141,7 @@ def run(root, transport, workers):
     def download(descriptor):
         digest = descriptor["digest"]
         algorithm, hex_digest = digest.split(":", 1)
-        if algorithm != "sha256" or not re.fullmatch(r"[a-f0-9]{64}", hex_digest):
+        if algorithm != "sha256" or len(hex_digest) != 64 or any(c not in "0123456789abcdef" for c in hex_digest):
             raise ValueError("unsupported image content digest")
         target = blobs / hex_digest
         if target.exists() and target.stat().st_size == descriptor["size"] and sha256(target) == hex_digest:
@@ -188,5 +196,6 @@ if __name__ == "__main__":
     parser.add_argument("--root", type=Path, required=True)
     parser.add_argument("--transport", default="https://quay.nju.edu.cn")
     parser.add_argument("--workers", type=int, default=3, choices=range(1, 5))
+    parser.add_argument("--tag", default="v0.26.0rc1-a3", choices=("v0.26.0rc1", "v0.26.0rc1-a3"))
     arguments = parser.parse_args()
-    run(arguments.root, arguments.transport, arguments.workers)
+    run(arguments.root, arguments.transport, arguments.workers, arguments.tag)

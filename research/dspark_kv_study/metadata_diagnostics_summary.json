@@ -1,0 +1,185 @@
+{
+  "scope": "primitive correctness controls, not model performance",
+  "results": [
+    {
+      "label": "Default",
+      "file": "metadata_gather_stages.json",
+      "sha256": "d1c4df0a8c288ffd02cdee36df0e0bcd5ef02a55328999817254ccbe9250ca08",
+      "failed": 38,
+      "executed": 360,
+      "stages": {
+        "table_copy": {
+          "failed": 0,
+          "executed": 360
+        },
+        "length_copy": {
+          "failed": 0,
+          "executed": 360
+        },
+        "starts": {
+          "failed": 0,
+          "executed": 360
+        },
+        "compact_lengths": {
+          "failed": 0,
+          "executed": 360
+        },
+        "columns": {
+          "failed": 0,
+          "executed": 360
+        },
+        "indices": {
+          "failed": 10,
+          "executed": 360
+        },
+        "mask": {
+          "failed": 3,
+          "executed": 360
+        },
+        "selected": {
+          "failed": 37,
+          "executed": 360
+        },
+        "raw_gather": {
+          "failed": 10,
+          "executed": 120
+        }
+      }
+    },
+    {
+      "label": "Blocking",
+      "file": "metadata_blocking.json",
+      "sha256": "14eb1e48677c1161cc6be8cdc55b55d160516995ac8f914e193b112b657b97cb",
+      "failed": 44,
+      "executed": 360,
+      "stages": {
+        "table_copy": {
+          "failed": 0,
+          "executed": 360
+        },
+        "length_copy": {
+          "failed": 0,
+          "executed": 360
+        },
+        "starts": {
+          "failed": 1,
+          "executed": 360
+        },
+        "compact_lengths": {
+          "failed": 4,
+          "executed": 360
+        },
+        "columns": {
+          "failed": 0,
+          "executed": 360
+        },
+        "indices": {
+          "failed": 11,
+          "executed": 360
+        },
+        "mask": {
+          "failed": 6,
+          "executed": 360
+        },
+        "selected": {
+          "failed": 42,
+          "executed": 360
+        },
+        "raw_gather": {
+          "failed": 11,
+          "executed": 120
+        }
+      }
+    },
+    {
+      "label": "No memory cache",
+      "file": "metadata_no_cache.json",
+      "sha256": "695c59ad2d2e400f33f525c963ab1c1f009fe743ba3abbb854a0df0b7662df33",
+      "failed": 41,
+      "executed": 360,
+      "stages": {
+        "table_copy": {
+          "failed": 0,
+          "executed": 360
+        },
+        "length_copy": {
+          "failed": 0,
+          "executed": 360
+        },
+        "starts": {
+          "failed": 0,
+          "executed": 360
+        },
+        "compact_lengths": {
+          "failed": 6,
+          "executed": 360
+        },
+        "columns": {
+          "failed": 0,
+          "executed": 360
+        },
+        "indices": {
+          "failed": 10,
+          "executed": 360
+        },
+        "mask": {
+          "failed": 4,
+          "executed": 360
+        },
+        "selected": {
+          "failed": 39,
+          "executed": 360
+        },
+        "raw_gather": {
+          "failed": 8,
+          "executed": 120
+        }
+      }
+    },
+    {
+      "label": "Both",
+      "file": "metadata_both.json",
+      "sha256": "28bb3f502d3b55faebd3444ac7146ed95a644a9980f6ab62766e9d661739f7ac",
+      "failed": 39,
+      "executed": 360,
+      "stages": {
+        "table_copy": {
+          "failed": 0,
+          "executed": 360
+        },
+        "length_copy": {
+          "failed": 0,
+          "executed": 360
+        },
+        "starts": {
+          "failed": 0,
+          "executed": 360
+        },
+        "compact_lengths": {
+          "failed": 6,
+          "executed": 360
+        },
+        "columns": {
+          "failed": 0,
+          "executed": 360
+        },
+        "indices": {
+          "failed": 11,
+          "executed": 360
+        },
+        "mask": {
+          "failed": 4,
+          "executed": 360
+        },
+        "selected": {
+          "failed": 37,
+          "executed": 360
+        },
+        "raw_gather": {
+          "failed": 9,
+          "executed": 120
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "scope": "live FIA read-side block table and absolute write mapping audit; excluded from timing",
+  "source_files": [
+    {
+      "name": "worker_33717_draft_reads.jsonl",
+      "sha256": "7e99e250055227024a807b71bc1a2f6a8e252e9cb1c8184cf7c17d1fd56cd0b0"
+    }
+  ],
+  "checked_request_group_calls": 55,
+  "group_ids": [
+    0
+  ],
+  "failed_reads": 0,
+  "failed_writes": 0,
+  "passed": true,
+  "observed_kv_length_range": [
+    2183,
+    2219
+  ],
+  "failed_examples": []
+}

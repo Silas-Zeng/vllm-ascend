@@ -1,0 +1,31 @@
+{
+  "formal_configurations": 18,
+  "measured_batches": 180,
+  "measured_requests": 450,
+  "output_tokens_per_request": 512,
+  "independent_profiles": 18,
+  "target_worker_invocations": 1152,
+  "target_graph_replays": 978,
+  "graph_fia_records": 35208,
+  "native_control_matching_profile_batches": 17,
+  "profile_control_mismatch_labels": [
+    "ar_c4096_b4"
+  ],
+  "sealed_files_verified": 541,
+  "sealed_bytes": 153524364,
+  "remote_sdk_inventory_files": 2353,
+  "independent_local_and_server_profile_configurations_identical": true,
+  "related_local_regression_tests_passed": 71,
+  "local_markdown_links_checked": 143,
+  "missing_local_links": 0,
+  "visual_qa_png_figures": 12,
+  "full_repository_ci": "attempted; not fully executable on this Windows host",
+  "ci_limits": [
+    "actionlint Go dependency fetch failed over both proxy and direct transport",
+    "native /bin/bash and python3 hook entry points unavailable from Windows pre-commit",
+    "shellcheck unavailable; changed launcher passed bash -n and native execution"
+  ],
+  "runnable_repository_checks": "passed; skipped unavailable hooks documented, equivalent Python/logger checks passed separately",
+  "native_logits_nan_check_enabled": false,
+  "full_vllm_distributed_model_suite_run": false
+}

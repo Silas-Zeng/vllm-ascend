@@ -1,0 +1,39 @@
+{
+  "tag": "v0.6.0",
+  "asset": {
+    "url": "https://api.github.com/repos/opencontainers/umoci/releases/assets/304500965",
+    "id": 304500965,
+    "node_id": "RA_kwDOBE71Tc4SJlDl",
+    "name": "umoci.linux.arm64",
+    "label": null,
+    "uploader": {
+      "login": "cyphar",
+      "id": 2888411,
+      "node_id": "MDQ6VXNlcjI4ODg0MTE=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2888411?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/cyphar",
+      "html_url": "https://github.com/cyphar",
+      "followers_url": "https://api.github.com/users/cyphar/followers",
+      "following_url": "https://api.github.com/users/cyphar/following{/other_user}",
+      "gists_url": "https://api.github.com/users/cyphar/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/cyphar/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/cyphar/subscriptions",
+      "organizations_url": "https://api.github.com/users/cyphar/orgs",
+      "repos_url": "https://api.github.com/users/cyphar/repos",
+      "events_url": "https://api.github.com/users/cyphar/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/cyphar/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "content_type": "application/octet-stream",
+    "state": "uploaded",
+    "size": 7536824,
+    "digest": "sha256:5cfd17f2e7a4bcf9ed67ea1b955ca893d200349b9ce6a3d3707dba415f458a1f",
+    "download_count": 10939,
+    "created_at": "2025-10-15T08:56:10Z",
+    "updated_at": "2025-10-15T08:56:12Z",
+    "browser_download_url": "https://github.com/opencontainers/umoci/releases/download/v0.6.0/umoci.linux.arm64"
+  }
+}

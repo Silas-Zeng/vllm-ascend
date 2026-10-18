@@ -1,0 +1,19 @@
+{
+  "pid": 31448,
+  "status": "failed",
+  "started_at": 1792288516.17606,
+  "steps": [
+    {
+      "name": "ar_emission_control",
+      "started_at": 1792288516.1808288,
+      "log": "logs/context_gate_ar_v2_20261018_ar_emission_control.log",
+      "exit_code": 1,
+      "finished_at": 1792288600.7018006
+    }
+  ],
+  "active_step": "ar_emission_control",
+  "child_pid": 31449,
+  "child_startticks": "45009165",
+  "error": "experiment step failed: ar_emission_control",
+  "finished_at": 1792288600.7023518
+}

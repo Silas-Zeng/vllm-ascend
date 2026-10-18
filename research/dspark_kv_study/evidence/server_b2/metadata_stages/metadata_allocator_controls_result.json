@@ -1,0 +1,32 @@
+{
+  "pid": 15005,
+  "status": "completed_with_failures",
+  "started_at": 1792280648.7566447,
+  "steps": [
+    {
+      "name": "blocking",
+      "started_at": 1792280648.7576292,
+      "log": "logs/metadata_allocator_controls_blocking.log",
+      "exit_code": 1,
+      "finished_at": 1792280670.2499697
+    },
+    {
+      "name": "no_cache",
+      "started_at": 1792280670.2508323,
+      "log": "logs/metadata_allocator_controls_no_cache.log",
+      "exit_code": 1,
+      "finished_at": 1792280690.991808
+    },
+    {
+      "name": "both",
+      "started_at": 1792280690.9926033,
+      "log": "logs/metadata_allocator_controls_both.log",
+      "exit_code": 1,
+      "finished_at": 1792280712.4841049
+    }
+  ],
+  "active_step": "both",
+  "child_pid": 15165,
+  "child_startticks": "44226646",
+  "finished_at": 1792280712.4846547
+}

@@ -1,0 +1,108 @@
+{
+  "scope": "exact primitive correctness, no physical-core attribution or timing",
+  "results": [
+    {
+      "label": "Supplied image",
+      "file": "primitives_native.json",
+      "sha256": "1db4a122325b53bf45454434adfb44e0a239a4ec5eb52bc88d9c2f37d437044e",
+      "failures": {
+        "int32_add_tensors": [
+          3,
+          51,
+          99,
+          147,
+          195
+        ],
+        "int32_multiply_scalar": [],
+        "int32_multiply_tensors": [
+          35,
+          83,
+          131,
+          179
+        ],
+        "int64_clamp": [
+          27,
+          75,
+          123,
+          171
+        ],
+        "int32_gather": [
+          13,
+          32,
+          42,
+          51,
+          61,
+          80,
+          90,
+          99,
+          109,
+          128,
+          138,
+          147,
+          157,
+          176,
+          186,
+          195
+        ],
+        "int32_mask_multiply": [
+          27,
+          75,
+          123,
+          171
+        ],
+        "bf16_matmul_integer_inputs": []
+      }
+    },
+    {
+      "label": "Official A2 image via PRoot",
+      "file": "primitives_official_a2.json",
+      "sha256": "924f1b46a4815c34be6cb408a5d84705adf0fce41e81306240ba05b0b708657f",
+      "failures": {
+        "int32_add_tensors": [
+          19,
+          67,
+          115,
+          163
+        ],
+        "int32_multiply_scalar": [],
+        "int32_multiply_tensors": [
+          3,
+          51,
+          99,
+          147,
+          195
+        ],
+        "int64_clamp": [
+          43,
+          91,
+          139,
+          187
+        ],
+        "int32_gather": [
+          26,
+          35,
+          45,
+          64,
+          74,
+          83,
+          93,
+          112,
+          122,
+          131,
+          141,
+          160,
+          170,
+          179,
+          189
+        ],
+        "int32_mask_multiply": [
+          43,
+          91,
+          139,
+          187
+        ],
+        "bf16_matmul_integer_inputs": []
+      }
+    }
+  ]
+}

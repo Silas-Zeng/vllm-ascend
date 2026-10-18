@@ -1,0 +1,44 @@
+{
+  "name": "context_native_timing_probe_v1_20261018",
+  "root": "/data/dspark-study-20261017",
+  "source_sha256": {
+    "/data/dspark-study-20261017/stages/context_measure_v5/study/run_vllm_baseline.py": "0a7a69ef4a6aada8f571884a0c18375e4d34507d347ae1aa460126810d6374ec",
+    "/data/dspark-study-20261017/stages/context_measure_v5/study/emission_timing.py": "759fd3213d99364090efcf6599318ee1493c3fb01ad35e420e8afdac9d288bb1",
+    "/data/dspark-study-20261017/stages/context_measure_v5/study/native_emission_timing.py": "18f9bb883f3b1381af49a6898accf739a06923d9a54554797db2a0012ddb53e9",
+    "/data/dspark-study-20261017/stages/context_measure_v5/study/study_worker_hooks.py": "28eb4a19d1023cedd15f508233073a3d113d9dabc67791267fc29d2048c0f89d",
+    "/data/dspark-study-20261017/stages/context_measure_v5/study/audit_draft_reads.py": "b8cb38d10213619fe33aae120c47b0b2c2b160dfb5364788f4c6c10023cb98ab",
+    "/data/dspark-study-20261017/stages/context_measure_v5/study/probe_native_timing.py": "0d939a2f50df001324ee60d80bde77da2d572175074c1306f8e58055a831c028",
+    "/data/dspark-study-20261017/stages/context_measure_v5/study/run_study_stage.sh": "7063ab2b7e258c196c74ffbcccb08f2439350869675b36475f753057c7c95ced",
+    "/data/dspark-study-20261017/study/deployment/run_job.py": "eac7af4ab213eb751ead2213a1c34d9067da2538fb699dd79321c991965ae97a",
+    "/data/dspark-study-20261017/study/deployment/run_native.sh": "ad6265e1b574c04dd239365945167812a7ab90d5e1e65fa029dd82e642ddf11f",
+    "/data/dspark-study-20261017/study/deployment/download_models.py": "17b432a592467e25204fc8ce77bd5b45652cefb236e0f2e31bbccf0ad8a55240",
+    "/data/dspark-study-20261017/prompts/long/prompts_long_c4096_b4.json": "8682f65391c59e61c5b864d0a41e9195b991d91aaf0678f24474271ff3706bc4",
+    "/model/Qwen3-8B/config.json": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+    "/data/dspark-study-20261017/runtime/vllm_ascend/spec_decode/llm_base_proposer.py": "25f0e85ea44291448b8a1b91408d6e4f8c80636646b603f78dd1c3a8fdece01f"
+  },
+  "scope": "C4 AR native/direct-engine/native-observer repeatability diagnostic",
+  "steps": [
+    {
+      "name": "probe",
+      "timeout_seconds": 600,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "env",
+        "TASK_QUEUE_ENABLE=1",
+        "bash",
+        "/data/dspark-study-20261017/stages/context_measure_v5/study/run_study_stage.sh",
+        "/data/dspark-study-20261017/stages/context_measure_v5/study",
+        "python",
+        "/data/dspark-study-20261017/stages/context_measure_v5/study/probe_native_timing.py",
+        "--target",
+        "/model/Qwen3-8B",
+        "--prompts",
+        "/data/dspark-study-20261017/prompts/long/prompts_long_c4096_b4.json",
+        "--output",
+        "/data/dspark-study-20261017/evidence/context_baseline_20261018/native_timing_probe_v1.json"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "image": "quay.io/ascend/vllm-ascend:v0.26.0rc1",
+  "index_digest": "sha256:243bf20fad2f4f6de56aa1b041bcdfdbe5bb9d485f3190f40f1c5d0f418fc469",
+  "image_digest": "sha256:7265a3a08bba26b9376a4d577015ac8d459675fb3c1eec89aef6d9a19ac219d9",
+  "transport": "https://quay.nju.edu.cn",
+  "manifest": {
+    "schemaVersion": 2,
+    "mediaType": "application/vnd.oci.image.manifest.v1+json",
+    "config": {
+      "mediaType": "application/vnd.oci.image.config.v1+json",
+      "digest": "sha256:c9c9432b69767cf1855efad44f20eaa8ab02520ae05b75c936e67ea4e7eb2702",
+      "size": 29246
+    },
+    "layers": [
+      {
+        "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+        "digest": "sha256:119d19e001bafa21919289095e1dbfac64f1e16d2469dd14c2d2a520039d26d9",
+        "size": 27613184
+      },
+      {
+        "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+        "digest": "sha256:832ab0a8427e40b2911fff42fc9825b9d800475c7581518d2df1dd833c15d957",
+        "size": 150902572
+      },
+      {
+        "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+        "digest": "sha256:ba284733d5f289b2722a450dbb872c03b9e4de91d45cac48654d796faee0e2a3",
+        "size": 181526803
+      },
+      {
+        "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+        "digest": "sha256:5ce2f058f092e9bd6b371773ce68cafdb1acb577038dcbdf4798d8097661a687",
+        "size": 4280972307
+      },
+      {
+        "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+        "digest": "sha256:cbad9efdb96d7cc102a3afa380c2bd912e1719fb36173021a21632901fa8e3d3",
+        "size": 216
+      },
+      {
+        "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+        "digest": "sha256:f4cfc171c67ad97e95d06c9e39ff6892b48a64be355e1b0c45ad0142e80efb53",
+        "size": 1899
+      },
+      {
+        "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+        "digest": "sha256:d959547757216f39d0e2ae7a05ced3d4b5c1f6958ffd26b5524608b2b97d3a5c",
+        "size": 99
+      },
+      {
+        "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+        "digest": "sha256:7ad0540f523d69158433292bce8981ec1ac8fc4661f5d80fd4d40e50f6fc5884",
+        "size": 252851436
+      },
+      {
+        "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+        "digest": "sha256:6eaa955f7d16541d3755494e49bc9e54474a0691f5bd30a92c36bacc7d3db38c",
+        "size": 103905662
+      },
+      {
+        "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+        "digest": "sha256:9d1ed92b1acf765eff8d0424376481022aa0270d5953feda68eae123191e27c2",
+        "size": 78809978
+      },
+      {
+        "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+        "digest": "sha256:d8948c36dfc6e7917469dd94c2a52f6d88d1a0eaf24e406e0e25077bc6c911e5",
+        "size": 444085783
+      },
+      {
+        "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+        "digest": "sha256:7f24161b3292b39d53267498c08ae4f481f66e3c69f05a7a7f96b0e1bfaf70ae",
+        "size": 147809342
+      },
+      {
+        "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+        "digest": "sha256:1a29be8e02ff216d78ca7a6db54d444107d415126483a114f132f39b433a87cb",
+        "size": 1049914490
+      },
+      {
+        "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+        "digest": "sha256:62435c5634e72211bd925d4e379926ddb5868f801a93a4f277390a591644a215",
+        "size": 1675
+      },
+      {
+        "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+        "digest": "sha256:8ec7772e8b6e7ccdc7fc5bb34da63ce7bcf0364a5390162224eb2ef8d3de7da6",
+        "size": 1855
+      },
+      {
+        "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+        "digest": "sha256:de9b47141fcfb923d59878e406e2602cf99a3a3e12148db7719a57cc308fac66",
+        "size": 1181
+      },
+      {
+        "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+        "digest": "sha256:3b033fefb1eba6559e3904726e8143801a449767fd677b08b93fa5a22762360b",
+        "size": 142
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "file": "official_a2_pull_download.log.gz",
+    "sha256": "c48f605243ed34aa2b7bacd6acf1103b9c32d30943613ec5b73a15785db64c80",
+    "original_sha256": "b52d1a37ae34c0ded13f1708088204bd0286fb5334a55244c15210b69b9f391a",
+    "bytes": 854,
+    "original_bytes": 1991
+  },
+  {
+    "file": "official_a2_unpack_unpack.log.gz",
+    "sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 20,
+    "original_bytes": 0
+  },
+  {
+    "file": "official_a2_correctness_runtime_probe.log.gz",
+    "sha256": "bd01914a14b2735793c1610c273340a60cb695f4e582f5b0c710337f1666efa2",
+    "original_sha256": "ef6d81e41ebde26dbe5895e685a500cf2a3d1a1e5cf9807b6ead551d81bd0cec",
+    "bytes": 930,
+    "original_bytes": 1839
+  },
+  {
+    "file": "official_a2_correctness_metadata.log.gz",
+    "sha256": "9eb4cc145b1e5470f0f20654bd57d7d591a4d34bdeb2e6d52b0186f16f9ee8e1",
+    "original_sha256": "e5f749e401bc90219c19c68c27481f63da18cf9fde1a3487c75c227088df5c6c",
+    "bytes": 596,
+    "original_bytes": 1885
+  },
+  {
+    "file": "official_a2_ar_smoke_ar_1k32.log.gz",
+    "sha256": "dbe07323adc89a9dd8572feba0abe0319662f4218513e1e1dcd6ee02928cc0d4",
+    "original_sha256": "2a1399a49813d1a5eadde2a93c8fc01b34cc98b1ec6f20fb8ea3f52180fbba05",
+    "bytes": 10486,
+    "original_bytes": 63098
+  }
+]

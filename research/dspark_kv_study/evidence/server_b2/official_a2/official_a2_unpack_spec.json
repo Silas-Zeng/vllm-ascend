@@ -1,0 +1,22 @@
+{
+  "name": "official_a2_unpack",
+  "root": "/data/dspark-study-20261017",
+  "source_sha256": {
+    "/data/dspark-study-20261017/tools/umoci": "5cfd17f2e7a4bcf9ed67ea1b955ca893d200349b9ce6a3d3707dba415f458a1f",
+    "/data/dspark-study-20261017/candidates/official_a2/runtime_manifest.json": "66a647eff7092c140a3dcac6b4080a0f028929e711b22ecf89293c44704f875c"
+  },
+  "steps": [
+    {
+      "name": "unpack",
+      "timeout_seconds": 1200,
+      "argv": [
+        "/data/dspark-study-20261017/tools/umoci",
+        "unpack",
+        "--rootless",
+        "--image",
+        "/data/dspark-study-20261017/candidates/official_a2/oci:dspark",
+        "/data/dspark-study-20261017/candidates/official_a2/bundle"
+      ]
+    }
+  ]
+}

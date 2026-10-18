@@ -1,0 +1,137 @@
+{
+  "pid": 50517,
+  "status": "complete",
+  "started_at": 1792304298.5318332,
+  "steps": [
+    {
+      "name": "ar_c4096_b1_parse",
+      "started_at": 1792304298.5340703,
+      "log": "logs/context_profile_analysis_v8_20261018_ar_c4096_b1_parse.log",
+      "exit_code": 0,
+      "finished_at": 1792304320.7284544
+    },
+    {
+      "name": "full_c4096_b1_parse",
+      "started_at": 1792304320.7322357,
+      "log": "logs/context_profile_analysis_v8_20261018_full_c4096_b1_parse.log",
+      "exit_code": 0,
+      "finished_at": 1792304349.6865044
+    },
+    {
+      "name": "window_c4096_b1_parse",
+      "started_at": 1792304349.687964,
+      "log": "logs/context_profile_analysis_v8_20261018_window_c4096_b1_parse.log",
+      "exit_code": 0,
+      "finished_at": 1792304379.7933178
+    },
+    {
+      "name": "ar_c16384_b1_parse",
+      "started_at": 1792304379.796733,
+      "log": "logs/context_profile_analysis_v8_20261018_ar_c16384_b1_parse.log",
+      "exit_code": 0,
+      "finished_at": 1792304402.0420392
+    },
+    {
+      "name": "full_c16384_b1_parse",
+      "started_at": 1792304402.0434694,
+      "log": "logs/context_profile_analysis_v8_20261018_full_c16384_b1_parse.log",
+      "exit_code": 0,
+      "finished_at": 1792304430.9475746
+    },
+    {
+      "name": "window_c16384_b1_parse",
+      "started_at": 1792304430.9489803,
+      "log": "logs/context_profile_analysis_v8_20261018_window_c16384_b1_parse.log",
+      "exit_code": 0,
+      "finished_at": 1792304461.2055027
+    },
+    {
+      "name": "ar_c24576_b1_parse",
+      "started_at": 1792304461.2070124,
+      "log": "logs/context_profile_analysis_v8_20261018_ar_c24576_b1_parse.log",
+      "exit_code": 0,
+      "finished_at": 1792304485.1037116
+    },
+    {
+      "name": "full_c24576_b1_parse",
+      "started_at": 1792304485.1073656,
+      "log": "logs/context_profile_analysis_v8_20261018_full_c24576_b1_parse.log",
+      "exit_code": 0,
+      "finished_at": 1792304514.2609017
+    },
+    {
+      "name": "window_c24576_b1_parse",
+      "started_at": 1792304514.2623777,
+      "log": "logs/context_profile_analysis_v8_20261018_window_c24576_b1_parse.log",
+      "exit_code": 0,
+      "finished_at": 1792304544.317097
+    },
+    {
+      "name": "ar_c4096_b4_parse",
+      "started_at": 1792304544.318608,
+      "log": "logs/context_profile_analysis_v8_20261018_ar_c4096_b4_parse.log",
+      "exit_code": 0,
+      "finished_at": 1792304566.7135942
+    },
+    {
+      "name": "full_c4096_b4_parse",
+      "started_at": 1792304566.7151153,
+      "log": "logs/context_profile_analysis_v8_20261018_full_c4096_b4_parse.log",
+      "exit_code": 0,
+      "finished_at": 1792304596.9713068
+    },
+    {
+      "name": "window_c4096_b4_parse",
+      "started_at": 1792304596.9746633,
+      "log": "logs/context_profile_analysis_v8_20261018_window_c4096_b4_parse.log",
+      "exit_code": 0,
+      "finished_at": 1792304628.3321059
+    },
+    {
+      "name": "ar_c16384_b4_parse",
+      "started_at": 1792304628.3336084,
+      "log": "logs/context_profile_analysis_v8_20261018_ar_c16384_b4_parse.log",
+      "exit_code": 0,
+      "finished_at": 1792304652.8312674
+    },
+    {
+      "name": "full_c16384_b4_parse",
+      "started_at": 1792304652.8345854,
+      "log": "logs/context_profile_analysis_v8_20261018_full_c16384_b4_parse.log",
+      "exit_code": 0,
+      "finished_at": 1792304684.4421477
+    },
+    {
+      "name": "window_c16384_b4_parse",
+      "started_at": 1792304684.443711,
+      "log": "logs/context_profile_analysis_v8_20261018_window_c16384_b4_parse.log",
+      "exit_code": 0,
+      "finished_at": 1792304717.3009508
+    },
+    {
+      "name": "ar_c24576_b4_parse",
+      "started_at": 1792304717.3042636,
+      "log": "logs/context_profile_analysis_v8_20261018_ar_c24576_b4_parse.log",
+      "exit_code": 0,
+      "finished_at": 1792304742.4019568
+    },
+    {
+      "name": "full_c24576_b4_parse",
+      "started_at": 1792304742.4058027,
+      "log": "logs/context_profile_analysis_v8_20261018_full_c24576_b4_parse.log",
+      "exit_code": 0,
+      "finished_at": 1792304775.615353
+    },
+    {
+      "name": "window_c24576_b4_parse",
+      "started_at": 1792304775.6169083,
+      "log": "logs/context_profile_analysis_v8_20261018_window_c24576_b4_parse.log",
+      "exit_code": 0,
+      "finished_at": 1792304811.2321863
+    }
+  ],
+  "active_step": "window_c24576_b4_parse",
+  "child_pid": 55990,
+  "child_startticks": "46635108",
+  "finished_at": 1792304811.2328908
+}

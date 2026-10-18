@@ -1,0 +1,13 @@
+{
+  "archived_at": 1792286297.3927126,
+  "diagnosis_started_at_utc": "2026-10-18 00:33:42 UTC",
+  "all_jobs_terminal": true,
+  "job_statuses": {
+    "bounded_task_queue_20261018": "complete",
+    "bounded_queue_confirmation_20261018": "completed_with_failures",
+    "bounded_cold_cache_20261018": "complete",
+    "bounded_official_recheck_20261018": "complete",
+    "bounded_native_stability_20261018": "complete"
+  },
+  "note": "Raw reports finalized only after all jobs terminal; previous interim manifest replaced. PRoot timing excluded from native performance."
+}

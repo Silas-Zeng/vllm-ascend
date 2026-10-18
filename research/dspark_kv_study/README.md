@@ -2,19 +2,40 @@
 
 更新：2026-10-18。本目录记录从简历中的设想出发，持续实施的长上下文投机解码研究。入口按“问题 → 实现 → 正确性 → 性能 → Profiling → 下一步”组织。简历数字不是优化目标，也不作为实验结果；没有收益或验证失败的候选同样保留。
 
-**组件实验已完成，真实分页读取适配器已经实现，完整模型正确性与端到端性能仍未通过交付门槛。** 下文已有的性能图来自第一阶段真实 NPU 组件测量，不能解释为 DSpark 模型加速。
+**已完成 AR、原生 DSpark Full KV、最小接线修正后的 Draft Window 三组正式对比和阶段 profiling。** 输入 4K / 16K / 24K，输出固定 512 token，并发 1 与 4 分开，BF16，投机组 K=7。18 个配置、180 批正式测量、450 次请求；另有 18 份独立采集和 12 份读取审计。
+
+[完整实验与瓶颈报告](context_baseline_results.md) · [性能表](results/context_20261018/context_tables.md) · [阶段表](results/context_20261018/context_profile_tables.md) · [全部输出变体](results/context_20261018/context_outputs.md) · [复算说明](context_reproduction.md)
+
+![正式模型总耗时](figures/context_20261018/context_wall_seconds.png)
+
+长上下文并发 4 的主要设备增长项是 Target attention。窗口降低了 Draft attention 成本，
+但没有改变 Target 的完整上下文验证；4K 的接受长度下降还导致窗口回退。
+部分输出与 AR 不一致，图中的耗时比按真实观察展示，不能统一称为已验证的无损加速。
+
+![Target 阶段成本](figures/context_20261018/phase_target.png)
+
+原生窗口曾存在实际读表接线错误，已在独立副本中做最小修正并通过读取审计；
+接线、调度预算、计时入口和图归因的核验过程见 [实际发现](context_baseline_findings.md)。
+541 个封存文件均经原始/展开 SHA-256 校验，完整 CSV 在本地独立复算后与服务器汇总一致。
+条件见 [正式协议](baseline_bottleneck_protocol.md)。
+
+## 早期探索与运行门槛记录
+
+下文保留组件实验和历史 KV 原型，环境与本轮模型矩阵分开；历史选择本轮未启用。
+原始运行故障后来未再复现，根因仍未确认，见 [限时排查](bounded_diagnosis.md)。
 
 当前进展：
 
 | 阶段 | 实际证据与状态 |
 | --- | --- |
+| 正式模型基线与阶段 profiling | 已完成 18 配置、180 批、18 份独立采集；[主报告](context_baseline_results.md) |
 | 组件性能与时间线 | 两轮、1440 个计时样本和 4 类图表，见下文 |
 | 新服务器推理准备 | 910B2、64GB；4×4 矩阵冒烟检查通过；Target 16 个文件和 Draft 5 个文件逐一校验，见 [环境](evidence/server_b2/runtime_probe.json)、[Target](evidence/server_b2/target_verified.json)、[Draft](evidence/server_b2/model_download.json) |
 | 历史页＋局部窗口 | [paged_history.py](paged_history.py) 实现整页直读、请求级缓存及 BM25 / uniform / sink / recent 对照；10 项逻辑测试通过 |
 | 实际 DSpark builder 接线 | 双 KV group、混合长度的 10 组 CPU 回归通过，见 [原始结果](evidence/server_b2/history_builder_qa.json)；补丁尚未晋升为模型验证通过 |
 | 真实分页 FIA | 首轮 8 组通过，第 9 组失败；保留 [全部结果](evidence/server_b2/paged_fia_initial.json) 和匹配 SHA-256 的 [当时源码](archive/fia_initial/validate_paged_history_npu.py) |
-| 模型基线 | 新镜像的 AR 在融合、图回放及 eager attention 路径暴露异常；当前不发布模型吞吐、TPOT 或接受率结论 |
-| 最小问题隔离 | 不含 attention 的基础元数据检查 40 次中 4 次块表内容错误；长度与窗口起点正常，见 [原始记录](evidence/server_b2/metadata_without_attention.json) |
+| 原生运行门槛 | 最初 AR 失败、DSpark 成功；随后默认队列、新缓存及固定次数检查均通过，累计 13 次启动、58 份原生 512-token 测量输出一致；[单输入图与完整记录](bounded_diagnosis.md)。这项短输入诊断不替代正式长度矩阵，也不证明长输入跨方法输出一致 |
+| 最小问题隔离 | 此前确有整数算子周期错误、官方 A2 错误及向量检查 97/3200 失败；本轮 metadata 360 次和向量 3200 次复测均通过。旧结果与图保留于 [分阶段分析](environment_diagnostics.md)，最新状态见 [限时排查](bounded_diagnosis.md) |
 
 当前研究取舍、公式和论文参考见 [research_notes.md](research_notes.md)；部署与回归入口见 [integration.md](integration.md)；失败、修正和下一步见 [experiments.md](experiments.md)。不同设备、运行库和执行模式的结果分开记录。
 
@@ -48,9 +69,9 @@ flowchart LR
 
 这张图是位置示意，不是性能测量。实际框架接入约束见 [integration.md](integration.md)。
 
-## 3. 真实实验环境与测量范围
+## 3. 早期组件实验环境与测量范围
 
-| 项目 | 本次记录 |
+| 项目 | 2026-10-17 组件阶段记录（与本轮 910B2 模型矩阵分开） |
 | --- | --- |
 | NPU 运行时型号 | `Ascend910_9362`，可见 2 个设备，每个 64GB；实验使用逻辑设备 0 |
 | 系统 | Linux aarch64，glibc 2.31，Python 3.11.4 |
@@ -137,11 +158,12 @@ python plot_profile.py evidence/run_06.trace.json.gz --output figures
 | --- | --- |
 | 历史锚点 CPU 选择与绝对地址参考 | 已实现并测试 |
 | NPU 组件性能、重复测量、索引缓存消融与时间线 | 已完成 |
-| AR / Full KV / Window / Anchors 的 vLLM 实验入口 | 已实现，包括真实输出事件计时、执行模式一致性检查和失败留存 |
+| AR / Full KV / Window / Anchors 的 vLLM 实验入口 | 已实现；正式基线统一使用原生请求统计，旧输出观察入口作为诊断保留 |
 | 历史锚点接入 DSpark 的实际 attention metadata / FIA | 适配器和最小隔离补丁已实现；CPU 接线通过，NPU 完整验证未通过 |
-| Mean acceptance length、TPOT、端到端吞吐、生成一致性 | 新设备尚无满足正确性门槛的模型结果，不发布加速结论 |
+| Mean acceptance length、TPOT、端到端吞吐、生成一致性 | 三组长度矩阵、18 份阶段 profiling 与全部输出检查已完成；[实际结果及边界](context_baseline_results.md) |
 | 简历中的性能数字 | 未验证，不作为成果引用 |
 
-下一步先定位完整 KV、普通 AR 也会触发的 attention 异常，核对同步、输入格式与软件配对；随后完成同输入的 AR / Full / Window / Anchors 贪心回归，再进行 4K / 16K / 24K、并发 1/4、512-token 的性能与接受长度实验。只有基线正确后，才评估历史信息是否值得其准备开销。
+本轮已完成窗口实际读取校验、18 个配置的正式测量与独立 profiling；1K 保留为运行门槛诊断。
+历史选择候选的下一阶段计划见主报告，尚未晋升为模型收益结论。计时、采集和 CPU 解析分阶段串行执行，软件与模型在实验中保持冻结。
 
 研究补丁只允许安装到显式指定的独立运行库副本。原始软件和共享权重保持可追溯，账号密码及权重文件不进入仓库。

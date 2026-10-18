@@ -1,0 +1,29 @@
+{
+  "recorded_at_utc": "2026-10-17T23:55:33.743826+00:00",
+  "platform": "Linux-5.15.0-25-generic-aarch64-with-glibc2.35",
+  "glibc": [
+    "glibc",
+    "2.35"
+  ],
+  "python": "3.12.13",
+  "packages": {
+    "torch": "2.10.0+cpu",
+    "torch-npu": "2.10.0.post4",
+    "vllm": "0.26.0+empty",
+    "vllm-ascend": "0.26.0rc1",
+    "transformers": "5.14.1",
+    "triton-ascend": "3.2.2"
+  },
+  "source_files": {
+    "vllm": "/vllm-workspace/vllm/vllm/__init__.py",
+    "vllm_ascend": "/vllm-workspace/vllm-ascend/vllm_ascend/__init__.py"
+  },
+  "torch_npu_imported_version": "2.10.0.post4",
+  "npu": {
+    "count": 1,
+    "device_name": "Ascend910B2"
+  },
+  "npu_matrix_correctness": true,
+  "cann_compiler_version": "Version=9.1.0\nversion_dir=cann\nrequired_package_runtime_version=\"9.1\"\nrequired_package_ge-executor_version=\"9.1\"\nrequired_package_metadef_version=\"9.1\"\nrequired_package_bisheng-compiler_version=\"9.1\"\nrequired_package_tbe-tik_version=\"9.1\"\ntimestamp=20260730_231653901\n",
+  "llm_base_proposer_sha256": "e3e1ff579e67f845f155c983294ae5546e6ee76ba330098d7867e870c3f9f6e4"
+}

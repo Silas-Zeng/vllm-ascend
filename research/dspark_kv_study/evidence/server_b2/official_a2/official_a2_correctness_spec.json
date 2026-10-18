@@ -1,0 +1,56 @@
+{
+  "name": "official_a2_correctness",
+  "root": "/data/dspark-study-20261017",
+  "source_sha256": {
+    "/data/dspark-study-20261017/study/deployment/run_proot_runtime.py": "e344d761e102ef58fa48e5d63e26b284a24f8833d43c6c3c25254c624c022399",
+    "/data/dspark-study-20261017/study/deployment/runtime_probe.py": "c0d9c7dc7940fa1247fc0833a9de679e3339fdb60bce9dfdb7cca986cd5af201",
+    "/data/dspark-study-20261017/study/diagnose_npu_gather.py": "94734cab0df6837b9110565c604e110a95524de0a57c315c7b3e32d7add4e2ef",
+    "/data/dspark-study-20261017/candidates/official_a2/runtime_manifest.json": "66a647eff7092c140a3dcac6b4080a0f028929e711b22ecf89293c44704f875c"
+  },
+  "steps": [
+    {
+      "name": "runtime_probe",
+      "timeout_seconds": 180,
+      "argv": [
+        "python3",
+        "/data/dspark-study-20261017/study/deployment/run_proot_runtime.py",
+        "--root",
+        "/data/dspark-study-20261017/candidates/official_a2",
+        "--study",
+        "/data/dspark-study-20261017",
+        "--proot",
+        "/data/dspark-study-20261017/tools/proot_540/usr/bin/proot",
+        "--proot-library-path",
+        "/data/dspark-study-20261017/tools/proot/usr/lib/aarch64-linux-gnu",
+        "--",
+        "python",
+        "/data/dspark-study-20261017/study/deployment/runtime_probe.py",
+        "--output",
+        "/data/dspark-study-20261017/evidence/official_a2_runtime_probe.json"
+      ]
+    },
+    {
+      "name": "metadata",
+      "timeout_seconds": 300,
+      "argv": [
+        "python3",
+        "/data/dspark-study-20261017/study/deployment/run_proot_runtime.py",
+        "--root",
+        "/data/dspark-study-20261017/candidates/official_a2",
+        "--study",
+        "/data/dspark-study-20261017",
+        "--proot",
+        "/data/dspark-study-20261017/tools/proot_540/usr/bin/proot",
+        "--proot-library-path",
+        "/data/dspark-study-20261017/tools/proot/usr/lib/aarch64-linux-gnu",
+        "--",
+        "python",
+        "/data/dspark-study-20261017/study/diagnose_npu_gather.py",
+        "--iterations",
+        "30",
+        "--output",
+        "/data/dspark-study-20261017/evidence/official_a2_metadata.json"
+      ]
+    }
+  ]
+}

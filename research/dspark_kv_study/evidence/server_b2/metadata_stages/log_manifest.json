@@ -1,0 +1,44 @@
+[
+  {
+    "file": "metadata_gather_stages_stages.log.gz",
+    "sha256": "be1c2e63f8c9d866683e4c9d9030be3dfb59256c28dde799e6084c7e3d8fbd74",
+    "original_sha256": "17531ccb5f287f10384a7c21296f03e6a4f12d841ddb20efa43b10f1f863f2e4",
+    "bytes": 575,
+    "original_bytes": 1851
+  },
+  {
+    "file": "metadata_allocator_controls_blocking.log.gz",
+    "sha256": "a5acc189958f5a4d8afce961dfed1518f367ca53c2e0bb5ed8dc2c8d8676cbcb",
+    "original_sha256": "534cf172eabb3ee7d0b169524201edeaba5d0d13de6e4dd2ffcd28547f372888",
+    "bytes": 566,
+    "original_bytes": 1851
+  },
+  {
+    "file": "metadata_allocator_controls_no_cache.log.gz",
+    "sha256": "8e58a28b43e46adec53ce5e922de305d925c2b6541e8e94fb03003b14f84ba0f",
+    "original_sha256": "37a67c850aac031d120eec9b7b4ef1489ff20f20bd703d5a3821f17057405b9c",
+    "bytes": 567,
+    "original_bytes": 1851
+  },
+  {
+    "file": "metadata_allocator_controls_both.log.gz",
+    "sha256": "7570000cf4b9125b1375273b43f7b7136f02c4bfc883b35a9f4c40958de25d0c",
+    "original_sha256": "7693c375fe66998f95332bdf3323cb11cda6a3217cb6defa9fc5f64c82f880ea",
+    "bytes": 571,
+    "original_bytes": 1851
+  },
+  {
+    "file": "metadata_jit_controls_jit_off.log.gz",
+    "sha256": "fa98de1961e04561d75a67b285e43cdd27cd9146b7c71b6573b606150cccb7b6",
+    "original_sha256": "e37cfcf0b116e2ce3f5b4e772fc93678cbfe62d969b7c463508dd06a83526efe",
+    "bytes": 645,
+    "original_bytes": 2061
+  },
+  {
+    "file": "metadata_jit_controls_jit_on.log.gz",
+    "sha256": "5c96fa982d43a7cfa3678055524b2183d4f108d4a449ebf95ac68b91a45fe96f",
+    "original_sha256": "a82142c037acf88f61e5e10da36a12e03d7abc029a0ac277e7809448db249650",
+    "bytes": 1109,
+    "original_bytes": 3128
+  }
+]

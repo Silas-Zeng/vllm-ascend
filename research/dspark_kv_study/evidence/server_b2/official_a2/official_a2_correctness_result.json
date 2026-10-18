@@ -1,0 +1,26 @@
+{
+  "pid": 19613,
+  "status": "failed",
+  "started_at": 1792281317.8491647,
+  "steps": [
+    {
+      "name": "runtime_probe",
+      "started_at": 1792281317.8519871,
+      "log": "logs/official_a2_correctness_runtime_probe.log",
+      "exit_code": 0,
+      "finished_at": 1792281343.898352
+    },
+    {
+      "name": "metadata",
+      "started_at": 1792281343.8995843,
+      "log": "logs/official_a2_correctness_metadata.log",
+      "exit_code": 1,
+      "finished_at": 1792281373.9004793
+    }
+  ],
+  "active_step": "metadata",
+  "child_pid": 19725,
+  "child_startticks": "44291936",
+  "error": "experiment step failed: metadata",
+  "finished_at": 1792281373.900984
+}

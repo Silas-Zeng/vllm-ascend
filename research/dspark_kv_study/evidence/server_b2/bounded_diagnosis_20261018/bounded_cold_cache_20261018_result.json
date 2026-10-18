@@ -1,0 +1,53 @@
+{
+  "pid": 26080,
+  "status": "complete",
+  "started_at": 1792284509.3725922,
+  "steps": [
+    {
+      "name": "metadata_recheck",
+      "started_at": 1792284509.3759017,
+      "log": "logs/bounded_cold_cache_20261018_metadata_recheck.log",
+      "exit_code": 0,
+      "finished_at": 1792284529.3668196
+    },
+    {
+      "name": "vector_recheck",
+      "started_at": 1792284529.3710105,
+      "log": "logs/bounded_cold_cache_20261018_vector_recheck.log",
+      "exit_code": 0,
+      "finished_at": 1792284543.3041818
+    },
+    {
+      "name": "ar_cold_unset_1",
+      "started_at": 1792284543.306527,
+      "log": "logs/bounded_cold_cache_20261018_ar_cold_unset_1.log",
+      "exit_code": 0,
+      "finished_at": 1792284676.3445504
+    },
+    {
+      "name": "ar_cold_queue1",
+      "started_at": 1792284676.3470857,
+      "log": "logs/bounded_cold_cache_20261018_ar_cold_queue1.log",
+      "exit_code": 0,
+      "finished_at": 1792284810.031059
+    },
+    {
+      "name": "ar_cold_unset_2",
+      "started_at": 1792284810.0335598,
+      "log": "logs/bounded_cold_cache_20261018_ar_cold_unset_2.log",
+      "exit_code": 0,
+      "finished_at": 1792284943.4719903
+    },
+    {
+      "name": "dspark_cold_queue1",
+      "started_at": 1792284943.474328,
+      "log": "logs/bounded_cold_cache_20261018_dspark_cold_queue1.log",
+      "exit_code": 0,
+      "finished_at": 1792285111.2549207
+    }
+  ],
+  "active_step": "dspark_cold_queue1",
+  "child_pid": 27220,
+  "child_startticks": "44651894",
+  "finished_at": 1792285111.2555974
+}

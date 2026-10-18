@@ -1,0 +1,47 @@
+{
+  "health": {
+    "argv": [
+      "npu-smi",
+      "info",
+      "-t",
+      "health",
+      "-i",
+      "3",
+      "-c",
+      "0"
+    ],
+    "exit_code": 0,
+    "stdout": "\tHealth Status                  : OK\n\tError Code                     : NA\n\tError Information              : NA\n",
+    "stderr": ""
+  },
+  "ecc": {
+    "argv": [
+      "npu-smi",
+      "info",
+      "-t",
+      "ecc",
+      "-i",
+      "3",
+      "-c",
+      "0"
+    ],
+    "exit_code": 0,
+    "stdout": "\tHBM Single Bit Error Count               : 0\n\tHBM Double Bit Error Count               : 0\n\tHBM Single Bit Aggregate Total Err Cnt   : 0\n\tHBM Double Bit Aggregate Total Err Cnt   : 0\n\tHBM Single Bit Isolated Pages Count      : 0\n\tHBM Double Bit Isolated Pages Count      : 0\n\tHBM Single Bit Next-Isolated Pages Count : 0\n\tHBM Double Bit Next-Isolated Pages Count : 0\n",
+    "stderr": ""
+  },
+  "err-count": {
+    "argv": [
+      "npu-smi",
+      "info",
+      "-t",
+      "err-count",
+      "-i",
+      "3",
+      "-c",
+      "0"
+    ],
+    "exit_code": 0,
+    "stdout": "This device does not support querying err-count.\n",
+    "stderr": ""
+  }
+}

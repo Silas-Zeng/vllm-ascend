@@ -1,0 +1,62 @@
+{
+  "name": "metadata_allocator_controls",
+  "root": "/data/dspark-study-20261017",
+  "continue_after_failure": true,
+  "source_sha256": {
+    "/data/dspark-study-20261017/study/diagnose_npu_gather.py": "94734cab0df6837b9110565c604e110a95524de0a57c315c7b3e32d7add4e2ef"
+  },
+  "steps": [
+    {
+      "name": "blocking",
+      "timeout_seconds": 240,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "env",
+        "ASCEND_LAUNCH_BLOCKING=1",
+        "python",
+        "/data/dspark-study-20261017/study/diagnose_npu_gather.py",
+        "--iterations",
+        "30",
+        "--output",
+        "/data/dspark-study-20261017/evidence/metadata_blocking.json"
+      ]
+    },
+    {
+      "name": "no_cache",
+      "timeout_seconds": 240,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "env",
+        "PYTORCH_NO_NPU_MEMORY_CACHING=1",
+        "python",
+        "/data/dspark-study-20261017/study/diagnose_npu_gather.py",
+        "--iterations",
+        "30",
+        "--output",
+        "/data/dspark-study-20261017/evidence/metadata_no_cache.json"
+      ]
+    },
+    {
+      "name": "both",
+      "timeout_seconds": 240,
+      "argv": [
+        "bash",
+        "/data/dspark-study-20261017/study/deployment/run_native.sh",
+        "/data/dspark-study-20261017",
+        "env",
+        "ASCEND_LAUNCH_BLOCKING=1",
+        "PYTORCH_NO_NPU_MEMORY_CACHING=1",
+        "python",
+        "/data/dspark-study-20261017/study/diagnose_npu_gather.py",
+        "--iterations",
+        "30",
+        "--output",
+        "/data/dspark-study-20261017/evidence/metadata_both.json"
+      ]
+    }
+  ]
+}

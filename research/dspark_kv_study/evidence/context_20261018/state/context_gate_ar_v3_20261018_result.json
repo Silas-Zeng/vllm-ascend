@@ -1,0 +1,18 @@
+{
+  "pid": 31741,
+  "status": "complete",
+  "started_at": 1792288720.6927123,
+  "steps": [
+    {
+      "name": "ar_emission_control",
+      "started_at": 1792288720.6981673,
+      "log": "logs/context_gate_ar_v3_20261018_ar_emission_control.log",
+      "exit_code": 0,
+      "finished_at": 1792288828.5493364
+    }
+  ],
+  "active_step": "ar_emission_control",
+  "child_pid": 31742,
+  "child_startticks": "45029616",
+  "finished_at": 1792288828.5499015
+}

@@ -1,0 +1,19 @@
+{
+  "pid": 35861,
+  "startticks": "45312554",
+  "started_at": 1792291550.0769048,
+  "argv": [
+    "python3",
+    "/data/dspark-study-20261017/study/deployment/queue_context_profiles.py",
+    "--root",
+    "/data/dspark-study-20261017",
+    "--stage",
+    "/data/dspark-study-20261017/stages/context_profile_v4/study",
+    "--window-runtime",
+    "/data/dspark-study-20261017/runtimes/window_baseline_v1",
+    "--output",
+    "/data/dspark-study-20261017/evidence/context_baseline_20261018/profile_v4",
+    "--name",
+    "context_profile_v4_20261018"
+  ]
+}

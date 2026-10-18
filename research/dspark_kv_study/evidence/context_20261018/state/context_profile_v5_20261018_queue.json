@@ -1,0 +1,7 @@
+{
+  "status": "not_launched",
+  "source_sha256": "6421a96779502db2777b30a76623207f9c5edd10d07528c5008834c7fe9098bd",
+  "started_at": 1792293589.8329904,
+  "reason": "formal timing/audit matrix has missing or failed steps",
+  "formal_status": "interrupted_for_native_api_validation"
+}

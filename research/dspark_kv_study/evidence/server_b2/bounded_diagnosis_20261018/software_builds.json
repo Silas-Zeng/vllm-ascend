@@ -1,0 +1,42 @@
+{
+  "recorded_at": 1792284153.242273,
+  "native_plugin_files_checked": 543,
+  "changed_files": [],
+  "version_files": {
+    "/usr/local/Ascend/cann-9.1.0/share/info/acl_extend/version.info": "Version=9.1.0\nversion_dir=cann\nrequired_package_runtime_version=\"9.1\"\ntimestamp=20260720_000024864\n",
+    "/usr/local/Ascend/cann-9.1.0/share/info/bisheng-compiler/version.info": "Version=9.1.0\nversion_dir=cann\ntimestamp=20260720_000024864\n",
+    "/usr/local/Ascend/cann-9.1.0/share/info/ge-compiler/version.info": "Version=9.1.0\nversion_dir=cann\nrequired_package_runtime_version=\"9.1\"\nrequired_package_metadef_version=\"9.1\"\nrequired_package_hcomm_version=\"9.1\"\nrequired_package_ge-executor_version=\"9.1\"\ntimestamp=20260720_000024864\n",
+    "/usr/local/Ascend/cann-9.1.0/share/info/ge-executor/version.info": "Version=9.1.0\nversion_dir=cann\nrequired_package_runtime_version=\"9.1\"\nrequired_package_metadef_version=\"9.1\"\nrequired_package_hcomm_version=\"9.1\"\ntimestamp=20260720_000024864\n",
+    "/usr/local/Ascend/cann-9.1.0/share/info/runtime/version.info": "Version=9.1.0\nversion_dir=cann\ntimestamp=20260720_000024864\n"
+  },
+  "library_sha256": {
+    "/usr/local/Ascend/driver/lib64/driver/libascend_hal.so": {
+      "bytes": 1860992,
+      "sha256": "013ee2559731abc5abc1c3ff94588ad4f539cfeeb26f15ee548285244357542c"
+    },
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libruntime.so": {
+      "bytes": 936424,
+      "sha256": "9b26b70d48e58dbe627987af059da391699a8bb6280bf5eefd6407ebba5e6740"
+    },
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libopapi_math.so": {
+      "bytes": 12919608,
+      "sha256": "416b54d18ffb3aa028c81c73bf6947c9ddf397f83ecbdc713d4df94e5ea84915"
+    },
+    "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libopapi_transformer.so": {
+      "bytes": 9507008,
+      "sha256": "ae1f38bc42df6f98e4457798df27fd2d3859f80be331d310e5a4ad6b43dc1aad"
+    },
+    "/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/lib/libtorch_npu.so": {
+      "bytes": 82429241,
+      "sha256": "83fb9a0eb249aef6bca7f8463047fcb4d3062cc4849f17ddf31a5e050c838842"
+    }
+  },
+  "vllm": {
+    "exit_code": 0,
+    "commit": "568afb3a13806beb53bb2e6bd518269357b237c0\n2026-07-26T17:57:50-07:00\n[CI/Build] Refresh tags before building macOS wheel (#49901)"
+  },
+  "vllm_ascend": {
+    "exit_code": 0,
+    "commit": "85625bd772f27a4a13bc8e548f131af5ce3ff734\n2026-08-27T22:09:46+08:00\n[v0.26.0rc][BugFix][Frontend] Select DeepSeek V4 effort mapping by checkpoint config (#14952)"
+  }
+}

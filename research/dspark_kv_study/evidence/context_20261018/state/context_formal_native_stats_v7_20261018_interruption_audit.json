@@ -1,0 +1,17 @@
+{
+  "reason": "Native speculative outputs vary across separate calls; preserve strict-check failures and collect complete observations with explicit false comparison flags",
+  "supervisor_pid": 39708,
+  "supervisor_startticks": "45681814",
+  "active_step": "full_c16384_b4_measure",
+  "child_pid": 43095,
+  "child_startticks": "46015058",
+  "owned_group_before": [
+    "  43095   39708   43095 Ssl  python /data/dspark-study-20261017/stages/context_native_stats_v7/study/run_vllm_baseline.py --mode full --target /model/Qwen3-8B --prompts /data/dspark-study-20261017/prompts/long/prompts_long_c16384_b4.json --output /data/dspark-study-20261017/evidence/context_baseline_20261018/formal_native_stats_v7/full_c16384_b4.json --concurrency 4 --output-tokens 512 --max-model-len 32768 --max-num-batched-tokens 4120 --max-num-scheduled-tokens 4096 --chunked-prefill --async-scheduling --timing-method native_stats --compare-generate --warmup 10 --repeats 10 --draft /data/dspark-study-20261017/models/dspark_qwen3_8b_block7 --reference /data/dspark-study-20261017/evidence/context_baseline_20261018/formal_native_stats_v7/ar_c16384_b4.json --record-reference-mismatch --audit-dir /data/dspark-study-20261017/evidence/context_baseline_20261018/formal_native_stats_v7/audits/full_c16384_b4 --audit-after --audit-output-tokens 32",
+    "  43167   43095   43095 Rl   VLLM::EngineCore",
+    "  43171   43167   43095 S    /usr/local/python3.12.13/bin/python -c from multiprocessing.resource_tracker import main;main(39)",
+    "  43174   43167   43095 Rl   VLLM::Worker"
+  ],
+  "started_at": 1792298853.9524596,
+  "finished_at": 1792298856.965925,
+  "group_live_after": []
+}

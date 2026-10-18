@@ -1,0 +1,7 @@
+{
+  "status": "not_launched",
+  "source_sha256": "84ba44b0855168573dbc168b6930f5bc432f18c968e8e51984f932c06e1dbd7e",
+  "started_at": 1792296024.5721912,
+  "reason": "formal timing/audit matrix has missing or failed steps",
+  "formal_status": "interrupted_for_recorded_variation"
+}

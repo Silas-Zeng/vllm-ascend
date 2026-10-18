@@ -1,0 +1,18 @@
+{
+  "pid": 39414,
+  "status": "complete",
+  "started_at": 1792294986.3276598,
+  "steps": [
+    {
+      "name": "gate",
+      "started_at": 1792294986.3342314,
+      "log": "logs/context_native_stats_gate_v1_20261018_gate.log",
+      "exit_code": 0,
+      "finished_at": 1792295180.1019554
+    }
+  ],
+  "active_step": "gate",
+  "child_pid": 39415,
+  "child_startticks": "45656180",
+  "finished_at": 1792295180.102586
+}

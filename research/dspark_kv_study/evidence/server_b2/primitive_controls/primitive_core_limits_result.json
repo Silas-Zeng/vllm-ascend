@@ -1,0 +1,32 @@
+{
+  "pid": 20224,
+  "status": "completed_with_failures",
+  "started_at": 1792281598.743203,
+  "steps": [
+    {
+      "name": "cube1_vector2",
+      "started_at": 1792281598.744285,
+      "log": "logs/primitive_core_limits_cube1_vector2.log",
+      "exit_code": 1,
+      "finished_at": 1792281615.9310596
+    },
+    {
+      "name": "cube4_vector8",
+      "started_at": 1792281615.9320788,
+      "log": "logs/primitive_core_limits_cube4_vector8.log",
+      "exit_code": 1,
+      "finished_at": 1792281628.8137803
+    },
+    {
+      "name": "cube23_vector46",
+      "started_at": 1792281628.8165371,
+      "log": "logs/primitive_core_limits_cube23_vector46.log",
+      "exit_code": 1,
+      "finished_at": 1792281641.6982682
+    }
+  ],
+  "active_step": "cube23_vector46",
+  "child_pid": 20375,
+  "child_startticks": "44320428",
+  "finished_at": 1792281641.698823
+}

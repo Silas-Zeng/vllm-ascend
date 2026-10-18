@@ -5,7 +5,9 @@ default_install_hook_types:
 default_stages:
   - pre-commit # Run locally
   - manual # Run in CI
-exclude: '^(\.agents|\.claude|\.gemini)/.*'
+# Scientific evidence and generated artifacts retain their recorded bytes.
+# Their hashes, data contracts and rendered figures are checked separately.
+exclude: '^(\.agents|\.claude|\.gemini)/.*|^research/dspark_kv_study/(evidence|archive|figures|results)/|^research/dspark_kv_study/profile_summary\.json$'
 
 repos:
 - repo: https://github.com/astral-sh/ruff-pre-commit

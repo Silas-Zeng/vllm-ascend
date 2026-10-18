@@ -1,0 +1,19 @@
+{
+  "pid": 14851,
+  "status": "failed",
+  "started_at": 1792280581.5039778,
+  "steps": [
+    {
+      "name": "stages",
+      "started_at": 1792280581.504874,
+      "log": "logs/metadata_gather_stages_stages.log",
+      "exit_code": 1,
+      "finished_at": 1792280603.4461122
+    }
+  ],
+  "active_step": "stages",
+  "child_pid": 14852,
+  "child_startticks": "44215702",
+  "error": "experiment step failed: stages",
+  "finished_at": 1792280603.446684
+}

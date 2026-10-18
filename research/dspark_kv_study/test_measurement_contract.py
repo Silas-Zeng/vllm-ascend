@@ -1,10 +1,26 @@
 import unittest
 
 from benchmark_attention import trace_events
-from run_vllm_baseline import model_options, request_tpot_ms
+from run_vllm_baseline import model_options, profiling_session, request_tpot_ms
 
 
 class MeasurementContractTests(unittest.TestCase):
+    def test_profiler_flushes_when_output_validation_raises(self):
+        class Profiler:
+            def __init__(self):
+                self.events = []
+
+            def start_profile(self, profile_prefix):
+                self.events.append(("start", profile_prefix))
+
+            def stop_profile(self):
+                self.events.append(("stop",))
+
+        profiler = Profiler()
+        with self.assertRaisesRegex(AssertionError, "output mismatch"), profiling_session(profiler, "test-trace", True):
+            raise AssertionError("output mismatch")
+        self.assertEqual(profiler.events, [("start", "test-trace"), ("stop",)])
+
     def test_torchnpu_and_chrome_trace_export_formats(self):
         events = [{"ph": "X", "name": "kv_study/anchors_cached", "dur": 10}]
         self.assertEqual(trace_events(events), events)
